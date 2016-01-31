@@ -17,7 +17,7 @@ use common\models\User;
  * @property integer $updated_at
  * @property string $author
  */
-class Blog extends \yii\db\ActiveRecord
+class ImportNews extends \yii\db\ActiveRecord
 {
     public $file;
    
@@ -42,7 +42,7 @@ class Blog extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'blog';
+        return 'import_news';
     }
 
     /**
@@ -99,5 +99,22 @@ class Blog extends \yii\db\ActiveRecord
             return false;
         }
 
+    }
+
+    // Определить количество нов новостей после парсинга
+    public static function getFreshNews(){
+        $i=0;
+        $ImportModel = ImportNews::find()->all();
+        if($ImportModel) {
+            foreach ($ImportModel as $row) {
+
+                $duble = Blog::getDublicateByTitle($row->title);
+                if (!$duble) {
+                    $i++;
+             }
+
+            }
+        }
+        return $i;
     }
 }

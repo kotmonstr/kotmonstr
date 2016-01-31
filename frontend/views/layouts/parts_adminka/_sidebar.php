@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Url;
+use common\models\ImportNews;
 
 $curModule = Yii::$app->controller->module->id;
 $curContr = Yii::$app->controller->id;
@@ -10,6 +11,8 @@ $fullPath = $curModule . '/' . $curContr;
 //vd($fullPath);
 //vd($curModule .'/'.$curContr .'/' .$curAction);
 $file_avatar = Yii::getAlias('@frontend') . '/web/upload/user/' . Yii::$app->user->id . '/avatar/avatar.jpg';
+
+$countNewNews = ImportNews::getFreshNews();
 ?>
 
 <div id="left">
@@ -54,6 +57,20 @@ $file_avatar = Yii::getAlias('@frontend') . '/web/upload/user/' . Yii::$app->use
         } ?>">
             <a href="<?= Url::to('/blog/show') ?>">
                 <i class="fa"></i><span class="link-title">&nbsp;Cтатьи</span>
+            </a>
+        </li>
+        <li class="<?php if ($path == 'blog/add-news-from-parser') {
+            echo "active";
+        } ?>">
+            <a href="<?= Url::to('/blog/add-news-from-parser') ?>">
+                <i class="fa"></i><span class="link-title">&nbsp;Импорт новых статей (<?= $countNewNews ? $countNewNews : '0'; ?>)</span>
+            </a>
+        </li>
+        <li class="<?php if ($path == 'blog/parser-start') {
+            echo "active";
+        } ?>">
+            <a href="<?= Url::to('/blog/parser-start') ?>">
+                <i class="fa"></i><span class="link-title">&nbsp;Начать парсинг</span>
             </a>
         </li>
 

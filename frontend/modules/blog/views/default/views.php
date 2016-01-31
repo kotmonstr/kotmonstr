@@ -15,8 +15,13 @@ $this->registerJsFile('/js/custom/comment.js');
     <div class="row">
         <div class="container">
             <div class="pos bg_preview_post">
-                <center><h3><?= $model->title ?></h3></center>               
-                <?= $model->content ?>         
+                <center><h3><?= $model->title ?></h3></center>
+                <center>
+                <?php if($model->image ){ ?>
+                <img alt="" src="<?= $model->image; ?>">
+                <?php } ?>
+                </center>
+                <p class="content"><?= $model->content ?>  </p>
             </div>
         </div>
     </div>
@@ -247,4 +252,9 @@ margin-top: 23px;
     . p{
         background-color: #ffffff!important;
          }
+    .content{
+        font-size: 14px;
+        font-family: "Verdana", "sans-serif";
+        margin-top: 20px;
+    }
 </style>

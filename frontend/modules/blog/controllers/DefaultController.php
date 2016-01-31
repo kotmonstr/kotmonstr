@@ -2,6 +2,7 @@
 
 namespace app\modules\blog\controllers;
 
+use common\models\simple_html_dom;
 use yii\web\Controller;
 use common\models\Blog;
 use Yii;
@@ -13,6 +14,7 @@ use common\models\Comment;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
+use common\models\ImportNews;
 
 class DefaultController extends Controller {
      public function behaviors()
@@ -29,7 +31,7 @@ class DefaultController extends Controller {
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create','update','delete','create-image'],
+                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -156,6 +158,97 @@ class DefaultController extends Controller {
         $blog->updateAttributes(['view']);
         $coment_model = Comment::find()->where(['blog_id'=>$id])->all();
         return $this->render('views', ['model' => $blog,'coment_model'=> $coment_model]);
+    }
+
+    public function actionAddNewsFromParser(){
+        $ImportModel = ImportNews::find()->all();
+        if($ImportModel) {
+            foreach ($ImportModel as $row) {
+
+                $duble = Blog::getDublicateByTitle($row->title);
+                if (!$duble) {
+                    $model = new Blog();
+                    $model->title = $row->title;
+                    $model->image = $row->image;
+                    $model->content = $row->content;
+                    $model->created_at = $row->created_at;
+                    $model->updated_at = $row->updated_at;
+                    $model->author = $row->author;
+                    $model->save();
+                } else {
+                    //echo "It is Dublicate", PHP_EOL;
+                }
+
+            }
+        }
+        return $this->redirect('/admin/index');
+    }
+
+    public function actionParserStart(){
+
+
+
+        ini_set('max_execution_time', 0);
+        ini_set('memory_limit', '128M');
+        ini_set( 'default_charset', 'UTF-8' );
+        //header('Content-Type: text/html; charset=UTF-8');
+
+
+        $arrResult = [];
+        $arrResult2 = [];
+        $html = new simple_html_dom();
+        $html->load_file('http://politrussia.com/news/');
+
+        // Find all links
+        foreach ($html->find('a.overlink') as $element) {
+            //echo $element->href. '<br>';
+            $arrResult[] = $element->href;
+        }
+        //vd($arrResult);
+
+
+        $i = 0;
+        foreach ($arrResult as $key => $link) {
+            $html->load_file('http://politrussia.com' . $link);
+            $i++;
+            $content = $html->find('div[class="news_text"]', 0)->plaintext;
+            $title = $html->find('h1[itemprop="name"]', 0)->plaintext;
+
+            foreach ($html->find('img[itemprop="contentUrl"]') as $element) {
+                $img2 = 'http://politrussia.com' . $element->src;
+            }
+
+            $content2 = mb_convert_encoding($content, "UTF-8", "Windows-1251");
+            $title2 = mb_convert_encoding($title, "UTF-8", "Windows-1251");
+
+            $arrResult2[$key]['title'] = $title2;
+            $arrResult2[$key]['content'] = $content2;
+            $arrResult2[$key]['img'] = $img2;
+        }
+
+        if(!empty($arrResult2)){
+            ImportNews::deleteAll();
+        }
+
+        foreach($arrResult2 as $key => $row){
+
+            $modelBlog = new ImportNews();
+            $modelBlog->title = $row['title'];
+            $modelBlog->content = $row['content'];
+            $modelBlog->created_at = time();
+            $modelBlog->updated_at = time();
+            $modelBlog->author = Yii::$app->user->id;
+            $modelBlog->image = $row['img'];
+
+            $dublicate = ImportNews::getDublicateByTitle($row['title']);
+            if(!$dublicate){
+                $modelBlog->save();
+            }
+
+
+        }
+
+        return $this->redirect('/admin/index');
     }
 
 }
