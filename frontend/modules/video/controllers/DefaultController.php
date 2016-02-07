@@ -38,6 +38,7 @@ class DefaultController extends Controller
                             'show-author',
                             'tv24',
                             'tv1',
+                            'tvc',
                             '5canal'
 
                         ],
@@ -45,7 +46,7 @@ class DefaultController extends Controller
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['index',
+                        'actions' => [
                             'view',
                             'preview',
                             'show-author',
@@ -55,11 +56,12 @@ class DefaultController extends Controller
                             'get-video-by-time',
                             'tv24',
                             'tv1',
+                            'tvc',
                             '5canal'
 
                         ],
                         'allow' => true,
-                        'roles' => ['@','?'],
+                        'roles' => ['?'],
                     ],
                 ],
             ],
@@ -92,6 +94,11 @@ class DefaultController extends Controller
     {
 
         return $this->render('tv');
+    }
+    public function actionTvc()
+    {
+
+        return $this->render('tvc');
     }
 
     public function action5canal()

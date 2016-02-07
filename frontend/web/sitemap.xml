@@ -1,0 +1,2504 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.kotmonstr.com	-->
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>http://kotmonstr.com/</loc>
+	<lastmod>2016-02-07T15:29:30+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/site/index</loc>
+	<lastmod>2016-02-07T15:29:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/index</loc>
+	<lastmod>2016-02-07T15:29:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/profile/form</loc>
+	<lastmod>2016-02-07T15:29:33+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/site/default/index</loc>
+	<lastmod>2016-02-07T15:29:33+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=1</loc>
+	<lastmod>2016-02-07T15:29:35+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=2</loc>
+	<lastmod>2016-02-07T15:29:36+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=3</loc>
+	<lastmod>2016-02-07T15:29:37+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=4</loc>
+	<lastmod>2016-02-07T15:29:38+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=5</loc>
+	<lastmod>2016-02-07T15:29:39+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=6</loc>
+	<lastmod>2016-02-07T15:29:39+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=7</loc>
+	<lastmod>2016-02-07T15:29:41+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=8</loc>
+	<lastmod>2016-02-07T15:29:41+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=9</loc>
+	<lastmod>2016-02-07T15:29:42+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=10</loc>
+	<lastmod>2016-02-07T15:29:43+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=11</loc>
+	<lastmod>2016-02-07T15:29:43+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/show-author?id=13</loc>
+	<lastmod>2016-02-07T15:29:44+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=1</loc>
+	<lastmod>2016-02-07T15:29:45+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=2</loc>
+	<lastmod>2016-02-07T15:29:46+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=6</loc>
+	<lastmod>2016-02-07T15:29:46+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=4</loc>
+	<lastmod>2016-02-07T15:29:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=5</loc>
+	<lastmod>2016-02-07T15:29:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=7</loc>
+	<lastmod>2016-02-07T15:29:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=8</loc>
+	<lastmod>2016-02-07T15:29:50+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=9</loc>
+	<lastmod>2016-02-07T15:29:50+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=10</loc>
+	<lastmod>2016-02-07T15:29:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/view?categoria_id=11</loc>
+	<lastmod>2016-02-07T15:29:52+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/tv24</loc>
+	<lastmod>2016-02-07T15:29:52+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/tv1</loc>
+	<lastmod>2016-02-07T15:29:53+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/5canal</loc>
+	<lastmod>2016-02-07T15:29:54+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/image/preview</loc>
+	<lastmod>2016-02-07T15:29:55+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/index</loc>
+	<lastmod>2016-02-07T15:29:56+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/book/views</loc>
+	<lastmod>2016-02-07T15:29:57+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/site/signup</loc>
+	<lastmod>2016-02-07T15:29:58+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/site/login</loc>
+	<lastmod>2016-02-07T15:29:59+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/index</loc>
+	<lastmod>2016-02-07T15:29:59+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/wishlist</loc>
+	<lastmod>2016-02-07T15:30:02+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/comparelist</loc>
+	<lastmod>2016-02-07T15:30:02+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/order</loc>
+	<lastmod>2016-02-07T15:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/signup</loc>
+	<lastmod>2016-02-07T15:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/login</loc>
+	<lastmod>2016-02-07T15:30:06+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/products</loc>
+	<lastmod>2016-02-07T15:30:07+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/cart</loc>
+	<lastmod>2016-02-07T15:30:10+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/blog</loc>
+	<lastmod>2016-02-07T15:30:11+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/contact</loc>
+	<lastmod>2016-02-07T15:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/detail?item=28</loc>
+	<lastmod>2016-02-07T15:30:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/detail?item=27</loc>
+	<lastmod>2016-02-07T15:30:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/detail?item=26</loc>
+	<lastmod>2016-02-07T15:30:14+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/detail?item=25</loc>
+	<lastmod>2016-02-07T15:30:15+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/detail?item=24</loc>
+	<lastmod>2016-02-07T15:30:16+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/detail?item=23</loc>
+	<lastmod>2016-02-07T15:30:16+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/shop/detail?item=22</loc>
+	<lastmod>2016-02-07T15:30:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/view?categoria_id=4&amp;page=1</loc>
+	<lastmod>2016-02-07T15:30:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/view?categoria_id=4&amp;page=2</loc>
+	<lastmod>2016-02-07T15:30:19+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/view?categoria_id=5&amp;page=1</loc>
+	<lastmod>2016-02-07T15:30:20+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/view?categoria_id=5&amp;page=2</loc>
+	<lastmod>2016-02-07T15:30:20+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=190</loc>
+	<lastmod>2016-02-07T15:30:21+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=189</loc>
+	<lastmod>2016-02-07T15:30:23+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=188</loc>
+	<lastmod>2016-02-07T15:30:23+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=187</loc>
+	<lastmod>2016-02-07T15:30:23+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=186</loc>
+	<lastmod>2016-02-07T15:30:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=24</loc>
+	<lastmod>2016-02-07T15:30:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=19</loc>
+	<lastmod>2016-02-07T15:30:26+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=34</loc>
+	<lastmod>2016-02-07T15:30:27+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=21</loc>
+	<lastmod>2016-02-07T15:30:28+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=23</loc>
+	<lastmod>2016-02-07T15:30:28+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=172</loc>
+	<lastmod>2016-02-07T15:30:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=173</loc>
+	<lastmod>2016-02-07T15:30:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=174</loc>
+	<lastmod>2016-02-07T15:30:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=175</loc>
+	<lastmod>2016-02-07T15:30:32+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=176</loc>
+	<lastmod>2016-02-07T15:30:32+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=1</loc>
+	<lastmod>2016-02-07T15:30:33+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=2</loc>
+	<lastmod>2016-02-07T15:30:34+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=3</loc>
+	<lastmod>2016-02-07T15:30:35+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=4</loc>
+	<lastmod>2016-02-07T15:30:35+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=5</loc>
+	<lastmod>2016-02-07T15:30:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=6</loc>
+	<lastmod>2016-02-07T15:30:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=7</loc>
+	<lastmod>2016-02-07T15:30:38+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=8</loc>
+	<lastmod>2016-02-07T15:30:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=9</loc>
+	<lastmod>2016-02-07T15:30:40+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=10</loc>
+	<lastmod>2016-02-07T15:30:40+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/show</loc>
+	<lastmod>2016-02-07T15:30:42+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/preview</loc>
+	<lastmod>2016-02-07T15:30:45+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/book/index</loc>
+	<lastmod>2016-02-07T15:30:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/index</loc>
+	<lastmod>2016-02-07T15:30:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=177</loc>
+	<lastmod>2016-02-07T15:30:52+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=178</loc>
+	<lastmod>2016-02-07T15:30:54+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=179</loc>
+	<lastmod>2016-02-07T15:30:54+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=180</loc>
+	<lastmod>2016-02-07T15:30:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=181</loc>
+	<lastmod>2016-02-07T15:30:56+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=182</loc>
+	<lastmod>2016-02-07T15:30:57+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=183</loc>
+	<lastmod>2016-02-07T15:30:57+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=184</loc>
+	<lastmod>2016-02-07T15:30:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=185</loc>
+	<lastmod>2016-02-07T15:30:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=165</loc>
+	<lastmod>2016-02-07T15:31:00+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=166</loc>
+	<lastmod>2016-02-07T15:31:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=167</loc>
+	<lastmod>2016-02-07T15:31:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=168</loc>
+	<lastmod>2016-02-07T15:31:02+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=169</loc>
+	<lastmod>2016-02-07T15:31:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=170</loc>
+	<lastmod>2016-02-07T15:31:04+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=171</loc>
+	<lastmod>2016-02-07T15:31:04+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=164</loc>
+	<lastmod>2016-02-07T15:31:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=122</loc>
+	<lastmod>2016-02-07T15:31:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=123</loc>
+	<lastmod>2016-02-07T15:31:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=124</loc>
+	<lastmod>2016-02-07T15:31:08+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=125</loc>
+	<lastmod>2016-02-07T15:31:08+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=126</loc>
+	<lastmod>2016-02-07T15:31:09+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=127</loc>
+	<lastmod>2016-02-07T15:31:10+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=128</loc>
+	<lastmod>2016-02-07T15:31:11+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=129</loc>
+	<lastmod>2016-02-07T15:31:11+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=130</loc>
+	<lastmod>2016-02-07T15:31:13+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=131</loc>
+	<lastmod>2016-02-07T15:31:13+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=132</loc>
+	<lastmod>2016-02-07T15:31:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=133</loc>
+	<lastmod>2016-02-07T15:31:15+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=134</loc>
+	<lastmod>2016-02-07T15:31:15+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=135</loc>
+	<lastmod>2016-02-07T15:31:16+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=136</loc>
+	<lastmod>2016-02-07T15:31:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=137</loc>
+	<lastmod>2016-02-07T15:31:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=138</loc>
+	<lastmod>2016-02-07T15:31:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=139</loc>
+	<lastmod>2016-02-07T15:31:20+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=140</loc>
+	<lastmod>2016-02-07T15:31:20+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=141</loc>
+	<lastmod>2016-02-07T15:31:21+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=142</loc>
+	<lastmod>2016-02-07T15:31:22+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=143</loc>
+	<lastmod>2016-02-07T15:31:22+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=144</loc>
+	<lastmod>2016-02-07T15:31:23+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=145</loc>
+	<lastmod>2016-02-07T15:31:24+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=146</loc>
+	<lastmod>2016-02-07T15:31:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=147</loc>
+	<lastmod>2016-02-07T15:31:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=148</loc>
+	<lastmod>2016-02-07T15:31:27+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=149</loc>
+	<lastmod>2016-02-07T15:31:27+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=150</loc>
+	<lastmod>2016-02-07T15:31:27+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=151</loc>
+	<lastmod>2016-02-07T15:31:29+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=152</loc>
+	<lastmod>2016-02-07T15:31:29+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=153</loc>
+	<lastmod>2016-02-07T15:31:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=154</loc>
+	<lastmod>2016-02-07T15:31:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=155</loc>
+	<lastmod>2016-02-07T15:31:32+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=156</loc>
+	<lastmod>2016-02-07T15:31:32+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=157</loc>
+	<lastmod>2016-02-07T15:31:34+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=158</loc>
+	<lastmod>2016-02-07T15:31:34+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=159</loc>
+	<lastmod>2016-02-07T15:31:34+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=160</loc>
+	<lastmod>2016-02-07T15:31:36+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=161</loc>
+	<lastmod>2016-02-07T15:31:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=162</loc>
+	<lastmod>2016-02-07T15:31:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=163</loc>
+	<lastmod>2016-02-07T15:31:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=80</loc>
+	<lastmod>2016-02-07T15:31:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=11</loc>
+	<lastmod>2016-02-07T15:31:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=81</loc>
+	<lastmod>2016-02-07T15:31:41+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=82</loc>
+	<lastmod>2016-02-07T15:31:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=83</loc>
+	<lastmod>2016-02-07T15:31:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=84</loc>
+	<lastmod>2016-02-07T15:31:43+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=85</loc>
+	<lastmod>2016-02-07T15:31:44+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=86</loc>
+	<lastmod>2016-02-07T15:31:45+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=87</loc>
+	<lastmod>2016-02-07T15:31:46+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=88</loc>
+	<lastmod>2016-02-07T15:31:46+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=89</loc>
+	<lastmod>2016-02-07T15:31:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=90</loc>
+	<lastmod>2016-02-07T15:31:48+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=12</loc>
+	<lastmod>2016-02-07T15:31:49+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=91</loc>
+	<lastmod>2016-02-07T15:31:49+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=92</loc>
+	<lastmod>2016-02-07T15:31:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=93</loc>
+	<lastmod>2016-02-07T15:31:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=94</loc>
+	<lastmod>2016-02-07T15:31:52+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=95</loc>
+	<lastmod>2016-02-07T15:31:53+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=96</loc>
+	<lastmod>2016-02-07T15:31:53+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=97</loc>
+	<lastmod>2016-02-07T15:31:54+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=98</loc>
+	<lastmod>2016-02-07T15:31:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=99</loc>
+	<lastmod>2016-02-07T15:31:56+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=100</loc>
+	<lastmod>2016-02-07T15:31:56+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=13</loc>
+	<lastmod>2016-02-07T15:31:58+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=101</loc>
+	<lastmod>2016-02-07T15:31:58+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=102</loc>
+	<lastmod>2016-02-07T15:31:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=103</loc>
+	<lastmod>2016-02-07T15:32:00+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=104</loc>
+	<lastmod>2016-02-07T15:32:00+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=105</loc>
+	<lastmod>2016-02-07T15:32:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=106</loc>
+	<lastmod>2016-02-07T15:32:02+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=107</loc>
+	<lastmod>2016-02-07T15:32:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=108</loc>
+	<lastmod>2016-02-07T15:32:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=109</loc>
+	<lastmod>2016-02-07T15:32:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=110</loc>
+	<lastmod>2016-02-07T15:32:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=14</loc>
+	<lastmod>2016-02-07T15:32:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title</loc>
+	<lastmod>2016-02-07T15:32:07+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at</loc>
+	<lastmod>2016-02-07T15:32:08+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author</loc>
+	<lastmod>2016-02-07T15:32:09+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=29</loc>
+	<lastmod>2016-02-07T15:32:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=19</loc>
+	<lastmod>2016-02-07T15:32:16+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=20</loc>
+	<lastmod>2016-02-07T15:32:19+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=21</loc>
+	<lastmod>2016-02-07T15:32:22+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=23</loc>
+	<lastmod>2016-02-07T15:32:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=22</loc>
+	<lastmod>2016-02-07T15:32:28+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=24</loc>
+	<lastmod>2016-02-07T15:32:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=25</loc>
+	<lastmod>2016-02-07T15:32:34+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=26</loc>
+	<lastmod>2016-02-07T15:32:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=27</loc>
+	<lastmod>2016-02-07T15:32:40+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=28</loc>
+	<lastmod>2016-02-07T15:32:44+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=30</loc>
+	<lastmod>2016-02-07T15:32:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=31</loc>
+	<lastmod>2016-02-07T15:32:49+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=32</loc>
+	<lastmod>2016-02-07T15:32:53+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=33</loc>
+	<lastmod>2016-02-07T15:32:56+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=34</loc>
+	<lastmod>2016-02-07T15:32:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=35</loc>
+	<lastmod>2016-02-07T15:33:02+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=36</loc>
+	<lastmod>2016-02-07T15:33:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=37</loc>
+	<lastmod>2016-02-07T15:33:08+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=38</loc>
+	<lastmod>2016-02-07T15:33:11+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=1</loc>
+	<lastmod>2016-02-07T15:33:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=2</loc>
+	<lastmod>2016-02-07T15:33:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=3</loc>
+	<lastmod>2016-02-07T15:33:15+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=4</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=5</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=6</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=7</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=8</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=9</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/preview?page=1</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/preview?page=2</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/preview?page=3</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/video/default/preview?page=4</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/book/default/create</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/book/default/index?sort=name</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/book/default/index?sort=eng_name</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/book/default/index?sort=image</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/book/default/index?sort=download</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/create</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/index?sort=id</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/index?sort=good_id</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/index?sort=name</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/index?sort=email</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/index?sort=content</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/index?sort=created_at</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/view?id=1</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/update?id=1</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/delete?id=1</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/view?id=2</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/update?id=2</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/delete?id=2</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/view?id=3</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/update?id=3</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/review/default/delete?id=3</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=111</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=112</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=113</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=114</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=115</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=116</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=117</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=118</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=119</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=120</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=15</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=121</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=79</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=52</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=53</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=54</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=55</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=56</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=57</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=58</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=59</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=16</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=60</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=61</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=62</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=63</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=64</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=65</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=66</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=67</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=68</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=69</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=17</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=70</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=71</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=72</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=73</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=74</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=75</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=76</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=77</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=78</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/views?id=37</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/index?page=18</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=-title</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=96</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=96</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=96</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=96</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=115</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=115</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=115</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=115</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=159</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=159</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=159</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=159</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=117</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=117</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=117</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=117</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=81</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=81</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=81</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=81</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=118</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=118</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=118</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=118</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=100</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=100</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=100</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=100</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=85</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=85</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=85</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=85</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=77</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=77</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=77</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=77</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=145</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=145</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=145</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=145</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=120</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=120</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=120</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=120</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=1</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=2</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=3</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=4</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=5</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=6</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=7</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=8</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=title&amp;page=9</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=-created_at</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=1</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=2</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=3</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=4</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=5</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=6</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=7</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=8</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=created_at&amp;page=9</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=-author</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=39</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=39</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=39</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=39</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=1</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=2</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=3</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=4</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=5</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=6</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=7</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=8</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?sort=author&amp;page=9</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=1&amp;sort=title</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=1&amp;sort=created_at</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=1&amp;sort=author</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=2&amp;sort=title</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=2&amp;sort=created_at</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=2&amp;sort=author</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=40</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=40</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=40</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=40</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=41</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=41</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=41</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=41</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=42</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=42</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=42</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=42</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=43</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=43</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=43</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=43</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=44</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=44</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=44</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=44</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=45</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=45</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=45</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=45</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=46</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=46</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=46</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=46</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=47</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=47</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=47</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=47</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=48</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=48</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=48</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=48</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=49</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=49</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=49</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=49</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=50</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=50</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=50</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=50</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=51</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=51</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=51</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=51</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=52</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=52</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=52</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=52</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=53</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=53</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=53</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=53</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=54</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=54</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=54</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=54</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=55</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=55</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=55</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=55</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=56</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=56</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=56</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=56</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=57</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=57</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=57</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=57</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=58</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=58</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=58</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=58</loc>
+	<lastmod>2016-02-07T15:33:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=3&amp;sort=title</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=3&amp;sort=created_at</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/show?page=3&amp;sort=author</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=59</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=59</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=59</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=59</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=60</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=60</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=60</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=60</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=61</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=61</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=61</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=61</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=62</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=62</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=62</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=62</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=63</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=63</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=63</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=63</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=64</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=64</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=64</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=64</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=65</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=65</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=65</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=65</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=66</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=66</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=66</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=66</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=67</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=67</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=67</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=67</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=68</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=68</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=68</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=68</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=69</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=69</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=69</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=69</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=70</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=70</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=70</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=70</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=71</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=71</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=71</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=71</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=72</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/view?id=72</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/update?id=72</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/default/delete?id=72</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://kotmonstr.com/blog/update?id=73</loc>
+	<lastmod>2016-02-07T15:33:18+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>

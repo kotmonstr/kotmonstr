@@ -1,48 +1,5 @@
 <?php
-
-$params = array_merge(
-        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
-);
-Yii::setAlias('@frontend_theme', dirname(__DIR__) . '/themes');
-return [
-    'id' => 'app-frontend',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
-    'controllerNamespace' => 'frontend\controllers',
-    'components' => [
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'useFileTransport' => false,
-        ],
-        'assetManager' => [
-            'basePath' => '@webroot/assets',
-            'baseUrl' => '@web/assets'
-        ],
-        'request' => [
-            'baseUrl' => ''
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false
-        ],
-        'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-        ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/default/error',
-        ],
-    ],
-    'modules' => [
+return $arrModules = [
         'admin' => [
             'class' => 'app\modules\admin\Module',
         ],
@@ -109,7 +66,8 @@ return [
         'banner' => [
             'class' => 'app\modules\banner\Module',
         ],
-    ],
-    'params' => $params,
-];
+        'articles' => [
+            'class' => 'app\modules\articles\Module',
+        ],
 
+];

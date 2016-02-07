@@ -48,7 +48,7 @@ class DefaultController extends Controller
 
     public function actionXxx()
     {
-        if (!Yii::$app->user->isGuest && Yii::$app->user->identity->role == 1 ) {
+        if (!Yii::$app->user->isGuest  ) {
             $this->layout = '/blog';
             $model = Xxx::find();
 

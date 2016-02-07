@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\blog\controllers;
+namespace app\modules\articles\controllers;
 
 use common\models\simple_html_dom;
 use yii\web\Controller;

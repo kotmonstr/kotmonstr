@@ -459,7 +459,7 @@ h1.brand span {
 .social-icons {
   float: right;
   display: inline-block;
-  margin: 0px 34px 0 0px;
+  margin: 2px 12px 0 0px;
 }
 .social-icons li {
   float: left;

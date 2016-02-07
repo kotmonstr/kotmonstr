@@ -4,9 +4,7 @@ use yii\helpers\Url;
 use common\models\VideoCategoria;
 use common\models\Author;
 
-$model_author = Author::find()->all();
-$url = Yii::$app->controller->module->id . '/' . Yii::$app->controller->action->id;
-$module = Yii::$app->controller->module->id;
+
 $file_avatar = Yii::getAlias('@frontend').'/web/upload/user/'.Yii::$app->user->id.'/avatar/avatar.jpg';
 //vd($url);
 ?>
@@ -43,75 +41,11 @@ $file_avatar = Yii::getAlias('@frontend').'/web/upload/user/'.Yii::$app->user->i
                         <div class="container">
                             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Меню</a>                                                   
                             <div class="nav-collapse nav-collapse_ " >
-                                <ul class="nav sf-menu">
-                                    <li class="li-first <?php
-                                    if ($url == 'site/index') {
-                                        echo"active";
-                                    }
-                                    ?>"><a href="<?= Url::to('/site/default/index') ?>"><em class="hidden-phone"></em><span class="visible-phone">Home</span></a></li>
-                                    <li class="sub-menu <?php
-                                    if ($url == 'video/show-author') {
-                                        echo"active";
-                                    }
-                                    ?>"><a href="javascript:void(0);">Авторы</a>
-                                        <ul>
-                                            <?php foreach ($model_author as $author): ?>
-                                                <li><a href="<?= Url::to(['/video/show-author', 'id' => $author->id]) ?>"><?= $author->name ?></a></li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu <?php
-                                    if ($url == 'video/view') {
-                                        echo"active";
-                                    }
-                                    ?>"><a href="javascript:void(0);">Видео</a>
-                                        <ul>
-                                            <?php foreach (VideoCategoria::getModel() as $categoria): ?>
-                                                <li><a href="<?= Url::to(['/video/view', 'categoria_id' => $categoria->id]); ?>"><?= $categoria->name ?></a></li>                                         
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu <?php
-                                    if ($url == 'video/tv24' || $url == 'video/tv1' || $url == 'video/5canal') {
-                                        echo"active";
-                                    }
-                                    ?>"><a href="javascript:void(0);">ТВ</a>
-                                        <ul>
-                                            <li><a href="<?= Url::to('/video/tv24') ?>">РОССИЯ 24</a></li>
-                                            <li><a href="<?= Url::to('/video/tv1') ?>">РОССИЯ 1</a></li>
-                                            <li><a href="<?= Url::to('/video/5canal') ?>">5 КАНАЛ'</a></li>
-                                        </ul>
-                                    </li>
 
 
+                                <?= $this->render('@frontend/views/layouts/parts/menu') ?>
 
-<!--                                    <li><a href="--><?//= Url::to('/rss/index') ?><!--">Новости RSS</a></li>-->
-                                    <li class="<?php
-                                    if ($url == 'rss/index') {
-                                        echo"active";
-                                    }
-                                    ?>"><a href="<?= Url::to('/image/preview'); ?>" >Фотографии</a></li>
 
-                                    <li class="<?php
-                                    if ($url == 'blog/index' || $url == 'blog/view') {
-                                        echo"active";
-                                    }
-                                    ?>"><a href="<?= Url::to('/blog/index') ?>">Новости</a></li>
-                                    <li class="<?php
-                                    if ($url == 'music/show') {
-                                        echo"active";
-                                    }
-                                    ?>"><a href="<?= Url::to('/music/show') ?>">Музыка</a></li>
-
-                                    <li><a href="<?= Url::to('/book/views') ?>">Книги</a></li>
-                                    <?php if (!Yii::$app->user->isGuest && Yii::$app->user->id == 1 || !Yii::$app->user->isGuest && Yii::$app->user->id == 2 || !Yii::$app->user->isGuest && Yii::$app->user->id == 3) { ?><li><a href="<?= Url::to('/admin/index') ?>">Админка</a></li><?php } ?>
-                                    <?php if (Yii::$app->user->isGuest) { ?>
-                                        <li><a href="<?= Url::to('/site/signup') ?>">Регистрация</a></li>
-                                        <li><a href="<?= Url::to('/site/login') ?>">Вход</a></li>
-                                    <?php } else { ?>
-                                        <li><a href="<?= Url::to('/site/logout') ?>">Выход</a>
-                                        <?php } ?>
-                                </ul>
                             </div>
                             <ul class="social-icons">
                                 <li><a href="#"><img src="/img/icon-1.png" alt=""></a></li>
