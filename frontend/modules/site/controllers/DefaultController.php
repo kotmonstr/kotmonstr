@@ -108,7 +108,7 @@ class DefaultController extends Controller
 
             try {
                 if ($eauth->authenticate()) {
-                 var_dump($eauth->getIsAuthenticated(), $eauth->getAttributes()); exit;
+                //var_dump($eauth->getIsAuthenticated(), $eauth->getAttributes()); exit;
 
                     $identity = User::findByEAuth($eauth);
                     Yii::$app->getUser()->login($identity);

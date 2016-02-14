@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 use common\models\VideoCategoria;
 use common\models\Author;
-
+use yii\helpers\VarDumper;
 //use frontend\assets\AppAsset;
 
 //$this->registerJsFile('/js/custom/social.js', ['depends' => AppAsset::className()]);
@@ -17,7 +17,11 @@ $file_avatar = Yii::getAlias('@frontend').'/web/upload/user/'.Yii::$app->user->i
 if (Yii::$app->getSession()->hasFlash('error')) {
     echo '<div class="alert alert-danger">'.Yii::$app->getSession()->getFlash('error').'</div>';
 }
+
+$identity = Yii::$app->getUser()->getIdentity();
+
 ?>
+
 <div class="container">
     <div class="row">
         <div class="span12">
@@ -32,12 +36,27 @@ if (Yii::$app->getSession()->hasFlash('error')) {
                                                 this.value = ''"  >
                         <a href="javascript:void(0);" onClick="document.getElementById('search-form').submit()"></a>
                     </form>
+
+
+
+
                     <?php if (file_exists($file_avatar)) { ?>
-                        <a href="<?= Url::to('/profile/form'); ?>"><div id="custom-avatar" class="contacts" style=" background: url('/upload/user/<?= Yii::$app->user->id ?>/avatar/avatar.jpg') no-repeat;background-size:100%">
+                        <a href="<?= Url::to('/profile/form'); ?>">
+                            <div id="custom-avatar" class="contacts" style=" background: url('/upload/user/<?= Yii::$app->user->id ?>/avatar/avatar.jpg') no-repeat;background-size:100%"></div></a>
                     <?php }else{?>
-                        <a href="<?= Url::to('/profile/form'); ?>"><div id="avatar" class="contacts" >       
+                                <?php  if (isset($identity->profile)) { ?>
+                                    <div id="custom-avatar" class="contacts" style="background: url(<?= $identity->profile['photo_big']?>) no-repeat;background-size:100%"></div>
+                               <?php }else{ ?>
+                                     <a href="<?= Url::to('/profile/form'); ?>"><div id="avatar" class="contacts" ></div></a>
+                                    <?php  } ?>
+
+
                     <?php } ?>        
-                    </div></a>
+
+
+
+
+
                     <span class="contacts"><?php
                         if (!Yii::$app->user->isGuest) {
                             echo Yii::$app->user->identity->username;

@@ -36,6 +36,7 @@ class User extends ActiveRecord implements IdentityInterface {
 
     public $IN;
     public $profile;
+    public $authKey;
 
     /**
      * @inheritdoc
@@ -69,7 +70,13 @@ class User extends ActiveRecord implements IdentityInterface {
      * @inheritdoc
      */
     public static function findIdentity($id) {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        if (Yii::$app->getSession()->has('user-'.$id)) {
+            return new self(Yii::$app->getSession()->get('user-'.$id));
+        }
+        else {
+            return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        }
+
     }
 
     /**
@@ -209,14 +216,14 @@ class User extends ActiveRecord implements IdentityInterface {
      */
 
 
-    public static function findIdentity2($id) {
-        if (Yii::$app->getSession()->has('user-'.$id)) {
-            return new self(Yii::$app->getSession()->get('user-'.$id));
-        }
-        else {
-            return isset(self::$users[$id]) ? new self(self::$users[$id]) : null;
-        }
-    }
+//    public static function findIdentity($id) {
+//        if (Yii::$app->getSession()->has('user-'.$id)) {
+//            return new self(Yii::$app->getSession()->get('user-'.$id));
+//        }
+//        else {
+//            return isset(self::$users[$id]) ? new self(self::$users[$id]) : null;
+//        }
+//    }
 
     /**
      * @param \nodge\eauth\ServiceBase $service
