@@ -44,10 +44,10 @@ class DefaultController extends Controller {
         $modelEmail = Email::find()->all();
         //vd($modelEmail);
         foreach($modelEmail as $email){
-            Yii::$app->mailer->compose(['html'=>'@common/mail/letter'],[ 'name' => 'Sir.Kotmonstr','imageFileName' => Yii::getAlias('@frontend').'/web/img/1.jpg'])
-                ->setFrom('kotmonstr@local.com')
+            Yii::$app->mailer->compose(['html'=>'@common/mail/letter'],[ 'name' => 'Sir.Kotmonstr','imageFileName' => 'https://lh3.ggpht.com/wml38uiBjuXJqWbMnA20hubEXTrdavS-MJcDoeV7hCYnL9-m2A9KmAfhVtgsp8CZsEA=w300'])
+                ->setFrom('admin@kotmonstr.com')
                 ->setTo($email->email)
-                ->setSubject('Firs test email by Kostya')
+                ->setSubject('Firs test email by Admin')
                 //->setTextBody('Plain text content')
                 //->setHtmlBody('<b>Kotmonstr.ru</b>')
                 ->send();

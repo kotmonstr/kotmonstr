@@ -7,6 +7,7 @@ use yii\web\Controller;
 use Yii;
 use common\models\Book;
 use common\models\BookSearch;
+use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 use yii\helpers\FileHelper;
 use yii\imagine\Image;

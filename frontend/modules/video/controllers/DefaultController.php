@@ -27,7 +27,6 @@ class DefaultController extends Controller
                 'rules' => [
                     [
                         'actions' => ['index',
-
                             'create',
                             'update',
                             'delete',
@@ -36,11 +35,6 @@ class DefaultController extends Controller
                             'add',
                             'send-youtube-code',
                             'show-author',
-                            'tv24',
-                            'tv1',
-                            'tvc',
-                            '5canal'
-
                         ],
                         'allow' => true,
                         'roles' => ['@'],
@@ -61,7 +55,7 @@ class DefaultController extends Controller
 
                         ],
                         'allow' => true,
-                        'roles' => ['?'],
+                        'roles' => ['?','@'],
                     ],
                 ],
             ],

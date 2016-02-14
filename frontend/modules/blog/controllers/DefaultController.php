@@ -31,12 +31,12 @@ class DefaultController extends Controller {
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start'],
+                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start','show'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => ['admin'],
                     ],
                     [
-                        'actions' => ['index','view','show','views'],
+                        'actions' => ['index','view','views'],
                         'allow' => true,
                         'roles' => ['@','?'],
                     ],

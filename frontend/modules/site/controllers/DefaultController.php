@@ -11,6 +11,7 @@ use yii\filters\AccessControl;
 use yii\widgets\ActiveForm;
 use yii\web\Response;
 use common\models\ImageSlider;
+use common\models\User;
 
 class DefaultController extends Controller
 {
@@ -21,6 +22,11 @@ class DefaultController extends Controller
     public function behaviors()
     {
         return [
+            'eauth' => [
+                // required to disable csrf validation on OpenID requests
+                'class' => \nodge\eauth\openid\ControllerBehavior::className(),
+                'only' => ['login'],
+            ],
             'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'signup'],
@@ -92,6 +98,40 @@ class DefaultController extends Controller
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
+
+        $serviceName = Yii::$app->getRequest()->getQueryParam('service');
+        if (isset($serviceName)) {
+            /** @var $eauth \nodge\eauth\ServiceBase */
+            $eauth = Yii::$app->get('eauth')->getIdentity($serviceName);
+            $eauth->setRedirectUrl(Yii::$app->getUser()->getReturnUrl());
+            $eauth->setCancelUrl(Yii::$app->getUrlManager()->createAbsoluteUrl('site/login'));
+
+            try {
+                if ($eauth->authenticate()) {
+                 var_dump($eauth->getIsAuthenticated(), $eauth->getAttributes()); exit;
+
+                    $identity = User::findByEAuth($eauth);
+                    Yii::$app->getUser()->login($identity);
+
+                    // special redirect with closing popup window
+                    $eauth->redirect();
+                }
+                else {
+                    // close popup window and redirect to cancelUrl
+                    $eauth->cancel();
+                }
+            }
+            catch (\nodge\eauth\ErrorException $e) {
+                // save error to show it later
+                Yii::$app->getSession()->setFlash('error', 'EAuthException: '.$e->getMessage());
+
+                // close popup window and redirect to cancelUrl
+//              $eauth->cancel();
+                $eauth->redirect($eauth->getCancelUrl());
+            }
+        }
+
+
         $model = new LoginForm;
         if (Yii::$app->request->isAjax) {
             Yii::$app->response->format = Response::FORMAT_JSON;
@@ -197,6 +237,13 @@ class DefaultController extends Controller
             Yii::$app->getSession()->setFlash('error', 'Ошибка при регистрации');
             return $this->redirect('/shop/index');
 
+        }
+    }
+
+    public function actionSocialRegister(){
+        if (Yii::$app->request->isAjax) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+                  vd('it is ok');
         }
     }
 
