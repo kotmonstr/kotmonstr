@@ -25,8 +25,9 @@ use common\models\OrderItems;
 use yii\web\Session;
 use common\models\Compare;
 use frontend\models\SignupForm;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
 
     public function behaviors()

@@ -12,9 +12,10 @@ use yii\data\Pagination;
 use common\models\Author;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
+use app\modules\core\controllers\CoreController;
 
 
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
 
     public function behaviors()

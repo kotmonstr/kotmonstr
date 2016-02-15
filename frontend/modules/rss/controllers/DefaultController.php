@@ -10,8 +10,9 @@ use yii\filters\VerbFilter;
 use common\models\EmailSearch;
 use yii\filters\AccessControl;
 use yii\mail\BaseMailer;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
 
     public function behaviors() {
         return [

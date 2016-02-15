@@ -9,10 +9,11 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use app\modules\core\controllers\CoreController;
 /**
  * DefaultController implements the CRUD actions for Author model.
  */
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
     public function behaviors()
     {

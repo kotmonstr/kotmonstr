@@ -8,11 +8,12 @@ use common\models\ReqvizitSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\modules\core\controllers\CoreController;
 
 /**
  * ReqvizitController implements the CRUD actions for Reqvizit model.
  */
-class ReqvizitController extends Controller
+class ReqvizitController extends CoreController
 {
     public function behaviors()
     {

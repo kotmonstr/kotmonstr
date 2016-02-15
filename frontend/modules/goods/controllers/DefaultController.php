@@ -12,12 +12,13 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\web\UploadedFile;
 use yii\helpers\FileHelper;
+use app\modules\core\controllers\CoreController;
 
 
 /**
  * DefaultController implements the CRUD actions for Shop model.
  */
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
     public $layout = '/adminka';
 

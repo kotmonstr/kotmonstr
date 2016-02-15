@@ -15,8 +15,9 @@ use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use common\models\ImportNews;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
      public function behaviors()
     {
         return [

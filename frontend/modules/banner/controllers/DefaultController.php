@@ -13,8 +13,9 @@ use common\models\Photo;
 use yii\helpers\FileHelper;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
     
         public function behaviors() {
         return [

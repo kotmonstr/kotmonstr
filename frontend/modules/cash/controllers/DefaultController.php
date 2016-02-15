@@ -8,8 +8,9 @@ use yii\web\Controller;
 use yii\helpers\FileHelper;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
      public function behaviors()
     {
         return [

@@ -8,12 +8,13 @@ use Yii;
 
 
 
+
 class CoreController extends Controller
 {
     public function init()
     {
         Online::SetMyDataAsVisitor();
-        echo "CORE";
+        //echo "CORE";
 
 
         parent::init();

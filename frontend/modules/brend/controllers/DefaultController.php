@@ -7,9 +7,10 @@ use common\models\BrendSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\modules\core\controllers\CoreController;
 
 
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
 
     public $layout='/adminka';

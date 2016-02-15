@@ -11,8 +11,9 @@ use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 use yii\helpers\FileHelper;
 use yii\imagine\Image;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
 
     public $layout = '/blog';
 

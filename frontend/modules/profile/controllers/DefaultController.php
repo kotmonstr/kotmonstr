@@ -8,11 +8,12 @@ use common\models\Profile;
 use common\models\User;
 use yii\helpers\FileHelper;
 use yii\web\UploadedFile;
+use app\modules\core\controllers\CoreController;
 
 /**
  * DefaultController implements the CRUD actions for Image model.
  */
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
 
     public $layout = '/blog';
 

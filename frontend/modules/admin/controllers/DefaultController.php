@@ -4,8 +4,9 @@ namespace app\modules\admin\controllers;
 
 use yii\web\Controller;
 use yii\filters\AccessControl;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
 
     /**
      * @inheritdoc

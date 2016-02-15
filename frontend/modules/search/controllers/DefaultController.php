@@ -8,9 +8,10 @@ use Yii;
 use common\models\Xxx;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
+use app\modules\core\controllers\CoreController;
 
 
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
     public function behaviors()
     {

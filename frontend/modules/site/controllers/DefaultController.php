@@ -12,8 +12,9 @@ use yii\widgets\ActiveForm;
 use yii\web\Response;
 use common\models\ImageSlider;
 use common\models\User;
+use app\modules\core\controllers\CoreController;
 
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
 
     /**

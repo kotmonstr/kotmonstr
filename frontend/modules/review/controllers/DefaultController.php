@@ -8,11 +8,12 @@ use common\models\ReviewSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\modules\core\controllers\CoreController;
 
 /**
  * DefaultController implements the CRUD actions for Review model.
  */
-class DefaultController extends Controller
+class DefaultController extends CoreController
 {
     public $layout='/adminka';
     public function behaviors()
