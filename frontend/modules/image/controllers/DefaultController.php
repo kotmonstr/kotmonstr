@@ -2,6 +2,7 @@
 
 namespace app\modules\image\controllers;
 
+use app\modules\core\controllers\CoreController;
 use Yii;
 use common\models\ImageSlider;
 use common\models\ImageSliderSearch;
@@ -14,7 +15,7 @@ use yii\helpers\FileHelper;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
-class DefaultController extends Controller {
+class DefaultController extends CoreController {
     
         public function behaviors() {
         return [

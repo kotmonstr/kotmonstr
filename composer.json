@@ -21,7 +21,8 @@
         "2amigos/yii2-file-upload-widget" : "*",
         "mdmsoft/yii2-upload-file": "*",
         "madcoda/php-youtube-api": "*",
-        "karpoff/yii2-crop-image-upload": "*"
+        "karpoff/yii2-crop-image-upload": "*",
+        "kartik-v/yii2-ipinfo": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
