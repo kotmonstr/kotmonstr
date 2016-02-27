@@ -53,7 +53,7 @@ $module = Yii::$app->controller->module->id;
 
     <li class="<?= $url == 'image/preview' ? 'active' : ''; ?>"><a href="<?= Url::to('/image/preview') ?>">Фотографии</a></li>
     <li class="<?= $url == 'blog/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/blog/index') ?>">Новости</a></li>
-    <li class="<?= $url == 'articles/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/articles/index') ?>">Статьи</a></li>
+    <li class="<?= $url == 'articles/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/article/index') ?>">Статьи</a></li>
     <li class="<?= $url == 'music/show' ? 'active' : ''; ?>"><a href="<?= Url::to('/music/show') ?>">Музыка</a></li>
     <li class="<?= $url == 'book/views' ? 'active' : ''; ?>"> <a href="<?= Url::to('/book/views') ?>">Книги</a></li>
 

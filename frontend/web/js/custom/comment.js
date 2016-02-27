@@ -9,8 +9,8 @@ var Comment = {
         url: '/comment/add',
         type: 'POST',
         dataType: 'json',
-        cache: false,
-        asinc: false,
+        //cache: false,
+        //asinc: false,
         data: {
             _csrf: csrf_token,
             comment_id: comment_id,
@@ -18,15 +18,16 @@ var Comment = {
         },
         success: function (data) {
             //alert(data.html);
-         $('.row-fluid:last').after(data.html);
-         
+         $('#comment').append(data.html);
+
            $('.row-fluid:last').animate({
-       
+
         opacity: 1
-    
+
 
       }, 3500 );
-         
+            $('#comment-textarea').val('');
+
         }
     });
     }

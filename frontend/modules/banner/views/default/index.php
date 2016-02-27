@@ -2,9 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use frontend\assets\AppAsset;
+use frontend\assets\AdminAsset;
 
-$this->registerJsFile('/js/custom/switch-banner.js', ['depends' => AppAsset::className()]);
+$this->registerJsFile('/js/custom/switch-banner.js', ['depends' => AdminAsset::className()]);
 
 $this->title = 'Баннеры';
 $this->params['breadcrumbs'][] = $this->title;

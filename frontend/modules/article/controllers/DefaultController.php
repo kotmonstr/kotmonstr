@@ -1,12 +1,11 @@
 <?php
 
-namespace app\modules\articles\controllers;
+namespace app\modules\article\controllers;
 
 use common\models\simple_html_dom;
 use yii\web\Controller;
-use common\models\Blog;
+use common\models\Article;
 use Yii;
-use common\models\BlogSearch;
 use yii\data\Pagination;
 use yii\helpers\FileHelper;
 use yii\web\UploadedFile;
@@ -16,6 +15,7 @@ use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use common\models\ImportNews;
 use app\modules\core\controllers\CoreController;
+use common\models\ArticleSearch;
 
 class DefaultController extends CoreController {
      public function behaviors()
@@ -49,10 +49,10 @@ class DefaultController extends CoreController {
     public $layout = '/blog';
 
     public function actionIndex() {
-        //$this->layout = '/blog';
+        //$this->layout = '/Article';
         // Вывести список статей
-
-        $query = Blog::find();
+//vd(1);
+        $query = Article::find();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => 10]);
         $models = $query->offset($pages->offset)
@@ -60,19 +60,19 @@ class DefaultController extends CoreController {
                 ->limit($pages->limit)
                 ->all();
 
-        $modelLastBlog = Blog::find()
+        $modelLastArticle = Article::find()
             ->orderBy('id DESC')
             ->limit(5)
             ->all();
 
-        $modeMostWatched = Blog::find()
+        $modeMostWatched = Article::find()
             ->orderBy('view DESC')
             ->limit(5)
             ->all();
 
 
         return $this->render('index', [ 'model' => $models,
-                            'modelLastBlog'=> $modelLastBlog,
+                            'modelLastArticle'=> $modelLastArticle,
                             'modeMostWatched'=> $modeMostWatched,
                             'pages' => $pages]);
     }
@@ -80,16 +80,17 @@ class DefaultController extends CoreController {
     public function actionView() {
         $this->layout = '/adminka';
         $id = Yii::$app->request->get('id');
-        $blog = $this->findModel($id);
-        //$blog = Blog::find()->where(['id' => $id])->one();
-        return $this->render('view', ['model' => $blog]);
+        $Article = $this->findModel($id);
+        //$Article = Article::find()->where(['id' => $id])->one();
+        return $this->render('view', ['model' => $Article]);
     }
 
     public function actionShow() {
-        $this->layout = '/adminka';
-        $searchModel = new BlogSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        $this->layout = '/adminka';
+        $searchModel = new ArticleSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //vd(1);
         return $this->render('show', [
                     'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
@@ -98,11 +99,17 @@ class DefaultController extends CoreController {
 
     public function actionCreate() {
         $this->layout = '/adminka';
-        $model = new Blog();
+        $model = new Article();
+//        if ($model->load(Yii::$app->request->post())){
+//        $model->validate();
+//        vd($model->getErrors());
+//        }
+
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+
             return $this->render('create', [
                         'model' => $model,
             ]);
@@ -125,11 +132,11 @@ class DefaultController extends CoreController {
     public function actionDelete($id) {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['show']);
     }
 
     protected function findModel($id) {
-        if (($model = Blog::findOne($id)) !== null) {
+        if (($model = Article::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
@@ -137,28 +144,29 @@ class DefaultController extends CoreController {
     }
 
     public function actionCreateImage() {
-        FileHelper::createDirectory(Yii::getAlias('@frontend') . '/web/upload/blog');
-        $model = new Blog();
+        FileHelper::createDirectory(Yii::getAlias('@frontend') . '/web/upload/Article');
+        $model = new Article();
         $name = date("dmYHis", time());
         if (Yii::$app->request->isPost) {
             $model->file = UploadedFile::getInstance($model, 'file');
-            $model->file->saveAs('upload/blog/' . $name . '.' . $model->file->extension);
+            $model->file->saveAs('upload/Article/' . $name . '.' . $model->file->extension);
             $full_name = $name . '.' . $model->file->extension;
-            return '/upload/blog/' . $full_name;
+            return '/upload/Article/' . $full_name;
         }
     }
 
-    public function actionViews($id) {
+    public function actionViews() {
+
         $this->layout = '/blog';
 
 
         $id = Yii::$app->request->get('id');
-        $blog = Blog::find()->where(['id' => $id])->one();
-        $viwsQuantity =(int)$blog->view;
-        $blog->view = $viwsQuantity +1;
-        $blog->updateAttributes(['view']);
+        $Article = Article::find()->where(['id' => $id])->one();
+        $viwsQuantity =(int)$Article->view;
+        $Article->view = $viwsQuantity +1;
+        $Article->updateAttributes(['view']);
         $coment_model = Comment::find()->where(['blog_id'=>$id])->all();
-        return $this->render('views', ['model' => $blog,'coment_model'=> $coment_model]);
+        return $this->render('views', ['model' => $Article,'coment_model'=> $coment_model]);
     }
 
     public function actionAddNewsFromParser(){
@@ -170,9 +178,9 @@ class DefaultController extends CoreController {
         if($ImportModel) {
             foreach ($obj as $row) {
 
-                $duble = Blog::getDublicateByTitle($row->title);
+                $duble = Article::getDublicateByTitle($row->title);
                 if (!$duble) {
-                    $model = new Blog();
+                    $model = new Article();
                     $model->title = $row->title;
                     $model->image = $row->image ? $row->image : '';
                     $model->content = $row->content;
@@ -248,17 +256,17 @@ class DefaultController extends CoreController {
 //        ImportNews::deleteAll();
 //        foreach($arrResult2 as $key => $row){
 //
-//            $modelBlog = new ImportNews();
-//            $modelBlog->title = $row['title'];
-//            $modelBlog->content = $row['content'];
-//            $modelBlog->created_at = time();
-//            $modelBlog->updated_at = time();
-//            $modelBlog->author = Yii::$app->user->id;
-//            $modelBlog->image = $row['img'];
+//            $modelArticle = new ImportNews();
+//            $modelArticle->title = $row['title'];
+//            $modelArticle->content = $row['content'];
+//            $modelArticle->created_at = time();
+//            $modelArticle->updated_at = time();
+//            $modelArticle->author = Yii::$app->user->id;
+//            $modelArticle->image = $row['img'];
 //
 //            //$dublicate = ImportNews::getDublicateByTitle($row['title']);
 //            //if(!$dublicate){
-//                $modelBlog->save();
+//                $modelArticle->save();
 //            //}
 //
 //

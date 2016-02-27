@@ -93,15 +93,15 @@ class Online extends \yii\db\ActiveRecord
         $identity = Yii::$app->getUser()->getIdentity();
 
         if (!Yii::$app->user->isGuest) {
-            $model = self::find()->where([user_id => Yii::$app->user->id])->one();
+            $model = self::find()->where(['user_id' => Yii::$app->user->id])->one();
             if($model)return $model;
         }
         elseif (Yii::$app->user->isGuest) {
-            $model = self::find()->where([user_ip => Yii::$app->request->userIP])->one();
+            $model = self::find()->where(['user_ip' => Yii::$app->request->userIP])->one();
            if($model)return $model;
         }
         elseif (isset($identity->profile)) {
-            $model = self::find()->where([social_name => $identity->profile['name']])->one();
+            $model = self::find()->where(['social_name' => $identity->profile['name']])->one();
             if($model)return $model;
         }else{
             return false;

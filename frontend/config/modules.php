@@ -69,8 +69,8 @@ return $arrModules = [
     'banner' => [
         'class' => 'app\modules\banner\Module',
     ],
-    'articles' => [
-        'class' => 'app\modules\articles\Module',
+    'article' => [
+        'class' => 'app\modules\article\Module',
     ],
 
 ];

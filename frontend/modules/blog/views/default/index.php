@@ -26,8 +26,8 @@ Yii::$app->formatter->locale = 'ru-RU';
                                     <tr>
                                         <td class="left-img">
                                             <div class="img"><a
-                                                    href="<?= Url::to(['/blog/default/views','id'=> $lastBlog->id]); ?>"><img
-                                                        alt="" src="<?=  ($lastBlog->image) ? $lastBlog->image :  "/img-custom/default.jpg"; ?>"></a></div>
+                                                    href="<?= Url::to(['/blog/default/views','id'=> $lastBlog->id]); ?>">
+                                                    <img alt="" width="50px" src="<?=  ($lastBlog->image) ? $lastBlog->image :  "/img-custom/default.jpg"; ?> "></a></div>
                                         </td>
                                         <td class="right-text">
                                             <div class="title-mini"><a
@@ -85,13 +85,13 @@ Yii::$app->formatter->locale = 'ru-RU';
                                                 alt="" src="<?= $image ?>"></a></div>
                                     <div class="txt">
                                         <div class="title"><a
-                                                href="<?= Url::to(['/blog/default/views', 'id' => $blog->id]); ?>"><?= StringHelper::truncate($blog->title, 70) ?></a>
+                                                href="<?= Url::to(['/blog/default/views', 'id' => $blog->id]); ?>"><?= StringHelper::truncate($blog->title, 80) ?></a>
                                         </div>
                                         <div class="partition">
 
                                         </div>
                                         <div class="text">
-                                            <h5><?= strip_tags(StringHelper::truncate($blog->content, 700)); ?></h5>
+                                            <h5><?= strip_tags(StringHelper::truncate($blog->content, 185)); ?></h5>
                                         </div>
                                         <div class="bottom">
                                             <div class="fleft">
@@ -129,8 +129,14 @@ Yii::$app->formatter->locale = 'ru-RU';
             <?=
             LinkPager::widget([
                 'pagination' => $pages,
+                'maxButtonCount'=>5,
+
+
             ]);
             ?>
+            <ul class="pagination">
+            <li class="last"><a href="/blog/default/index?page=<?= ceil ($pages->totalCount /$pageSize) ?>" data-page="<?= ceil ($pages->totalCount/$pageSize) ?>"><?= '...' . ceil ($pages->totalCount/$pageSize); ?></a></li>
+</ul>
         </center>
     </div>
 </div>

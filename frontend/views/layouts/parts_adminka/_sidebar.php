@@ -56,6 +56,13 @@ $countNewNews = ImportNews::getFreshNews();
             echo "active";
         } ?>">
             <a href="<?= Url::to('/blog/show') ?>">
+                <i class="fa"></i><span class="link-title">&nbsp;Новости</span>
+            </a>
+        </li>
+        <li class="<?php if ($path == 'article/show') {
+            echo "active";
+        } ?>">
+            <a href="<?= Url::to('/article/show') ?>">
                 <i class="fa"></i><span class="link-title">&nbsp;Cтатьи</span>
             </a>
         </li>

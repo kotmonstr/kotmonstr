@@ -2,9 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use frontend\assets\AppAsset;
+use frontend\assets\AdminAsset;
 
-$this->registerJsFile('/js/custom/switch-image.js', ['depends' => AppAsset::className()]);
+$this->registerJsFile('/js/custom/switch-image.js', ['depends' => AdminAsset::className()]);
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ImageSearch */

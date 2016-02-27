@@ -1,12 +1,10 @@
 <?php
 
 use yii\helpers\Html;
-use frontend\assets\AppAsset;
+use frontend\assets\AdminAsset;
 use yii\helpers\Url;
-/* @var $this \yii\web\View */
-/* @var $content string */
 
-AppAsset::register($this);
+AdminAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

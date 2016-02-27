@@ -8,7 +8,7 @@ Yii::$app->formatter->locale = 'ru-RU';
 /* @var $searchModel common\models\BlogSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Новости';
+$this->title = 'Статьи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div id="content">
@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
                 <p>
-                    <?= Html::a('Создать новость', ['create'], ['class' => 'btn btn-success']) ?>
+                    <?= Html::a('Создать статью', ['create'], ['class' => 'btn btn-success']) ?>
                 </p>
 
                 <?=
@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'attribute' => 'author',
                             //'format' => 'html',
                             'value' => function($data){
-                                return $data->user->username;
+                               // return $data->user->username;
                             }
                         ],
                         // 'updated_at',

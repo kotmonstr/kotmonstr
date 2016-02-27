@@ -9,7 +9,7 @@ Yii::$app->formatter->locale = 'ru-RU';
 ?>
 
 
-<center><h3>Новости</h3></center>
+<center><h3>Статьи</h3></center>
 <div class="row">
     <div class="container">
 
@@ -17,21 +17,21 @@ Yii::$app->formatter->locale = 'ru-RU';
             <tr>
                 <td class="td-left" valign="top">
 
-                    <?php if($modelLastBlog): ?>
+                    <?php if($modelLastArticle): ?>
                     <div class="div-left-news pos">
                         <div class="title">
                             Последние:
                             <table style="margin-top: 10px">
-                                <?php foreach ($modelLastBlog as $lastBlog): ?>
+                                <?php foreach ($modelLastArticle as $lastBlog): ?>
                                     <tr>
                                         <td class="left-img">
                                             <div class="img"><a
-                                                    href="<?= Url::to(['/blog/default/views','id'=> $lastBlog->id]); ?>"><img
+                                                    href="<?= Url::to(['/article/default/views','id'=> $lastBlog->id]); ?>"><img
                                                         alt="" src="<?=  ($lastBlog->image) ? $lastBlog->image :  "/img-custom/default.jpg"; ?>"></a></div>
                                         </td>
                                         <td class="right-text">
                                             <div class="title-mini"><a
-                                                    href="<?= Url::to(['/blog/default/views','id'=> $lastBlog->id]); ?>"><?= StringHelper::truncate($lastBlog->title, 27) ?></a>
+                                                    href="<?= Url::to(['/article/default/views','id'=> $lastBlog->id]); ?>"><?= StringHelper::truncate($lastBlog->title, 27) ?></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -49,12 +49,12 @@ Yii::$app->formatter->locale = 'ru-RU';
                                     <tr>
                                         <td class="left-img">
                                             <div class="img"><a
-                                                    href="<?= Url::to(['/blog/default/views','id'=> $MostBlog->id]); ?>"><img
+                                                    href="<?= Url::to(['/article/default/views','id'=> $MostBlog->id]); ?>"><img
                                                         alt="" src="<?=  ($MostBlog->image) ? $MostBlog->image :  "/img-custom/default.jpg"; ?>"></a></div>
                                         </td>
                                         <td class="right-text">
                                             <div class="title-mini"><a
-                                                    href="<?= Url::to(['/blog/default/views','id'=> $MostBlog->id]); ?>"><?= StringHelper::truncate($MostBlog->title, 27) ?></a>
+                                                    href="<?= Url::to(['/article/default/views','id'=> $MostBlog->id]); ?>"><?= StringHelper::truncate($MostBlog->title, 27) ?></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -81,11 +81,11 @@ Yii::$app->formatter->locale = 'ru-RU';
                                 <div class="hdash"></div>
                                 <div class="preview_post">
                                     <div class="img"><a
-                                            href="<?= Url::to(['/blog/default/views', 'id' => $blog->id]); ?>"><img
+                                            href="<?= Url::to(['/article/default/views', 'id' => $blog->id]); ?>"><img
                                                 alt="" src="<?= $image ?>"></a></div>
                                     <div class="txt">
                                         <div class="title"><a
-                                                href="<?= Url::to(['/blog/default/views', 'id' => $blog->id]); ?>"><?= StringHelper::truncate($blog->title, 70) ?></a>
+                                                href="<?= Url::to(['/article/default/views', 'id' => $blog->id]); ?>"><?= StringHelper::truncate($blog->title, 70) ?></a>
                                         </div>
                                         <div class="partition">
 

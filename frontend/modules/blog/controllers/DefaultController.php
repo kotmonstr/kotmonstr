@@ -2,7 +2,7 @@
 
 namespace app\modules\blog\controllers;
 
-use common\models\simple_html_dom;
+
 use yii\web\Controller;
 use common\models\Blog;
 use Yii;
@@ -16,9 +16,12 @@ use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use common\models\ImportNews;
 use app\modules\core\controllers\CoreController;
+use keltstr\simplehtmldom\SimpleHTMLDom as SHD;
+use vova07\imperavi\actions\GetAction;
+use yii\web\Response;
 
 class DefaultController extends CoreController {
-     public function behaviors()
+    public function behaviors()
     {
         return [
             'verbs' => [
@@ -27,12 +30,12 @@ class DefaultController extends CoreController {
                     'delete' => ['post'],
                 ],
             ],
-             'access' => [
+            'access' => [
                 'class' => AccessControl::className(),
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start','show'],
+                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start','show','image-upload','images-get','upload'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
@@ -46,19 +49,37 @@ class DefaultController extends CoreController {
         ];
     }
 
+    public function actions()
+    {
+        return [
+            'image-upload' => [
+                'class' => 'vova07\imperavi\actions\UploadAction',
+                'url' => '/frontend/web/upload/imp/', // URL адрес папки куда будут загружатся изображения.
+                //'path' => Yii::getAlias('@frontend') . '/web/upload/imp' // Или абсолютный путь к папке куда будут загружатся изображения.
+            ],
+            'images-get' => [
+                'class' => 'vova07\imperavi\actions\GetAction',
+                'url' => '/frontend/web/upload/imp/', // URL адрес папки куда будут загружатся изображения.
+                //'path' => Yii::getAlias('@frontend') . '/web/upload/imp', // Или абсолютный путь к папке куда будут загружатся изображения.
+                'type' => GetAction::TYPE_IMAGES,
+            ]
+        ];
+    }
+
     public $layout = '/blog';
 
     public function actionIndex() {
         //$this->layout = '/blog';
         // Вывести список статей
 
+        $pageSize =10;
         $query = Blog::find();
         $countQuery = clone $query;
-        $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => 10]);
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pageSize]);
         $models = $query->offset($pages->offset)
-                ->orderBy('created_at DESC')
-                ->limit($pages->limit)
-                ->all();
+            ->orderBy('created_at DESC')
+            ->limit($pages->limit)
+            ->all();
 
         $modelLastBlog = Blog::find()
             ->orderBy('id DESC')
@@ -72,9 +93,11 @@ class DefaultController extends CoreController {
 
 
         return $this->render('index', [ 'model' => $models,
-                            'modelLastBlog'=> $modelLastBlog,
-                            'modeMostWatched'=> $modeMostWatched,
-                            'pages' => $pages]);
+            'modelLastBlog'=> $modelLastBlog,
+            'modeMostWatched'=> $modeMostWatched,
+            'pages' => $pages,
+            'pageSize'=> $pageSize
+        ]);
     }
 
     public function actionView() {
@@ -91,33 +114,55 @@ class DefaultController extends CoreController {
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('show', [
-                    'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
-    public function actionCreate() {
+    public function actionCreate()
+    {
         $this->layout = '/adminka';
         $model = new Blog();
+        $time= time();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+        if ($model->load(Yii::$app->request->post())) {
+
+            if (UploadedFile::getInstance($model, 'file')) {
+                $uploaddir = Yii::getAlias('@frontend') . '/web/upload/upload_news/';
+                FileHelper::createDirectory($uploaddir);
+                $file = \yii\web\UploadedFile::getInstance($model, 'file');
+                $file->saveAs($uploaddir . $time. '.' . $file->extension);
+                $model->image = $time. '.' . $file->extension;
+            }
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
-                        'model' => $model,
+                'model' => $model,
             ]);
         }
     }
 
-    public function actionUpdate($id) {
+    public function actionUpdate($id)
+    {
         $this->layout = '/adminka';
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (\yii\web\UploadedFile::getInstance($model, 'file') != '') {
+            $time= time();
+            $uploaddir = Yii::getAlias('@frontend') . '/web/upload/upload_news/';
+            FileHelper::createDirectory($uploaddir);
+            $file = \yii\web\UploadedFile::getInstance($model, 'file');
+            $file->saveAs($uploaddir . $time . '.' . $file->extension);
+            $model->image = $time . '.' . $file->extension;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
+        } elseif ($model->load(Yii::$app->request->post())) {
+            $model->save();
+            return $this->redirect(['index', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                        'model' => $model,
+                'model' => $model,
             ]);
         }
     }
@@ -125,7 +170,7 @@ class DefaultController extends CoreController {
     public function actionDelete($id) {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['show']);
     }
 
     protected function findModel($id) {
@@ -176,9 +221,11 @@ class DefaultController extends CoreController {
                     $model->title = $row->title;
                     $model->image = $row->image ? $row->image : '';
                     $model->content = $row->content;
-                    $model->created_at = $row->created_at;
-                    $model->updated_at = $row->updated_at;
-                    $model->author = $row->author;
+                    //$model->created_at = $row->created_at;
+                    $model->updated_at = time();
+                    $model->author = 1;
+                    //$model->validate();
+                   // vd($model->getErrors());
                     $model->save();
                 } else {
                     //echo "It is Dublicate", PHP_EOL;
@@ -191,6 +238,10 @@ class DefaultController extends CoreController {
 
     public function actionParserStart(){
 
+        $file = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
+        if(file_exists($file)){
+            unlink($file);
+        }
 
         //SET SESSION wait_timeout=600000;
         ini_set('max_execution_time', 60000);
@@ -199,23 +250,19 @@ class DefaultController extends CoreController {
         ini_set( 'default_charset', 'UTF-8' );
         //header('Content-Type: text/html; charset=UTF-8');
 
-
         $arrResult = [];
         $arrResult2 = [];
-        $html = new simple_html_dom();
-        $html->load_file('http://politrussia.com/news/');
+        $html = SHD::file_get_html('http://politrussia.com/news/');
 
         // Find all links
         foreach ($html->find('a.overlink') as $element) {
             //echo $element->href. '<br>';
             $arrResult[] = $element->href;
         }
-        //vd($arrResult);
-
 
         $i = 0;
         foreach ($arrResult as $key => $link) {
-            $html->load_file('http://politrussia.com' . $link);
+            $html = SHD::file_get_html('http://politrussia.com' . $link);
             $i++;
             $content = $html->find('div[class="news_text"]', 0)->plaintext;
             $title = $html->find('h1[itemprop="name"]', 0)->plaintext;
@@ -224,13 +271,14 @@ class DefaultController extends CoreController {
                 $img2 = 'http://politrussia.com' . $element->src;
             }
 
-            $content2 = mb_convert_encoding($content, "UTF-8", "Windows-1251");
-            $title2 = mb_convert_encoding($title, "UTF-8", "Windows-1251");
+            //$content2 = mb_convert_encoding($content, "UTF-8");
+            //$title2 = mb_convert_encoding($title, "UTF-8");
 
-            $arrResult2[$key]['title'] = $title2;
-            $arrResult2[$key]['content'] = $content2;
+            $arrResult2[$key]['title'] = $title;
+            $arrResult2[$key]['content'] = $content;
             $arrResult2[$key]['image'] = $img2;
         }
+        //vd($arrResult2);
 
         if(!empty($arrResult2)){
             //$model = ImportNews::deleteAll();
@@ -241,8 +289,8 @@ class DefaultController extends CoreController {
             //echo $data;
             //vd(1);
 
-            $file = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
-            file_put_contents($file, $data);
+            $file2 = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
+            file_put_contents($file2, $data);
         }
 
 //        ImportNews::deleteAll();
@@ -264,7 +312,42 @@ class DefaultController extends CoreController {
 //
 //        }
 
+
         return $this->redirect('/admin/index');
+    }
+
+    // Вернет только что загруженное фото
+    public function actionUpload()
+    {
+        $uploaddir = Yii::getAlias('@frontend') . '/web/upload/imp/';
+        $file = md5(date('YmdHis')).'.'.pathinfo(@$_FILES['file']['name'], PATHINFO_EXTENSION);
+        if (move_uploaded_file(@$_FILES['file']['tmp_name'], $uploaddir.$file)) {
+            $array = array(
+                'filelink' => '/upload/imp/'.$file
+            );
+        }
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return $array;
+    }
+
+
+    // Вернет уже загруженные файлы
+    public function actionUploaded()
+    {
+
+        $uploaddir = Yii::getAlias('@frontend') . '/web/upload/imp/';
+        $arr = scandir($uploaddir);
+        $i=0;
+        foreach($arr as $key =>  $val){
+            $i++;
+            if( $i > 2 ) {
+                $array['filelink' . $i]['thumb'] = '/upload/imp/' . $val;
+                $array['filelink' . $i]['image'] = '/upload/imp/' . $val;
+                $array['filelink' . $i]['title'] = '/upload/imp/' . $val;
+            }
+        }
+        $array = stripslashes(json_encode($array));
+        echo $array;
     }
 
 }
