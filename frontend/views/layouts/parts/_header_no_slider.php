@@ -27,9 +27,9 @@ $identity = Yii::$app->getUser()->getIdentity();
         <div class="span12">
             <div class="header-block clearfix">
                 <div class="clearfix header-block-pad">
-                    <a href="<?= Url::to('/site/index') ?>">
+                    <a href="<?= Url::to('/') ?>">
                     <div class="logo-img"></div></a>
-                   <!-- <a href="<?= Url::to('/site/index') ?>"><h1 class="logo"><span class="red">Kot</span>monstr</h1></a><a href="<?= Url::to('/shop/index') ?>"><span>Магазин</span></a> -->
+                   <!-- <a href="<?= Url::to('/') ?>"><h1 class="logo"><span class="red">Kot</span>monstr</h1></a><a href="<?= Url::to('/shop/index') ?>"><span>Магазин</span></a> -->
                     <form id="search-form" action="<?= Url::to('/search/show-item');?>" method="GET" accept-charset="utf-8" class="navbar-form" >
                         <input type="text" name="item" onBlur="if (this.value == '')
                                     this.value = ''" onFocus="if (this.value == '')

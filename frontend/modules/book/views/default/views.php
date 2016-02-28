@@ -1,9 +1,9 @@
 <?php
-header('Content-type: application/rar');
+//header('Content-type: application/rar');
 use yii\helpers\Url;
 use yii\helpers\Html;
 
-$this->registerJsFile('/js/custom/download.js');
+$this->registerJsFile('/js/custom/download.js',['depends'=> \frontend\assets\AppAsset::className()]);
 ?>
 
 <section id="content">

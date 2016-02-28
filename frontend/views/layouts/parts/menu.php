@@ -13,7 +13,7 @@ $module = Yii::$app->controller->module->id;
     if ($url == 'site/index') {
         echo"active";
     }
-    ?>"><a href="<?= Url::to('/site/default/index') ?>"><em class="hidden-phone"></em><span class="visible-phone">Home</span></a></li>
+    ?>"><a href="<?= Url::to('/') ?>"><em class="hidden-phone"></em><span class="visible-phone">Home</span></a></li>
     <li class="sub-menu <?php
     if ($url == 'video/show-author') {
         echo"active";
@@ -51,22 +51,22 @@ $module = Yii::$app->controller->module->id;
 
 
 
-    <li class="<?= $url == 'image/preview' ? 'active' : ''; ?>"><a href="<?= Url::to('/image/preview') ?>">Фотографии</a></li>
-    <li class="<?= $url == 'blog/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/blog/index') ?>">Новости</a></li>
-    <li class="<?= $url == 'articles/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/article/index') ?>">Статьи</a></li>
-    <li class="<?= $url == 'music/show' ? 'active' : ''; ?>"><a href="<?= Url::to('/music/show') ?>">Музыка</a></li>
-    <li class="<?= $url == 'book/views' ? 'active' : ''; ?>"> <a href="<?= Url::to('/book/views') ?>">Книги</a></li>
+    <li class="<?= $url == 'image/preview' ? 'active' : ''; ?>"><a href="<?= Url::to('/images') ?>">Фотографии</a></li>
+    <li class="<?= $url == 'blog/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/news') ?>">Новости</a></li>
+    <li class="<?= $url == 'articles/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/blog') ?>">Статьи</a></li>
+    <li class="<?= $url == 'music/show' ? 'active' : ''; ?>"><a href="<?= Url::to('/music') ?>">Музыка</a></li>
+    <li class="<?= $url == 'book/views' ? 'active' : ''; ?>"> <a href="<?= Url::to('/book/default/views') ?>">Книги</a></li>
 
 
 
 
 
 
-    <?php if (!Yii::$app->user->isGuest && Yii::$app->user->id == 1 || !Yii::$app->user->isGuest && Yii::$app->user->id == 2 || !Yii::$app->user->isGuest && Yii::$app->user->id == 3) { ?><li><a href="<?= Url::to('/admin/index') ?>">Админка</a></li><?php } ?>
+    <?php if (!Yii::$app->user->isGuest && Yii::$app->user->id == 1 || !Yii::$app->user->isGuest && Yii::$app->user->id == 2 || !Yii::$app->user->isGuest && Yii::$app->user->id == 3) { ?><li><a href="<?= Url::to('/admin') ?>">Админка</a></li><?php } ?>
     <?php if (Yii::$app->user->isGuest) { ?>
-        <li><a href="<?= Url::to('/site/signup') ?>">Регистрация</a></li>
-        <li><a href="<?= Url::to('/site/login') ?>">Вход</a></li>
+        <li><a href="<?= Url::to('signup') ?>">Регистрация</a></li>
+        <li><a href="<?= Url::to('login') ?>">Вход</a></li>
     <?php } else { ?>
-    <li><a href="<?= Url::to('/site/logout') ?>">Выход</a>
+    <li><a href="<?= Url::to('logout') ?>">Выход</a>
         <?php } ?>
 </ul>

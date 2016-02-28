@@ -18,7 +18,7 @@ class DefaultController extends CoreController {
     public $layout = '/blog';
 
     public function actionViews() {
-         $model = Book::find()->all();
+        $model = Book::find()->all();
         return $this->render('views',['model'=>$model]);
     }
 
