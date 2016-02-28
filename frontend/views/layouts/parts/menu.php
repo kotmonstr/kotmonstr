@@ -64,9 +64,9 @@ $module = Yii::$app->controller->module->id;
 
     <?php if (!Yii::$app->user->isGuest && Yii::$app->user->id == 1 || !Yii::$app->user->isGuest && Yii::$app->user->id == 2 || !Yii::$app->user->isGuest && Yii::$app->user->id == 3) { ?><li><a href="<?= Url::to('/admin') ?>">Админка</a></li><?php } ?>
     <?php if (Yii::$app->user->isGuest) { ?>
-        <li><a href="<?= Url::to('signup') ?>">Регистрация</a></li>
-        <li><a href="<?= Url::to('login') ?>">Вход</a></li>
+        <li><a href="<?= Url::to('/signup') ?>">Регистрация</a></li>
+        <li><a href="<?= Url::to('/login') ?>">Вход</a></li>
     <?php } else { ?>
-    <li><a href="<?= Url::to('logout') ?>">Выход</a>
+    <li><a href="<?= Url::to('/logout') ?>">Выход</a>
         <?php } ?>
 </ul>
