@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model common\models\Blog */
 
 $this->title = 'Редактировать новость: ' . ' ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Blogs', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Article', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Редактировать';
 ?>

@@ -33,11 +33,11 @@ $model = new NewsletterForm;
             </div>
             <div class="span8 float">
                 <ul class="footer-menu">
-                    <li><a href="<?= Url::to('/site/index') ?>" class="current">Главная</a>|</li>
-                    <li><a href="<?= Url::to('/video/index') ?>">Видео</a>|</li>
-                    <li><a href="<?= Url::to('/video/tv') ?>">Тв</a>|</li>
-                    <li><a href="<?= Url::to('/image/index') ?>">Фотографии</a>|</li>
-                    <li><a href="<?= Url::to('/blog/index') ?>">Статьи</a>|</li>
+                    <li><a href="<?= Url::to('/') ?>" class="current">Главная</a>|</li>
+                    <li><a href="<?= Url::to('/news') ?>">Новости</a>|</li>
+                    <li><a href="<?= Url::to('/video/tv24') ?>">Тв</a>|</li>
+                    <li><a href="<?= Url::to('/images') ?>">Фотографии</a>|</li>
+                    <li><a href="<?= Url::to('/article') ?>">Статьи</a>|</li>
                     <?php if (!Yii::$app->user->isGuest && Yii::$app->user->id == 1 || !Yii::$app->user->isGuest && Yii::$app->user->id == 2 || !Yii::$app->user->isGuest && Yii::$app->user->id == 3) { ?><li><a href="<?= Url::to('/admin/index') ?>">Админка</a></li><?php } ?>
                 </ul>
                 Kotmonstr  &copy;  <?= date("Y", time()); ?>  |   <a href="/site/index">Privacy Policy</a> <!-- {%FOOTER_LINK} -->

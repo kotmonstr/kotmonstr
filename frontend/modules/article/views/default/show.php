@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'attribute' => 'title',
                             'format' => 'html',
                             'value' => function($data){
-                                return Html::a($data->title,'/blog/update?id='.$data->id);
+                                return Html::a($data->title,'/article/update?id='.$data->id);
                             }
                         ],
                         //'image',

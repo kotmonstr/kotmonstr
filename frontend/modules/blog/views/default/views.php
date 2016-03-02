@@ -4,9 +4,11 @@ use yii\helpers\Url;
 use common\models\User;
 use common\models\Comment;
 use yii\helpers\StringHelper;
+
+
 Yii::$app->formatter->locale = 'ru-RU';
 
-$this->registerJsFile('/js/custom/comment.js');
+$this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAsset::className()]);
 ?>
 
 <input type="hidden" id="comment_id" value="<?= $model->id ?>">
@@ -47,6 +49,7 @@ $this->registerJsFile('/js/custom/comment.js');
                         <?= StringHelper::truncate($model->content,1000); ?>
                     </div>
                     <div class="span2 time-d">
+                  
                         <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?><br><?= date("H:i",$model->created_at) ?>
                     </div>
                 </div>

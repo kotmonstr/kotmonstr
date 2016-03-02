@@ -19,8 +19,6 @@ class DefaultController extends CoreController
 {
 
    // public $layout = '/adminka';
-
-
     public function behaviors()
     {
         return [
@@ -35,12 +33,12 @@ class DefaultController extends CoreController
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'add','show'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'add'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['add'],
+                        'actions' => ['add','show'],
                         'allow' => true,
                         'roles' => ['@', '?'],
                     ],

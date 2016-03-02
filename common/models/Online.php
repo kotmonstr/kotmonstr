@@ -63,7 +63,9 @@ class Online extends \yii\db\ActiveRecord
     {
         $identity = Yii::$app->getUser()->getIdentity();
         if (isset($identity->profile)) {
-            $socialName = $identity->profile['name'];
+            $socialName = $identity->profile['name'] ? $identity->profile['name'] : 'unknouwn';
+        }else{
+            $socialName = 'unknouwn';
         }
 
 

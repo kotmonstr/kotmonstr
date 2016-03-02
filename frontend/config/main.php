@@ -11,10 +11,21 @@ $params = array_merge(
 Yii::setAlias('@frontend_theme', dirname(__DIR__) . '/themes');
 return [
     'id' => 'app-frontend',
+    'timeZone' => 'Europe/Moscow',
+    'sourceLanguage' => 'ru-RU',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'dateFormat' => 'php:d.m.Y',
+            'datetimeFormat' => 'php:j F, H:i',
+            'timeFormat' => 'php:H:i:s',
+            'defaultTimeZone' => 'Europe/Moscow',
+            'locale' => 'ru-RU'
+
+        ],
         'eauth' => [
             'class' => 'nodge\eauth\EAuth',
             'popup' => true, // Use the popup window instead of redirecting.
@@ -161,10 +172,6 @@ return [
         ],
         'request' => [
             'baseUrl' => ''
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false
         ],
         'user' => [
             'identityClass' => 'common\models\User',

@@ -28,8 +28,8 @@ return [
                 'news'=>'/blog/default/index',
                 'blog'=>'/article/default/index',
                 'music'=>'/music/default/show',
-                'book'=>'/book/default/views',
-               // 'site/index'=>'site/default/index',
+                'books'=>'/book/default/views',
+
 
 
 

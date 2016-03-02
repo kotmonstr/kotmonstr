@@ -55,7 +55,7 @@ $module = Yii::$app->controller->module->id;
     <li class="<?= $url == 'blog/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/news') ?>">Новости</a></li>
     <li class="<?= $url == 'articles/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/blog') ?>">Статьи</a></li>
     <li class="<?= $url == 'music/show' ? 'active' : ''; ?>"><a href="<?= Url::to('/music') ?>">Музыка</a></li>
-    <li class="<?= $url == 'book/views' ? 'active' : ''; ?>"> <a href="<?= Url::to('/book/default/views') ?>">Книги</a></li>
+    <li class="<?= $url == 'book/views' ? 'active' : ''; ?>"> <a href="<?= Url::to('/books') ?>">Книги</a></li>
 
 
 
