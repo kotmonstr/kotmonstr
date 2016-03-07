@@ -72,7 +72,7 @@ class DefaultController extends CoreController {
         //$this->layout = '/blog';
         // Вывести список статей
 
-        $pageSize =10;
+        $pageSize =9;
         $query = Blog::find();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pageSize]);
@@ -83,12 +83,12 @@ class DefaultController extends CoreController {
 
         $modelLastBlog = Blog::find()
             ->orderBy('id DESC')
-            ->limit(5)
+            ->limit(3)
             ->all();
 
         $modeMostWatched = Blog::find()
             ->orderBy('view DESC')
-            ->limit(5)
+            ->limit(3)
             ->all();
 
 

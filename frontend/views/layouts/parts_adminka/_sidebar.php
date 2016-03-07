@@ -2,6 +2,7 @@
 
 use yii\helpers\Url;
 use common\models\ImportNews;
+use frontend\components\OnlineHelper;
 
 $curModule = Yii::$app->controller->module->id;
 $curContr = Yii::$app->controller->id;
@@ -36,11 +37,18 @@ $countNewNews = ImportNews::getFreshNews();
 
                 <ul class="list-unstyled user-info">
                     <li><a href=""><?= Yii::$app->user->identity->username ?></a></li>
-                    <li>Last Access :
+                    <li>Последний визит:
                         <br>
                         <small>
-                            <i class="fa fa-calendar"></i>&nbsp;16 Mar 16:32
+                            <i class="fa fa-calendar"></i>&nbsp; <?= OnlineHelper::getlastloginTime(); ?>
+                        </ br>
+
                         </small>
+                    </li>
+                </ br>
+                    <li>
+
+                    <?= OnlineHelper::getlastDifferentInTime(); ?>
                     </li>
                 </ul>
             </div>

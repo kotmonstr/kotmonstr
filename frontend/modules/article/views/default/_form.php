@@ -21,6 +21,9 @@ use yii\widgets\ActiveForm;
 
                     <?= $form->field($model, 'content')->widget(Widget::className(), [
                         'settings' => [
+                            'iframe' => true,
+                            'air'=> true,
+                            'formatting'=> ['iframe'],
                             'lang' => 'ru',
                             'minHeight' => 400,
                             'pastePlainText' => true,

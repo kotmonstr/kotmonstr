@@ -1,10 +1,15 @@
 
 .logo-img{
-    background: url('/img-custom/kotmonstr.png') no-repeat top center;
-    width: 700px;
-    height: 200px;
-    zoom: 50%;
+    background: url('/img-custom/kotmonstr.png') no-repeat center center;
+    background-size: 100% 27%;
+    width: 200px;
+    height: 70px;
+    /* margin-left: 38px; */
+    /* margin-top: 10px; */
+    /* position: absolute; */
+    margin: 0px auto;
 }
+
 .logo{
     font-family: 'Kaushan Script', cursive;
     font-size: 50px;
@@ -14,7 +19,7 @@
     color:#CF3046;
 }
 #avatar{
-    background: url('/img-custom/avatar-default.jpg') no-repeat top center;
+    background: url('/img-custom/avatar-default.jpg') no-repeat center center;
     width: 12%;
     height: 51%;
     position: absolute;
@@ -28,12 +33,7 @@
 #custom-avatar{
     background-size: 100% 100%;
     width: 100px;
-    height: 150px;
-    position: absolute;
-
-    top: 1px;
-    right: -28px;
-//zoom: 52%;
+    height: 70px;
     opacity: 0.4;
     cursor: pointer;
 }

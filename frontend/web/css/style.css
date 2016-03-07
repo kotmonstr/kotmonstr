@@ -39,7 +39,7 @@ h4 {
 }
 h5 {
   font-size: 18px;
-  color: #444;
+  //color: #444;
   font-weight: 600;
   letter-spacing: -1px;
 }
@@ -246,7 +246,8 @@ header {
   z-index: 999;
 }
 .header-block-pad {
-  padding: 53px 31px 46px 52px;
+  //padding: 53px 31px 46px 52px;
+  padding: 0px 26px 0px 0px;
 }
 h1.brand {
   display: inline-block;
@@ -271,12 +272,9 @@ h1.brand span {
 }
 .contacts {
   float: right;
-  display: inline-block;
-  margin: 7px 62px 0 0px;
-  padding: 6px 45px 10px 0;
   color: #ffffff;
-  line-height: 22px;
-  background: url(../img/line-1.png) right 0 repeat-y;
+  height: 70px;
+  line-height: 73px;
 }
 .contacts span,
 .contacts a {
@@ -287,13 +285,14 @@ h1.brand span {
   color: #fff;
 }
 /* search-form */.navbar-form {
-  background: url(../img/form-search.jpg) 0 0 repeat-x #1c1c1c;
-  border-bottom: #515152 1px solid;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  margin: 19px 0px 0 0;
-  float: right;
+                   background: url(../img/form-search.jpg) 0 0 repeat-x #1c1c1c;
+                   border-bottom: #515152 1px solid;
+                   -webkit-border-radius: 3px;
+                   -moz-border-radius: 3px;
+                   border-radius: 3px;
+                   margin: 10px 0px 0 0;
+                   /* float: right; */
+                   height: 44px;
 }
 .navbar-form input {
   background: none;
@@ -302,20 +301,22 @@ h1.brand span {
   line-height: 18px;
   width: 288px;
   float: left;
-  margin: 0px;
-  padding-top: 6px;
-  padding-bottom: 5px;
+  /* margin: 0px; */
+  padding-top: 15px;
+  /* padding-bottom: 5px; */
 }
 .navbar-form input:focus {
   box-shadow: none;
 }
 .navbar-form a {
-  margin: 0;
-  display: inline-block;
-  width: 40px;
-  height: 33px;
+  margin-top: -17px;
+  /* display: inline-block; */
+  width: 38px;
+  height: 40px;
   background: url(../img/search.png) 0 0 no-repeat;
   float: right;
+  line-height: 63px;
+  font-size: 20px;
 }
 .navbar-form a:hover {
   background: url(../img/search.png) right 0 no-repeat;

@@ -117,4 +117,13 @@ class Online extends \yii\db\ActiveRecord
         $model->last_visit=time();
         $model->updateAttributes(['last_visit']);
     }
+
+    public static function getlastitmeById($id){
+        $model = self::find()->where(['user_id'=> $id])->one();
+        if($model){
+            return $model->last_visit;
+        }else{
+            return false;
+        }
+    }
 }
