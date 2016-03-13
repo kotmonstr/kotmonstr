@@ -4,115 +4,153 @@ use yii\helpers\Url;
 use common\models\User;
 use common\models\Comment;
 use yii\helpers\StringHelper;
-Yii::$app->formatter->locale = 'ru-RU';
+use app\components\TemplateWidget;
 
-$this->registerJsFile('/js/custom/comment.js',['depends'=> \backend\assets\AppAsset::className()]);
+Yii::$app->formatter->locale = 'ru-RU';
+$this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\AppAsset::className()]);
+
+$allContentCountLetters = strlen($model->content);
+$leftContent = substr($model->content, 0, -($allContentCountLetters / 2));
+$rightContent = substr($model->content, -($allContentCountLetters / 2));
+
+
 ?>
 
-<input type="hidden" id="comment_id" value="<?= $model->id ?>">
 
-<section id="content">
-    <div class="row">
-        <div class="container">
-            <div class="pos bg_preview_post">
-                <center><h3><?= $model->title ?></h3></center>
-                <center>
-                <?php if($model->image ){ ?>
-                <img alt="" src="<?= $model->image; ?>">
-                <?php } ?>
-                </center>
-                <p class="content"><?= $model->content ?>  </p>
+<div class="container" style="text-align: center; padding: 0px 35px">
+    <div class="row pos bg_preview_post">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center">
+                <input type="hidden" id="comment_id" value="<?= $model->id ?>">
+                <h3><?= $model->title ?></h3>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 " style="padding: 0px 45px" >
+                <img src="<?= $model->src . DIRECTORY_SEPARATOR . $model->image ?>" width="auto" alt="">
+            </div>
+        </div>
+
+
+        <?= TemplateWidget::widget(['model'=> $model]); ?>
+        <div class="row">
+
+
+
+<!--            <div class="col-md-6 text"  style="padding: 0px 45px">-->
+<!--                --><?//= $leftContent; ?>
+<!--            </div>-->
+<!---->
+<!--            <div class="col-md-6 text" style="padding: 0px 45px">-->
+<!--                --><?//= $rightContent; ?>
+<!--            </div>-->
+
         </div>
     </div>
 </div>
-</section>
-
-<section id="comment">
 
 
-    <center><h5>Коментарии</h5></center>
+<div class="container">
+    <div class="row">
+        <section id="comment">
 
 
-    <?php foreach ($coment_model as $model): ?>
-        <div class="row-fluid ">
-            <div class="container">
+            <center><h5>Коментарии</h5></center>
+
+
+            <?php foreach ($coment_model as $model): ?>
+
+
                 <div class="span12 target main-comment pos bg_preview_post">
                     <div class="span2" style="text-align: center">
                         <?= User::getAvatar($model->author_id) ?><br>
+
                         <div class="com-name"><?= $model->author->username ?></div>
                     </div>
 
-                    <div class="span8" title="<?= $model->content?>">
-                        <?= StringHelper::truncate($model->content,1000); ?>
+                    <div class="span8" title="<?= $model->content ?>">
+                        <?= StringHelper::truncate($model->content, 1000); ?>
                     </div>
                     <div class="span2 time-d">
-                        <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?><br><?= date("H:i",$model->created_at) ?>
+                        <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?>
+                        <br><?= date("H:i", $model->created_at) ?>
                     </div>
                 </div>
-            </div>
-        </div>
-    <?php endforeach; ?>
 
-</section>
-<?php if(!Yii::$app->user->isGuest):?>
-<section id="form">
-    <div class="container shet" style="margin-top:50px">
-        <div class="row">
-            <div class="span12">
-            <div class="span10 left-div">
-                <textarea id="comment-textarea"></textarea>
-            </div>
-            <div class="span2">
-                <a onclick="Comment.AddComment()" href="javascript:void(0);" class="btn btn_ sub-btn">Добавить комментарий</a>
-            </div>
-            </div>
-
-        </div>
+            <?php endforeach; ?>
     </div>
+</div>
 </section>
+<?php if (!Yii::$app->user->isGuest): ?>
+    <section id="form">
+        <div class="container shet" style="margin-top:50px">
+            <div class="row">
+                <div class="span12">
+                    <div class="span10 left-div">
+                        <textarea id="comment-textarea"></textarea>
+                    </div>
+                    <div class="span2">
+                        <a onclick="Comment.AddComment()" href="javascript:void(0);" class="btn btn_ sub-btn">Добавить
+                            комментарий</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 <?php endif ?>
 <style>
-    .sub-btn{
-        margin-left: 0px!important;
+    .text {
+        font-size: 14px;
+        font-family: "Verdana", "sans-serif";
     }
 
-   #comment-textarea {
+    .sub-btn {
+        margin-left: 0px !important;
+    }
+
+    #comment-textarea {
         width: 885px;
         height: 120px;
-       margin-left: 16px;
+        margin-left: 16px;
     }
-    .left-div{
+
+    .left-div {
         margin: 0px;
     }
+
     a, a:link, a:visited {
-        color: #fff!important;
+        color: #fff !important;
 
     }
-    .com-name{
+
+    .com-name {
         font-size: 14px;
         font-weight: bold;
     }
-    .main-comment{
-        //border: 1px solid red;
+
+    .main-comment {
+    / / border : 1 px solid red;
         padding: 5px 0px;
         margin-bottom: 10px;
     }
-    .time-d{
+
+    .time-d {
         text-align: center;
-vertical-align: middle;
-margin-top: 23px;
+        vertical-align: middle;
+        margin-top: 23px;
     }
+
     p {
-        // color : #ffffff !important;
+    / / color : #ffffff !important;
         background-color: #fff !important;
         font-family: verdana;
     }
-    h5{
+
+    h5 {
         padding: 20px;
     }
-
-
 
     h3 {
         font-size: 28px;
@@ -121,8 +159,6 @@ margin-top: 23px;
         letter-spacing: -2px;
         color: #666;
     }
-
-
 
 
 </style>
@@ -231,7 +267,7 @@ margin-top: 23px;
 
     .clearfix:after, .group:after {
         clear: both;
-        // content : " ";
+    / / content : " ";
         display: block;
         font-size: 0;
         height: 0;
@@ -242,17 +278,19 @@ margin-top: 23px;
     .pos {
         border-radius: 4px;
         box-shadow: 5px 5px 10px #000;
-       
+
     }
 
     .title {
-        // font-family : "solomon";
+    / / font-family : "solomon";
         font-size: 20px;
     }
-    . p{
-        background-color: #ffffff!important;
-         }
-    .content{
+
+    . p {
+        background-color: #ffffff !important;
+    }
+
+    .content {
         font-size: 14px;
         font-family: "Verdana", "sans-serif";
         margin-top: 20px;

@@ -48,6 +48,24 @@ Yii::$app->formatter->locale = 'ru-RU';
             </div>
             <? endforeach; ?>
         </div>
+
+
+        <div class="col-sm-12" style="text-align: center">
+            <?=
+            LinkPager::widget([
+                'pagination' => $pages,
+                'maxButtonCount' => 5,
+            ]);
+            ?>
+            <ul class="pagination">
+                <li class="last"><a href="/blog/default/index?page=<?= ceil($pages->totalCount / $pageSize) ?>"
+                                    data-page="<?= ceil($pages->totalCount / $pageSize) ?>"><?= '...' . ceil($pages->totalCount / $pageSize); ?></a>
+                </li>
+            </ul>
+        </div>
+
+
+
         <div class="row">
             <div class="col-md-12" style="text-align: center">
                 <h5>Свежие новости</h5>
@@ -111,19 +129,7 @@ Yii::$app->formatter->locale = 'ru-RU';
                 </a>
             </div>
         <? endforeach; ?>
-        <div class="col-sm-12" style="text-align: center">
-            <?=
-            LinkPager::widget([
-                'pagination' => $pages,
-                'maxButtonCount' => 5,
-            ]);
-            ?>
-            <ul class="pagination">
-                <li class="last"><a href="/blog/default/index?page=<?= ceil($pages->totalCount / $pageSize) ?>"
-                                    data-page="<?= ceil($pages->totalCount / $pageSize) ?>"><?= '...' . ceil($pages->totalCount / $pageSize); ?></a>
-                </li>
-            </ul>
-        </div>
+
         </div>
     </div>
 </div>

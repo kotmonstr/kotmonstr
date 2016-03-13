@@ -32,10 +32,27 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-          
-            'title',
-            'image',
-            'created_at',
+            [
+                'label'=>'Заголовок',
+                'format'=>'raw',
+                'value'=>$model->title,
+            ],
+
+            [
+                'label'=>'Картинка',
+                'value'=>$model->src.'/'.$model->image,
+                'format' => ['image',['width'=>'200','height'=>'200']],
+            ],
+
+            [
+                'label' => 'Содержание',
+                'value' => \yii\helpers\StringHelper::truncate($model->content,200)
+            ],
+            [
+                'label'=>'Дата создания',
+                'format'=>'raw',
+                'value'=> Yii::$app->formatter->asDate($model->created_at,'long')
+            ],
         ],
     ]) ?>
 

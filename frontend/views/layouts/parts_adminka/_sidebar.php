@@ -74,6 +74,20 @@ $countNewNews = ImportNews::getFreshNews();
                 <i class="fa"></i><span class="link-title">&nbsp;Cтатьи</span>
             </a>
         </li>
+        <li class="<?php if ($path == 'article_category/index') {
+            echo "active";
+        } ?>">
+            <a href="<?= Url::to('/article_category/index') ?>">
+                <i class="fa"></i><span class="link-title">&nbsp;Категории статей</span>
+            </a>
+        </li>
+        <li class="<?php if ($path == 'template/index') {
+            echo "active";
+        } ?>">
+            <a href="<?= Url::to('/template/index') ?>">
+                <i class="fa"></i><span class="link-title">&nbsp;Template</span>
+            </a>
+        </li>
         <li class="<?php if ($path == 'blog/add-news-from-parser') {
             echo "active";
         } ?>">
@@ -174,6 +188,15 @@ $countNewNews = ImportNews::getFreshNews();
         } ?>">
             <a href="<?= Url::to('/review/index') ?>">
                 <i class="fa"></i><span class="link-title">&nbsp;Отзывы</span>
+            </a>
+        </li>
+
+
+        <li class="<?php if ($path == 'seo/index') {
+            echo "active";
+        } ?>">
+            <a href="<?= Url::to('/seo/index') ?>">
+                <i class="fa"></i><span class="link-title">&nbsp;Seo</span>
             </a>
         </li>
 

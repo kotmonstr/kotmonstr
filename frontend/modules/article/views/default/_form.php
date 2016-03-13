@@ -1,12 +1,13 @@
 <?php
 
-use frontend\assets\AppAdmin;
+use frontend\assets\AdminAsset;
 use vova07\imperavi\Widget;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 
-
+$this->registerJsFile('/js/custom/image-upload.js', ['depends' => AdminAsset::className()]);
 
 ?>
 <div id="content">
@@ -14,16 +15,15 @@ use yii\widgets\ActiveForm;
         <div class="inner bg-light lter">
             <div id="collapse4" class="body">
                 <div class="brend-index">
-
-                    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
-
+                    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'id' => 'form-article']]); ?>
                     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
-
+                    <?= $form->field($model, 'article_category')->dropDownList([NULL => ''] + ArrayHelper::map(common\models\ArticleCategory::find()->all(), 'id', 'name')) ?>
+                    <?= $form->field($model, 'template')->dropDownList([NULL => ''] + ArrayHelper::map(common\models\Template::find()->all(), 'id', 'name')) ?>
                     <?= $form->field($model, 'content')->widget(Widget::className(), [
                         'settings' => [
                             'iframe' => true,
-                            'air'=> true,
-                            'formatting'=> ['iframe'],
+                            'air' => true,
+                            'formatting' => ['iframe'],
                             'lang' => 'ru',
                             'minHeight' => 400,
                             'pastePlainText' => true,
@@ -39,65 +39,19 @@ use yii\widgets\ActiveForm;
                             ]
                         ]
                     ]) ?>
-
-
-                    <?php if ($model->image) {
-                        echo Html::img('/upload/upload_news/' . $model->image, ['style' => 'height: 120px;']);
-                        ?>
-                        <a href="<?= Url::to(['/upload/news/deleteimage', 'id' => $model->id]) ?>" class="btn btn-warning"
-                           onclick="confirmDelete(event)">Удалить</a>
-                        <?php
-                    } else {
-                        echo Html::img('/upload/default.jpg', ['style' => 'height: 120px;']);
-                    }
-                    ?>
-
-                    <?= $form->field($model, 'file')->fileInput()->label('') ?>
-
-
+                    <?= $form->field($model, 'image')->textInput(['maxlength' => true, 'style' => 'display:none'])->label('') ?>
+                    <?= $form->field($model, 'src')->hiddenInput(['value' => '/upload/article'])->label('') ?>
+                    <? if ($model->image) { ?>
+                        <img src="<?= $model->src . '/' . $model->image ?>" width="200px" alt="">
+                    <? } ?>
+                    <div class="photo"
+                         onchange="startUpload()"><?= $form->field($model, 'file')->fileInput()->label('Картинка', ['class' => 'red-b']) ?></div>
+                    <div class="avatar"></div>
                     <div class="form-group">
                         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Принять изменения', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                     </div>
-
                     <?php ActiveForm::end(); ?>
 
-                    <?php
-                    //echo newerton\fancybox\FancyBox::widget([
-                    //    'target' => 'a[rel=fancybox]',
-                    //    'helpers' => true,
-                    //    'mouse' => true,
-                    //    'config' => [
-                    //        'maxWidth' => '90%',
-                    //        'maxHeight' => '90%',
-                    //        'playSpeed' => 7000,
-                    //        'padding' => 0,
-                    //        'fitToView' => false,
-                    //        'width' => '70%',
-                    //        'height' => '70%',
-                    //        'autoSize' => false,
-                    //        'closeClick' => false,
-                    //        'openEffect' => 'elastic',
-                    //        'closeEffect' => 'elastic',
-                    //        'prevEffect' => 'elastic',
-                    //        'nextEffect' => 'elastic',
-                    //        'closeBtn' => true,
-                    //        'openOpacity' => true,
-                    //        'helpers' => [
-                    //            'title' => ['type' => 'float'],
-                    //            'buttons' => [],
-                    //            'thumbs' => ['width' => 68, 'height' => 50],
-                    //            'overlay' => [
-                    //                'css' => [
-                    //                    'background' => 'rgba(0, 0, 0, 0.8)'
-                    //                ]
-                    //            ]
-                    //        ],
-                    //    ]
-                    //]);
-                    //
-                    //                    echo Html::a(Html::img('/upload/imp/1.jpg'), '/upload/imp/1.jpg', ['rel' => 'fancybox']);
-                    //                    echo Html::a(Html::img('/upload/imp/2.jpg'), '/upload/imp/2.jpg', ['rel' => 'fancybox']);
-                    //?>
                 </div>
             </div>
         </div>

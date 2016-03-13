@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use app\components\SliderWidget;
 use frontend\assets\AppAsset;
-
+use app\components\SeoHelper;
 AppAsset::register($this);
 
 ?>
@@ -14,7 +14,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <?= SeoHelper::getMeta(); ?>
     <?php $this->head() ?>
 </head>
 <body>

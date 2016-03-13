@@ -13,7 +13,6 @@ use common\models\Comment;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
-use common\models\ImportNews;
 use app\modules\core\controllers\CoreController;
 use common\models\ArticleSearch;
 
@@ -32,7 +31,7 @@ class DefaultController extends CoreController {
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start'],
+                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start','image-submit'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -49,12 +48,12 @@ class DefaultController extends CoreController {
     public $layout = '/blog';
 
     public function actionIndex() {
-        //$this->layout = '/Article';
+
         // Вывести список статей
-//vd(1);
+        $pageSize =9;
         $query = Article::find();
         $countQuery = clone $query;
-        $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => 10]);
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pageSize]);
         $models = $query->offset($pages->offset)
                 ->orderBy('created_at DESC')
                 ->limit($pages->limit)
@@ -62,19 +61,21 @@ class DefaultController extends CoreController {
 
         $modelLastArticle = Article::find()
             ->orderBy('id DESC')
-            ->limit(5)
+            ->limit(3)
             ->all();
 
         $modeMostWatched = Article::find()
             ->orderBy('view DESC')
-            ->limit(5)
+            ->limit(3)
             ->all();
 
 
         return $this->render('index', [ 'model' => $models,
                             'modelLastArticle'=> $modelLastArticle,
                             'modeMostWatched'=> $modeMostWatched,
-                            'pages' => $pages]);
+                            'pages' => $pages,
+                            'pageSize'=> $pageSize
+        ]);
     }
 
     public function actionView() {
@@ -97,19 +98,20 @@ class DefaultController extends CoreController {
         ]);
     }
 
-    public function actionCreate() {
+    public function actionCreate()
+    {
         $this->layout = '/adminka';
         $model = new Article();
-//        if ($model->load(Yii::$app->request->post())){
+
+//        if (Yii::$app->request->post()) {
+//
+//        $model->load(Yii::$app->request->post());
 //        $model->validate();
 //        vd($model->getErrors());
-//        }
-
-
+//    }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
-
             return $this->render('create', [
                         'model' => $model,
             ]);
@@ -131,7 +133,6 @@ class DefaultController extends CoreController {
 
     public function actionDelete($id) {
         $this->findModel($id)->delete();
-
         return $this->redirect(['show']);
     }
 
@@ -162,11 +163,15 @@ class DefaultController extends CoreController {
 
         $id = Yii::$app->request->get('id');
         $Article = Article::find()->where(['id' => $id])->one();
-        $viwsQuantity =(int)$Article->view;
-        $Article->view = $viwsQuantity +1;
-        $Article->updateAttributes(['view']);
-        $coment_model = Comment::find()->where(['blog_id'=>$id])->all();
-        return $this->render('views', ['model' => $Article,'coment_model'=> $coment_model]);
+        if($Article) {
+            $viwsQuantity = (int)$Article->view;
+            $Article->view = $viwsQuantity + 1;
+            $Article->updateAttributes(['view']);
+            $coment_model = Comment::find()->where(['blog_id' => $id])->all();
+            return $this->render('views', ['model' => $Article, 'coment_model' => $coment_model]);
+        }else{
+            $this->redirect('site/error');
+        }
     }
 
     public function actionAddNewsFromParser(){
@@ -274,5 +279,17 @@ class DefaultController extends CoreController {
 
         return $this->redirect('/admin/index');
     }
+    public function actionImageSubmit() {
+        FileHelper::createDirectory(Yii::getAlias('@frontend') . '/web/upload/article');
+        $path = Yii::getAlias('@frontend') . '/web/upload/article/';
 
+        $model = new Article();
+        $name = date("dmYHis", time());
+        if (Yii::$app->request->isPost) {
+            $model->file = UploadedFile::getInstance($model, 'file');
+            $model->file->saveAs($path  . $name .'.'. $model->file->extension);
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return  $name .'.'. $model->file->extension;
+        }
+    }
 }

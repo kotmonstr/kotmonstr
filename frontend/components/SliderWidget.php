@@ -31,7 +31,7 @@ class SliderWidget extends Widget
     {
 //vd($this->model);
         if ($this->model) {
-            echo $this->render('_slider', ['model' => $this->model,'path'=>$this->path]);
+            echo $this->render('slider/_slider', ['model' => $this->model,'path'=>$this->path]);
         } else {
             return false;
         }

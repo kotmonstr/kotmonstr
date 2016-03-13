@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
-
+use app\components\SeoHelper;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -14,8 +14,8 @@ AppAsset::register($this);
     <head>
         <meta charset="<?= Yii::$app->charset ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?= SeoHelper::getMeta(); ?>
         <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
 
         <?php $this->head() ?>
     </head>

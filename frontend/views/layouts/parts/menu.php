@@ -7,6 +7,8 @@ $model_author = Author::find()->all();
 $model_author = Author::find()->all();
 $url = Yii::$app->controller->module->id . '/' . Yii::$app->controller->action->id;
 $module = Yii::$app->controller->module->id;
+
+//vd($url);
 ?>
 <ul class="nav sf-menu">
     <li class="li-first <?php
@@ -53,7 +55,7 @@ $module = Yii::$app->controller->module->id;
 
     <li class="<?= $url == 'image/preview' ? 'active' : ''; ?>"><a href="<?= Url::to('/images') ?>">Фотографии</a></li>
     <li class="<?= $url == 'blog/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/news') ?>">Новости</a></li>
-    <li class="<?= $url == 'articles/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/blog') ?>">Статьи</a></li>
+    <li class="<?= $url == 'article/index' ? 'active' : ''; ?>"><a href="<?= Url::to('/blog') ?>">Статьи</a></li>
     <li class="<?= $url == 'music/show' ? 'active' : ''; ?>"><a href="<?= Url::to('/music') ?>">Музыка</a></li>
     <li class="<?= $url == 'book/views' ? 'active' : ''; ?>"> <a href="<?= Url::to('/books') ?>">Книги</a></li>
 

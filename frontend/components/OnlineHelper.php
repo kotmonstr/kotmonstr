@@ -33,7 +33,7 @@ class OnlineHelper extends BaseArrayHelper
             $lastTime = Online::getlastitmeById($currentId);
             $dif = time() - $lastTime;
             $time = Yii::$app->formatter->asDatetime($dif,'medium');
-            return date('h' ,$dif).' часа назад';
+            return $dif.'  назад';
         }
     }
 

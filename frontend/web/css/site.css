@@ -31,6 +31,10 @@
     cursor: pointer;
 }
 #custom-avatar{
+
+    background-size: 67%!important;
+    margin-top: -4px;
+
     background-size: 100% 100%;
     width: 100px;
     height: 70px;

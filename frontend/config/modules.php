@@ -51,26 +51,23 @@ return $arrModules = [
     'music' => [
         'class' => 'app\modules\music\Module',
     ],
-    'goods' => [
-        'class' => 'app\modules\goods\Module',
-    ],
-    'goods_category' => [
-        'class' => 'app\modules\goods_category\Module',
-    ],
-    'shop' => [
-        'class' => 'app\modules\shop\Module',
-    ],
     'review' => [
         'class' => 'app\modules\review\Module',
-    ],
-    'brend' => [
-        'class' => 'app\modules\brend\Module',
     ],
     'banner' => [
         'class' => 'app\modules\banner\Module',
     ],
     'article' => [
         'class' => 'app\modules\article\Module',
+    ],
+    'seo' => [
+        'class' => 'app\modules\seo\Module',
+    ],
+    'template' => [
+        'class' => 'app\modules\template\Module',
+    ],
+    'article_category' => [
+        'class' => 'app\modules\article_category\Module',
     ],
 
 ];
