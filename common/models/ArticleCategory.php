@@ -50,7 +50,7 @@ class ArticleCategory extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getArticles()
+    public function getArticle()
     {
         return $this->hasMany(Article::className(), ['article_category' => 'id']);
     }

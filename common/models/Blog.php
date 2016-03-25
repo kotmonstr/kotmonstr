@@ -1,10 +1,12 @@
 <?php
 
 namespace common\models;
+
 use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
 use Yii;
 use common\models\User;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "blog".
@@ -16,26 +18,33 @@ use common\models\User;
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $author
+ * @property string $slug
  */
 class Blog extends \yii\db\ActiveRecord
 {
     public $file;
-   
+    public $template;
+
     public function behaviors()
-{
-    return [
-        [
-            'class' => TimestampBehavior::className(),
-            'createdAtAttribute' => 'created_at',
-        ],
-         [
-              'class' => BlameableBehavior::className(),
-             'createdByAttribute' => 'author',
-             'updatedByAttribute' => 'updater_id',          
-         ],
-      ];
-    
-}
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+            ],
+            [
+                'class' => BlameableBehavior::className(),
+                'createdByAttribute' => 'author',
+                'updatedByAttribute' => 'updater_id',
+            ],
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+                // 'slugAttribute' => 'slug',
+            ],
+        ];
+
+    }
 
     /**
      * @inheritdoc
@@ -54,7 +63,7 @@ class Blog extends \yii\db\ActiveRecord
             [['title'], 'required'],
             [['content'], 'string'],
             [['created_at', 'updated_at', 'author', 'view', 'updater_id'], 'integer'],
-            [['title', 'image'], 'string', 'max' => 255]
+            [['title', 'image','slug'], 'string', 'max' => 255]
         ];
     }
 
@@ -73,9 +82,11 @@ class Blog extends \yii\db\ActiveRecord
             'author' => Yii::t('app', 'Автор'),
             'view' => Yii::t('app', 'Просмотров'),
             'updater_id' => Yii::t('app', 'Редактор ID'),
+            'slug' => Yii::t('app', 'Slug'),
         ];
     }
-     /**
+
+    /**
      * @return \yii\db\ActiveQuery
      */
     public function getUpdater()
@@ -91,11 +102,12 @@ class Blog extends \yii\db\ActiveRecord
         return $this->hasOne(User::className(), ['id' => 'author']);
     }
 
-    public static function getDublicateByTitle($title){
-        $model = self::find()->where(['title'=> $title])->one();
-        if($model){
+    public static function getDublicateByTitle($title)
+    {
+        $model = self::find()->where(['title' => $title])->one();
+        if ($model) {
             return true;
-        }else{
+        } else {
             return false;
         }
 

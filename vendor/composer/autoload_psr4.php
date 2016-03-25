@@ -17,6 +17,7 @@ return array(
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'vova07\\imperavi\\' => array($vendorDir . '/vova07/yii2-imperavi-widget/src'),
+    'notgosu\\yii2\\modules\\metaTag\\' => array($vendorDir . '/notgosu/yii2-meta-tag-module/src'),
     'nodge\\eauth\\' => array($vendorDir . '/nodge/yii2-eauth/src'),
     'mongosoft\\file\\' => array($vendorDir . '/mongosoft/yii2-upload-behavior'),
     'mdm\\upload\\' => array($vendorDir . '/mdmsoft/yii2-upload-file'),

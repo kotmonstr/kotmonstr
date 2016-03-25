@@ -14,9 +14,9 @@ use yii\behaviors\TimestampBehavior;
  * @property integer $author_id
  * @property integer $created_at
  * @property integer $blog_id
- *
- * @property Blog $blog
- * @property User $author
+ * @property integer $updated_at
+ * @property string $social_name
+ * @property string $social_avatar
  */
 class Comment extends \yii\db\ActiveRecord
 {
@@ -46,9 +46,10 @@ class Comment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['content', 'author_id', 'blog_id'], 'required'],
+            [['content', 'blog_id',], 'required'],
             [['content'], 'string'],
-            [['author_id', 'created_at', 'blog_id'], 'integer']
+            [['author_id', 'created_at', 'blog_id', 'updated_at'], 'integer'],
+            [['social_name', 'social_avatar'], 'string', 'max' => 255],
         ];
     }
 
@@ -58,11 +59,14 @@ class Comment extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'content' => Yii::t('app', 'Content'),
-            'author_id' => Yii::t('app', 'Author ID'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'blog_id' => Yii::t('app', 'Blog ID'),
+            'id' => 'ID',
+            'content' => 'Content',
+            'author_id' => 'Author ID',
+            'created_at' => 'Created At',
+            'blog_id' => 'Blog ID',
+            'updated_at' => 'Updated At',
+            'social_name' => 'Social Name',
+            'social_avatar' => 'Social Avatar',
         ];
     }
 

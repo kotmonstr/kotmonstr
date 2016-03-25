@@ -439,8 +439,8 @@ h1.brand span {
 .nav-collapse_ .nav > li > ul li > a:hover,
 .nav-collapse_ .nav > li > ul li.sfHover > a {
   text-decoration: none;
-  background: #fff;
-  color: #000;
+  background: #ebf8ff;
+  color: #CF3039!important;
 }
 .nav-collapse_ .nav ul ul {
   position: absolute;

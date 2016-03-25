@@ -59,8 +59,8 @@ return [
                 'facebook' => [
                     // register your app here: https://developers.facebook.com/apps/
                     'class' => 'nodge\eauth\services\FacebookOAuth2Service',
-                    'clientId' => '...',
-                    'clientSecret' => '...',
+                    'clientId' => '527775067401938',
+                    'clientSecret' => '507b28804fc5e365b1771fad8e4ffc21',//507b28804fc5e365b1771fad8e4ffc21
                 ],
                 'yahoo' => [
                     'class' => 'nodge\eauth\services\YahooOpenIDService',
@@ -135,16 +135,7 @@ return [
             ],
         ],
 
-        // (optionally) you can configure pretty urls
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                'login/<service:google|facebook|etc>' => 'site/login',
-            ],
-        ],
-
-        // (optionally) you can configure logging
+       // (optionally) you can configure logging
         'log' => [
             'targets' => [
                 [

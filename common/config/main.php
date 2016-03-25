@@ -3,7 +3,7 @@
 return [
     'components' => [
         'db' => [
-           'class' => 'yii\db\Connection',
+            'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=u713312557_kot',
             'username' => 'u713312557_kot',
             'password' => 'jokers12',
@@ -18,6 +18,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            //'enableStrictParsing' => true,
             'rules' => [
 
                 ''=>'site/default/index',
@@ -29,19 +30,20 @@ return [
                 'blog'=>'/article/default/index',
                 'music'=>'/music/default/show',
                 'books'=>'/book/default/views',
+                'site/index'=>'site/default/index',
 
-
-
+                'article/list/<slug:.+>' => '/article/default/views',
+                'blog/list/<slug:.+>' => '/blog/default/views',
 
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<_m:[\w\-]+>' => '<_m>/default/index',
                 // /module/default/action -> /module/action
-                '<_m:[\w\-]+>/<_a:[\w\-]+>' => '<_m>/default/<_a>'
+                '<_m:[\w\-]+>/<_a:[\w\-]+>' => '<_m>/default/<_a>',
             ],
         ],
         'authManager' => [
             'class' => 'yii\rbac\PhpManager',
-            'defaultRoles' => ['user','moder','admin'], //здесь прописываем роли
+            'defaultRoles' => ['user', 'moder', 'admin'], //здесь прописываем роли
             //зададим куда будут сохраняться наши файлы конфигураций RBAC
             'itemFile' => '@common/components/rbac/items.php',
             'assignmentFile' => '@common/components/rbac/assignments.php',

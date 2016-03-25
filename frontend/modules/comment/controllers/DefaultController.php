@@ -134,13 +134,20 @@ class DefaultController extends CoreController {
     }
 
     public function actionAdd() {
+        $identity = Yii::$app->getUser()->getIdentity();
+        if (isset($identity->profile)) {
+            //vd($identity->profile);
+        }
+
         $comment_id = Yii::$app->request->post('comment_id');
         $message = Yii::$app->request->post('message');
         if($message &&  $message!=''){
         $model = new Comment;
         $model->content = $message;
         $model->blog_id = $comment_id;
-        $model->author_id = Yii::$app->user->id;
+        $model->author_id = Yii::$app->user->id ? Yii::$app->user->id : null;
+        $model->social_name = $identity ? $identity->profile['name'] : null;
+        $model->social_avatar = $identity && !empty($identity->profile['photo'] ) ? $identity->profile['photo'] : null;
         //$model->validate();
         //vd($model->getErrors());
         $model->save();

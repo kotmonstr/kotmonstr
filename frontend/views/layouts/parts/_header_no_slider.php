@@ -18,6 +18,26 @@ $identity = Yii::$app->getUser()->getIdentity();
 
 <div class="container">
     <div class="row">
+    <div id="panel">
+        <div class="navbar navbar-inverse navbar-fixed-top" id="advanced" style="margin-top: 0px;">
+            <span class="trigger"><strong></strong><em></em></span>
+            <div class="navbar-inner">
+                <div class="container"
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-top-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="javascript:void(0);">kotmonstr.com</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="row">
         <div class="span12">
             <div class="header-block clearfix">
                 <div class="clearfix header-block-pad">
@@ -47,7 +67,7 @@ $identity = Yii::$app->getUser()->getIdentity();
                                     </div>
                                 </a>
                             <?php } else { ?>
-                                <?php if (isset($identity->profile)) { ?>
+                                <?php if (isset($identity->profile) && !empty($identity->profile['photo_big'])) { ?>
                                     <div id="custom-avatar" class="contacts"
                                          style="background: url(<?= $identity->profile['photo_big'] ?>) no-repeat center center;background-size:100%">
 
@@ -88,7 +108,7 @@ $identity = Yii::$app->getUser()->getIdentity();
                             </div>
                             <ul class="social-icons">
                                 <li><a href="/site/login?service=vkontakte"><img src="/img/icon-1.png" alt=""></a></li>
-                                <li><a href="#"><img src="/img/icon-2.png" alt=""></a></li>
+                                <li><a href="/site/login?service=facebook"><img src="/img/icon-2.png" alt=""></a></li>
                                 <li><a href="#"><img src="/img/icon-3.png" alt=""></a></li>
                                 <li><a href="#"><img src="/img/icon-4.png" alt=""></a></li>
                             </ul>

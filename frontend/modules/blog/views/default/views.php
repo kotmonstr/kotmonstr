@@ -4,7 +4,7 @@ use yii\helpers\Url;
 use common\models\User;
 use common\models\Comment;
 use yii\helpers\StringHelper;
-
+use app\components\TemplateWidget;
 
 Yii::$app->formatter->locale = 'ru-RU';
 
@@ -14,20 +14,52 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
 <input type="hidden" id="comment_id" value="<?= $model->id ?>">
 
 <section id="content">
-    <div class="row">
-        <div class="container">
-            <div class="pos bg_preview_post">
-                <center><h3><?= $model->title ?></h3></center>
-                <center>
-                <?php if($model->image ){ ?>
-                <img alt="" src="<?= $model->image; ?>">
-                <?php } ?>
-                </center>
-                <p class="content"><?= $model->content ?>  </p>
+    <div class="container" style="text-align: center; padding: 0px 35px">
+        <div class="row pos bg_preview_post">
+
+
+            <div class="row">
+                <div class="col-md-12" style="text-align: center">
+                    <input type="hidden" id="comment_id" value="<?= $model->id ?>">
+                    <h3><?= $model->title ?></h3>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-12 " style="padding: 0px 45px">
+                    <img src="<?= $model->image ?>" width="auto" alt="">
+                </div>
+            </div>
+
+
+            <?= TemplateWidget::widget(['model' => $model,'template'=> 1]); ?>
+
+
+            <div class="row">
+                <div class="col-md-12" style="padding-right: 0px;padding-left: 20px;">
+                    <hr>
+                </div>
+                <div class="col-md-9" style="text-align: right">
+
+                    <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"
+                            charset="utf-8"></script>
+                    <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+                    <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+                </div>
+                <div class="col-md-3" style="text-align: right">
+                                                <span class="glyphicon glyphicon-time bold dark-color"
+                                                      aria-hidden="true"></span>
+                                    <span
+                                        class="dark-color"><?= ' ' . Yii::$app->formatter->asDate($model->created_at, 'short') . ' ' . Yii::$app->formatter->asTime($model->created_at, 'short') ?></span>
+                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"
+                                          style="margin-left:10px">&nbsp;<?= $model->view ?></span>
+                                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"
+                                          style="margin-left:10px">&nbsp;<?= Comment::getMessagesQuantityByBlogId($model->id) ?></span>
+                </div>
+            </div>
+
+
         </div>
-    </div>
-</div>
 </section>
 
 <section id="comment">
@@ -89,7 +121,7 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
         margin: 0px;
     }
     a, a:link, a:visited {
-        color: #fff!important;
+       // color: #fff!important;
 
     }
     .com-name{
@@ -108,7 +140,7 @@ margin-top: 23px;
     }
     p {
         // color : #ffffff !important;
-        background-color: #fff !important;
+        //background-color: #fff !important;
         font-family: verdana;
     }
     h5{

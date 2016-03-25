@@ -9,16 +9,14 @@ use app\components\TemplateWidget;
 Yii::$app->formatter->locale = 'ru-RU';
 $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\AppAsset::className()]);
 
-$allContentCountLetters = strlen($model->content);
-$leftContent = substr($model->content, 0, -($allContentCountLetters / 2));
-$rightContent = substr($model->content, -($allContentCountLetters / 2));
-
 
 ?>
 
 
 <div class="container" style="text-align: center; padding: 0px 35px">
     <div class="row pos bg_preview_post">
+
+
         <div class="row">
             <div class="col-md-12" style="text-align: center">
                 <input type="hidden" id="comment_id" value="<?= $model->id ?>">
@@ -27,79 +25,108 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
         </div>
 
         <div class="row">
-            <div class="col-md-12 " style="padding: 0px 45px" >
+            <div class="col-md-12 " style="padding: 0px 45px">
                 <img src="<?= $model->src . DIRECTORY_SEPARATOR . $model->image ?>" width="auto" alt="">
             </div>
         </div>
 
 
-        <?= TemplateWidget::widget(['model'=> $model]); ?>
+        <?= TemplateWidget::widget(['model' => $model]); ?>
+
+
         <div class="row">
+            <div class="col-md-12" style="padding-right: 0px;padding-left: 20px;">
+                <hr>
+            </div>
+            <div class="col-md-9" style="text-align: right">
 
-
-
-<!--            <div class="col-md-6 text"  style="padding: 0px 45px">-->
-<!--                --><?//= $leftContent; ?>
-<!--            </div>-->
-<!---->
-<!--            <div class="col-md-6 text" style="padding: 0px 45px">-->
-<!--                --><?//= $rightContent; ?>
-<!--            </div>-->
-
+                <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"
+                        charset="utf-8"></script>
+                <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+                <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+            </div>
+            <div class="col-md-3" style="text-align: right">
+                                                <span class="glyphicon glyphicon-time bold dark-color"
+                                                      aria-hidden="true"></span>
+                                    <span
+                                        class="dark-color"><?= ' ' . Yii::$app->formatter->asDate($model->created_at, 'short') . ' ' . Yii::$app->formatter->asTime($model->created_at, 'short') ?></span>
+                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"
+                                          style="margin-left:10px">&nbsp;<?= $model->view ?></span>
+                                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"
+                                          style="margin-left:10px">&nbsp;<?= Comment::getMessagesQuantityByBlogId($model->id) ?></span>
+            </div>
         </div>
+
+
     </div>
-</div>
 
 
-<div class="container">
-    <div class="row">
-        <section id="comment">
+    <div class="container" style="text-align: center;padding: 6px 70px 0px 0px;margin: 0px 1px 0px 0px;">
+
+            <section id="comment">
 
 
-            <center><h5>Коментарии</h5></center>
+                <center><h5>Коментарии</h5></center>
+
+                <? if($coment_model && $coment_model != ''): ?>
+                <?php foreach ($coment_model as $model): ?>
 
 
-            <?php foreach ($coment_model as $model): ?>
+                    <div class="row target main-comment pos bg_preview_post">
+                        <div class="span2" style="text-align: center">
+                            <?= User::getAvatar($model->author_id) ?><br>
 
+                            <div class="com-name"><?= $model->author->username ?></div>
+                        </div>
 
-                <div class="span12 target main-comment pos bg_preview_post">
-                    <div class="span2" style="text-align: center">
-                        <?= User::getAvatar($model->author_id) ?><br>
-
-                        <div class="com-name"><?= $model->author->username ?></div>
+                        <div class="span6" title="<?= $model->content ?>">
+                            <?= StringHelper::truncate($model->content, 1000); ?>
+                        </div>
+                        <div class="span2 time-d">
+                            <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?>
+                            <br><?= date("H:i", $model->created_at) ?>
+                        </div>
                     </div>
 
-                    <div class="span8" title="<?= $model->content ?>">
-                        <?= StringHelper::truncate($model->content, 1000); ?>
-                    </div>
-                    <div class="span2 time-d">
-                        <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?>
-                        <br><?= date("H:i", $model->created_at) ?>
-                    </div>
-                </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
 
-            <?php endforeach; ?>
+            </section>
+
     </div>
-</div>
-</section>
+
+
 <?php if (!Yii::$app->user->isGuest): ?>
     <section id="form">
         <div class="container shet" style="margin-top:50px">
             <div class="row">
-                <div class="span12">
-                    <div class="span10 left-div">
+
+                    <div class="span8 left-div">
                         <textarea id="comment-textarea"></textarea>
                     </div>
-                    <div class="span2">
+                    <div class="span4">
                         <a onclick="Comment.AddComment()" href="javascript:void(0);" class="btn btn_ sub-btn">Добавить
                             комментарий</a>
                     </div>
                 </div>
 
-            </div>
         </div>
     </section>
-<?php endif ?>
+<?php endif; ?>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <style>
     .text {
         font-size: 14px;
@@ -121,7 +148,7 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
     }
 
     a, a:link, a:visited {
-        color: #fff !important;
+        //color: #fff !important;
 
     }
 
@@ -131,7 +158,7 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
     }
 
     .main-comment {
-    / / border : 1 px solid red;
+    / / border: 1 px solid red;
         padding: 5px 0px;
         margin-bottom: 10px;
     }
@@ -143,8 +170,8 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
     }
 
     p {
-    / / color : #ffffff !important;
-        background-color: #fff !important;
+    / / color: #ffffff !important;
+        //background-color: #fff !important;
         font-family: verdana;
     }
 
@@ -159,10 +186,6 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
         letter-spacing: -2px;
         color: #666;
     }
-
-
-</style>
-<style>
     .bg_preview_post {
         background: none repeat scroll 0 0 #ffffff;
         margin-bottom: 20px;
@@ -200,15 +223,11 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
     }
 
     a, a:link, a:visited {
-        color: #cc0000;
-        text-decoration: none;
+        //color: #cc0000;
+        //text-decoration: none;
     }
 
-    a, a:link, a:visited {
-        color: #cc0000;
-        text-decoration: none;
 
-    }
 
     .bg_preview_post .preview_post .txt {
         margin-left: 310px;
@@ -267,7 +286,7 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
 
     .clearfix:after, .group:after {
         clear: both;
-    / / content : " ";
+    / / content: " ";
         display: block;
         font-size: 0;
         height: 0;
@@ -282,12 +301,12 @@ $rightContent = substr($model->content, -($allContentCountLetters / 2));
     }
 
     .title {
-    / / font-family : "solomon";
+    / / font-family: "solomon";
         font-size: 20px;
     }
 
-    . p {
-        background-color: #ffffff !important;
+    p {
+        //background-color: #ffffff !important;
     }
 
     .content {

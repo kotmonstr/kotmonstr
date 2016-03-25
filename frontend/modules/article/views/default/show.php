@@ -48,10 +48,11 @@ $this->params['breadcrumbs'][] = $this->title;
                             'attribute' => 'title',
                             'format' => 'html',
                             'value' => function($data){
-                                return Html::a($data->title,'/article/update?id='.$data->id);
+                                return Html::a(\yii\helpers\StringHelper::truncate($data->title,50),'/article/update?id='.$data->id);
                             }
                         ],
-                        //'image',
+
+                       // Html::img()
                         //'content:html',
                         //'created_at',
                         [
@@ -63,12 +64,12 @@ $this->params['breadcrumbs'][] = $this->title;
                             }
                         ],
                         [
-                          
-                            'attribute' => 'author',
-                            //'format' => 'html',
+
+                           'label' => 'картинка',
+                            'format' => 'html',
                             'value' => function($data){
-                               // return $data->user->username;
-                            }
+                                return Html::img($data->src.'/'.$data->image,['width'=>'100px']);
+                           }
                         ],
                         // 'updated_at',
                         //'author',

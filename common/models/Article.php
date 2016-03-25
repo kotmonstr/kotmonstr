@@ -5,8 +5,10 @@ namespace common\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
-
+use common\models\ArticleCategory;
+use yii\behaviors\SluggableBehavior;
 use common\models\Template;
+use yii\db\ActiveRecord;
 
 
 /**
@@ -24,23 +26,36 @@ use common\models\Template;
  * @property integer $updater_id
  * @property integer $view
  * @property integer $template
+ * @property string $slug
  *
  * @property ArticleCategory $articleCategory
- * @property Template $teamplate0
+ * @property Template $template0
  */
-
 class Article extends \yii\db\ActiveRecord
 {
     public $file;
     public $filename;
+    //public $slug;
 
     public function behaviors()
     {
 
 
-              return [
-                  TimestampBehavior::className(),
-              ];
+        return [
+
+
+            [
+                'class' => 'yii\behaviors\TimestampBehavior',
+
+            ],
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+                // 'slugAttribute' => 'slug',
+            ],
+
+
+        ];
 
 
     }
@@ -59,7 +74,7 @@ class Article extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['article_category', 'title', 'image', 'src', 'content', 'template'], 'required'],
+            [['article_category', 'title', 'image', 'src', 'content', 'template', 'slug'], 'required'],
             [['article_category', 'created_at', 'updated_at', 'updater_id', 'view', 'template'], 'integer'],
             [['content'], 'string'],
             [['title', 'image', 'src'], 'string', 'max' => 255],
@@ -87,6 +102,7 @@ class Article extends \yii\db\ActiveRecord
             'updater_id' => 'Updater ID',
             'view' => 'View',
             'template' => 'Template',
+            'slug' => 'Slug',
         ];
     }
 

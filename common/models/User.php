@@ -211,6 +211,14 @@ class User extends ActiveRecord implements IdentityInterface {
             return false;
         }
     }
+    public static function getAvatarSocial($img) {
+
+        if ($img) {
+            return \yii\helpers\Html::img($img,['width'=> '100px']);
+        } else {
+            return false;
+        }
+    }
     /**
      * @var array EAuth attributes
      */

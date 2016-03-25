@@ -2,6 +2,7 @@
 
 namespace app\modules\article\controllers;
 
+use common\models\ArticleCategory;
 use common\models\simple_html_dom;
 use yii\web\Controller;
 use common\models\Article;
@@ -15,6 +16,7 @@ use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use app\modules\core\controllers\CoreController;
 use common\models\ArticleSearch;
+
 
 class DefaultController extends CoreController {
      public function behaviors()
@@ -46,18 +48,33 @@ class DefaultController extends CoreController {
     }
 
     public $layout = '/blog';
+    public $meta = [];
+
 
     public function actionIndex() {
+
+        $catID = Yii::$app->request->get('category');
 
         // Вывести список статей
         $pageSize =9;
         $query = Article::find();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pageSize]);
-        $models = $query->offset($pages->offset)
+
+        if($catID){
+            $models = $query->offset($pages->offset)
+                ->where(['article_category'=>$catID])
                 ->orderBy('created_at DESC')
                 ->limit($pages->limit)
                 ->all();
+        }else{
+            $models = $query->offset($pages->offset)
+                ->orderBy('created_at DESC')
+                ->limit($pages->limit)
+                ->all();
+        }
+
+
 
         $modelLastArticle = Article::find()
             ->orderBy('id DESC')
@@ -70,11 +87,19 @@ class DefaultController extends CoreController {
             ->all();
 
 
+        $ArticleCategoryModel = ArticleCategory::find()
+            ->leftJoin('article', '`article`.`article_category` = `article_category`.`id`')
+            ->where(['<>','article.article_category', 111])
+            ->with('article')
+            ->all();
+
+
         return $this->render('index', [ 'model' => $models,
                             'modelLastArticle'=> $modelLastArticle,
                             'modeMostWatched'=> $modeMostWatched,
                             'pages' => $pages,
-                            'pageSize'=> $pageSize
+                            'pageSize'=> $pageSize,
+                            'ArticleCategoryModel'=> $ArticleCategoryModel
         ]);
     }
 
@@ -90,6 +115,7 @@ class DefaultController extends CoreController {
 
         $this->layout = '/adminka';
         $searchModel = new ArticleSearch();
+
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //vd(1);
         return $this->render('show', [
@@ -158,48 +184,60 @@ class DefaultController extends CoreController {
 
     public function actionViews() {
 
+        //$this->title = 'Заголовок, сгенерированный контроллером';
+
         $this->layout = '/blog';
 
-
-        $id = Yii::$app->request->get('id');
-        $Article = Article::find()->where(['id' => $id])->one();
+        //$id = Yii::$app->request->get('id');
+        $slug = Yii::$app->request->get('slug');
+        //vd($slug);
+        $Article = Article::find()->where(['slug' => $slug])->one();
         if($Article) {
             $viwsQuantity = (int)$Article->view;
             $Article->view = $viwsQuantity + 1;
             $Article->updateAttributes(['view']);
-            $coment_model = Comment::find()->where(['blog_id' => $id])->all();
+            $coment_model = Comment::find()->where(['blog_id' => $Article->id])->all();
+            
+            $this->meta = $Article;
             return $this->render('views', ['model' => $Article, 'coment_model' => $coment_model]);
         }else{
-            $this->redirect('site/error');
+            $this->redirect('site/index');
         }
     }
 
     public function actionAddNewsFromParser(){
-        $ImportModel = file_get_contents(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
-        //vd(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
-        //$ImportModel = ImportNews::find()->all();
-        $obj = json_decode($ImportModel);
-        //vd($obj);
-        if($ImportModel) {
-            foreach ($obj as $row) {
+        $file = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
+        if(file_exists($file)){
+            $ImportModel = file_get_contents($file);
+            $obj = json_decode($ImportModel);
+            //vd($obj);
+            if($ImportModel) {
+                foreach ($obj as $row) {
 
-                $duble = Article::getDublicateByTitle($row->title);
-                if (!$duble) {
-                    $model = new Article();
-                    $model->title = $row->title;
-                    $model->image = $row->image ? $row->image : '';
-                    $model->content = $row->content;
-                    $model->created_at = $row->created_at;
-                    $model->updated_at = $row->updated_at;
-                    $model->author = $row->author;
-                    $model->save();
-                } else {
-                    //echo "It is Dublicate", PHP_EOL;
+                    $duble = Article::getDublicateByTitle($row->title);
+                    if (!$duble) {
+                        $model = new Article();
+                        $model->title = $row->title;
+                        $model->image = $row->image ? $row->image : '';
+                        $model->content = $row->content;
+                        $model->created_at = $row->created_at;
+                        $model->updated_at = $row->updated_at;
+                        $model->author = $row->author;
+                        $model->save();
+                    } else {
+                        //echo "It is Dublicate", PHP_EOL;
+                    }
+
                 }
-
             }
+            return $this->redirect('/admin/index');
+        }else{
+            //Todo add emty file
+            file_put_contents($file,"");
+            Yii::$app->session->setFlash('error', 'Нет новых новостей!');
+            return $this->redirect('/admin/index');
         }
-        return $this->redirect('/admin/index');
+
     }
 
     public function actionParserStart(){
@@ -246,36 +284,10 @@ class DefaultController extends CoreController {
         }
 
         if(!empty($arrResult2)){
-            //$model = ImportNews::deleteAll();
-
-
-// данные в json
-            $data = json_encode($arrResult2);
-            //echo $data;
-            //vd(1);
-
+             $data = json_encode($arrResult2);
             $file = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
             file_put_contents($file, $data);
         }
-
-//        ImportNews::deleteAll();
-//        foreach($arrResult2 as $key => $row){
-//
-//            $modelArticle = new ImportNews();
-//            $modelArticle->title = $row['title'];
-//            $modelArticle->content = $row['content'];
-//            $modelArticle->created_at = time();
-//            $modelArticle->updated_at = time();
-//            $modelArticle->author = Yii::$app->user->id;
-//            $modelArticle->image = $row['img'];
-//
-//            //$dublicate = ImportNews::getDublicateByTitle($row['title']);
-//            //if(!$dublicate){
-//                $modelArticle->save();
-//            //}
-//
-//
-//        }
 
         return $this->redirect('/admin/index');
     }

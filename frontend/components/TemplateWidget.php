@@ -12,7 +12,7 @@ class TemplateWidget extends Widget
     public function init()
     {
         parent::init();
-        $this->template = $this->model->template;
+        $this->template = $this->model->template ? $this->model->template : $this->template;
 
     }
 

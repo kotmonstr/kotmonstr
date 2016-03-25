@@ -131,18 +131,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-composer.git",
-            "reference": "d33d1046a5951f2f7823fe343f28ddc58b3421a4"
+            "reference": "348122de0b2c2e343b579f93fcda1da78cab4912"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/d33d1046a5951f2f7823fe343f28ddc58b3421a4",
-            "reference": "d33d1046a5951f2f7823fe343f28ddc58b3421a4",
+            "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/348122de0b2c2e343b579f93fcda1da78cab4912",
+            "reference": "348122de0b2c2e343b579f93fcda1da78cab4912",
             "shasum": ""
         },
         "require": {
             "composer-plugin-api": "^1.0"
         },
-        "time": "2016-02-06 01:03:32",
+        "time": "2016-03-21 19:11:44",
         "type": "composer-plugin",
         "extra": {
             "class": "yii\\composer\\Plugin",
@@ -180,19 +180,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-            "reference": "ef941bc83ea63326e44769b922476dc1035ea551"
+            "reference": "e64170ffa5678be6cb8c3decf92feac8142aa523"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/ef941bc83ea63326e44769b922476dc1035ea551",
-            "reference": "ef941bc83ea63326e44769b922476dc1035ea551",
+            "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/e64170ffa5678be6cb8c3decf92feac8142aa523",
+            "reference": "e64170ffa5678be6cb8c3decf92feac8142aa523",
             "shasum": ""
         },
         "require": {
             "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
             "yiisoft/yii2": ">=2.0.6"
         },
-        "time": "2016-01-24 17:03:09",
+        "time": "2016-03-21 19:11:20",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
@@ -232,12 +232,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/cebe/markdown.git",
-            "reference": "e4499350d8a94c4c693a7e784295eff7a717ae67"
+            "reference": "e2a490ceec590bf5bfd1b43bd424fb9dceceb7c5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cebe/markdown/zipball/e4499350d8a94c4c693a7e784295eff7a717ae67",
-            "reference": "e4499350d8a94c4c693a7e784295eff7a717ae67",
+            "url": "https://api.github.com/repos/cebe/markdown/zipball/e2a490ceec590bf5bfd1b43bd424fb9dceceb7c5",
+            "reference": "e2a490ceec590bf5bfd1b43bd424fb9dceceb7c5",
             "shasum": ""
         },
         "require": {
@@ -249,7 +249,7 @@
             "facebook/xhprof": "*@dev",
             "phpunit/phpunit": "4.1.*"
         },
-        "time": "2016-02-09 22:09:46",
+        "time": "2016-03-18 13:28:11",
         "bin": [
             "bin/markdown"
         ],
@@ -285,39 +285,6 @@
             "gfm",
             "markdown",
             "markdown-extra"
-        ]
-    },
-    {
-        "name": "bower-asset/jquery",
-        "version": "2.2.0",
-        "version_normalized": "2.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jquery/jquery-dist.git",
-            "reference": "6fc01e29bdad0964f62ef56d01297039cdcadbe5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/6fc01e29bdad0964f62ef56d01297039cdcadbe5",
-            "reference": "6fc01e29bdad0964f62ef56d01297039cdcadbe5",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "dist/jquery.js",
-            "bower-asset-ignore": [
-                "package.json"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "keywords": [
-            "browser",
-            "javascript",
-            "jquery",
-            "library"
         ]
     },
     {
@@ -520,12 +487,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/fzaninotto/Faker.git",
-            "reference": "d8c0bebc230284edc91b5e7091013e7a0c55bf34"
+            "reference": "bb09cf8982f89b50bb8bc6c0f9e451353ad17065"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d8c0bebc230284edc91b5e7091013e7a0c55bf34",
-            "reference": "d8c0bebc230284edc91b5e7091013e7a0c55bf34",
+            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/bb09cf8982f89b50bb8bc6c0f9e451353ad17065",
+            "reference": "bb09cf8982f89b50bb8bc6c0f9e451353ad17065",
             "shasum": ""
         },
         "require": {
@@ -536,7 +503,7 @@
             "phpunit/phpunit": "~4.0",
             "squizlabs/php_codesniffer": "~1.5"
         },
-        "time": "2016-02-20 14:15:56",
+        "time": "2016-03-22 20:16:49",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -809,212 +776,6 @@
         ]
     },
     {
-        "name": "mongosoft/yii2-upload-behavior",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mongosoft/yii2-upload-behavior.git",
-            "reference": "9e175641ace3641b4c96e1e8197a2569d1a4f0b4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mongosoft/yii2-upload-behavior/zipball/9e175641ace3641b4c96e1e8197a2569d1a4f0b4",
-            "reference": "9e175641ace3641b4c96e1e8197a2569d1a4f0b4",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0",
-            "yiisoft/yii2": "*",
-            "yiisoft/yii2-imagine": "*"
-        },
-        "require-dev": {
-            "phpunit/dbunit": "~1.0",
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2015-12-27 16:07:50",
-        "type": "yii2-extension",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "mongosoft\\file\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD 3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Alexander Mohorev",
-                "email": "dev.mohorev@gmail.com"
-            }
-        ],
-        "description": "Upload behavior for Yii 2",
-        "homepage": "https://github.com/mongosoft/yii2-upload-behavior",
-        "keywords": [
-            "Behavior",
-            "extension",
-            "file",
-            "image",
-            "resize",
-            "thumb",
-            "upload",
-            "yii2"
-        ]
-    },
-    {
-        "name": "yiisoft/yii2-swiftmailer",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-            "reference": "2cca1bb86444a6438b0720f8c60120a400982366"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/2cca1bb86444a6438b0720f8c60120a400982366",
-            "reference": "2cca1bb86444a6438b0720f8c60120a400982366",
-            "shasum": ""
-        },
-        "require": {
-            "swiftmailer/swiftmailer": "~5.0",
-            "yiisoft/yii2": ">=2.0.4"
-        },
-        "time": "2015-12-07 11:40:31",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "yii\\swiftmailer\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Paul Klimov",
-                "email": "klimov.paul@gmail.com"
-            }
-        ],
-        "description": "The SwiftMailer integration for the Yii framework",
-        "keywords": [
-            "email",
-            "mail",
-            "mailer",
-            "swift",
-            "swiftmailer",
-            "yii2"
-        ]
-    },
-    {
-        "name": "yiisoft/yii2-faker",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/yii2-faker.git",
-            "reference": "186c77214e0a4b75f10380b4e6e5f82788922cb7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-faker/zipball/186c77214e0a4b75f10380b4e6e5f82788922cb7",
-            "reference": "186c77214e0a4b75f10380b4e6e5f82788922cb7",
-            "shasum": ""
-        },
-        "require": {
-            "fzaninotto/faker": "~1.4",
-            "yiisoft/yii2": "*"
-        },
-        "time": "2015-12-18 01:52:12",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "yii\\faker\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Mark Jebri",
-                "email": "mark.github@yandex.ru"
-            }
-        ],
-        "description": "Fixture generator. The Faker integration for the Yii framework.",
-        "keywords": [
-            "Fixture",
-            "faker",
-            "yii2"
-        ]
-    },
-    {
-        "name": "yiisoft/yii2-imagine",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/yii2-imagine.git",
-            "reference": "586c9c99cb541ec4d4d2ec2a206b08a6fd6de888"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/586c9c99cb541ec4d4d2ec2a206b08a6fd6de888",
-            "reference": "586c9c99cb541ec4d4d2ec2a206b08a6fd6de888",
-            "shasum": ""
-        },
-        "require": {
-            "imagine/imagine": "0.5.*",
-            "yiisoft/yii2": "*"
-        },
-        "time": "2015-09-29 10:49:20",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "yii\\imagine\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Antonio Ramirez",
-                "email": "amigo.cobos@gmail.com"
-            }
-        ],
-        "description": "The Imagine integration for the Yii framework",
-        "keywords": [
-            "helper",
-            "image",
-            "imagine",
-            "yii2"
-        ]
-    },
-    {
         "name": "karpoff/yii2-crop-image-upload",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -1062,101 +823,6 @@
         ]
     },
     {
-        "name": "yiisoft/yii2-codeception",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/yii2-codeception.git",
-            "reference": "ee239c244fd011f11c8827f97ebe7600d03f1841"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/ee239c244fd011f11c8827f97ebe7600d03f1841",
-            "reference": "ee239c244fd011f11c8827f97ebe7600d03f1841",
-            "shasum": ""
-        },
-        "require": {
-            "yiisoft/yii2": ">=2.0.4"
-        },
-        "time": "2015-11-20 08:52:21",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "yii\\codeception\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Mark Jebri",
-                "email": "mark.github@yandex.ru"
-            }
-        ],
-        "description": "The Codeception integration for the Yii framework",
-        "keywords": [
-            "codeception",
-            "yii2"
-        ]
-    },
-    {
-        "name": "kartik-v/yii2-krajee-base",
-        "version": "1.8.2",
-        "version_normalized": "1.8.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-            "reference": "0c274e31e4392cbafc5fe158eae81738794e02ce"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/0c274e31e4392cbafc5fe158eae81738794e02ce",
-            "reference": "0c274e31e4392cbafc5fe158eae81738794e02ce",
-            "shasum": ""
-        },
-        "require": {
-            "yiisoft/yii2-bootstrap": "@dev"
-        },
-        "time": "2016-01-10 12:26:29",
-        "type": "yii2-extension",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "kartik\\base\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Kartik Visweswaran",
-                "email": "kartikv2@gmail.com",
-                "homepage": "http://www.krajee.com/"
-            }
-        ],
-        "description": "Base library and foundation components for all Yii2 Krajee extensions.",
-        "homepage": "https://github.com/kartik-v/yii2-krajee-base",
-        "keywords": [
-            "base",
-            "extension",
-            "foundation",
-            "krajee",
-            "widget",
-            "yii2"
-        ]
-    },
-    {
         "name": "bower-asset/jquery-ui",
         "version": "1.11.4",
         "version_normalized": "1.11.4.0",
@@ -1182,58 +848,6 @@
             "bower-asset-ignore": []
         },
         "installation-source": "dist"
-    },
-    {
-        "name": "yiisoft/yii2-jui",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/yii2-jui.git",
-            "reference": "1425ab29929dd195f468d3c4eb340ab509f28b83"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/1425ab29929dd195f468d3c4eb340ab509f28b83",
-            "reference": "1425ab29929dd195f468d3c4eb340ab509f28b83",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery-ui": "1.11.*@stable",
-            "yiisoft/yii2": ">=2.0.4"
-        },
-        "time": "2015-12-24 06:23:53",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            },
-            "asset-installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "yii\\jui\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Qiang Xue",
-                "email": "qiang.xue@gmail.com"
-            }
-        ],
-        "description": "The Jquery UI extension for the Yii framework",
-        "keywords": [
-            "jQuery UI",
-            "yii2"
-        ]
     },
     {
         "name": "kartik-v/yii2-icons",
@@ -1490,200 +1104,6 @@
         ]
     },
     {
-        "name": "yiisoft/yii2-debug",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/yii2-debug.git",
-            "reference": "e30ded9067f595b5e6d3536ec1365353b826b300"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/e30ded9067f595b5e6d3536ec1365353b826b300",
-            "reference": "e30ded9067f595b5e6d3536ec1365353b826b300",
-            "shasum": ""
-        },
-        "require": {
-            "yiisoft/yii2": ">=2.0.4",
-            "yiisoft/yii2-bootstrap": "*"
-        },
-        "time": "2016-02-16 08:23:57",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "yii\\debug\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Qiang Xue",
-                "email": "qiang.xue@gmail.com"
-            }
-        ],
-        "description": "The debugger extension for the Yii framework",
-        "keywords": [
-            "debug",
-            "debugger",
-            "yii2"
-        ]
-    },
-    {
-        "name": "yiisoft/yii2-gii",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/yii2-gii.git",
-            "reference": "06d71ba20ccb6a6dbcf568020e93047f0bdc80bd"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/06d71ba20ccb6a6dbcf568020e93047f0bdc80bd",
-            "reference": "06d71ba20ccb6a6dbcf568020e93047f0bdc80bd",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/typeahead.js": "0.10.* | ~0.11.0",
-            "phpspec/php-diff": ">=1.0.2",
-            "yiisoft/yii2": ">=2.0.4",
-            "yiisoft/yii2-bootstrap": "~2.0"
-        },
-        "time": "2016-02-16 23:57:57",
-        "type": "yii2-extension",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            },
-            "asset-installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "yii\\gii\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Qiang Xue",
-                "email": "qiang.xue@gmail.com"
-            }
-        ],
-        "description": "The Gii extension for the Yii framework",
-        "keywords": [
-            "code generator",
-            "gii",
-            "yii2"
-        ]
-    },
-    {
-        "name": "components/flag-icon-css",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/lipis/flag-icon-css.git",
-            "reference": "74e116a8e6db56fbee4b6dc6fa7fd36552f63f4d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/lipis/flag-icon-css/zipball/74e116a8e6db56fbee4b6dc6fa7fd36552f63f4d",
-            "reference": "74e116a8e6db56fbee4b6dc6fa7fd36552f63f4d",
-            "shasum": ""
-        },
-        "time": "2016-02-17 23:00:25",
-        "type": "component",
-        "extra": {
-            "component": {
-                "name": "flag-icon-css",
-                "files": [
-                    "less/**",
-                    "css/**",
-                    "flags/**"
-                ]
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Panayiotis Lipiridis (Lipis)",
-                "email": "lipiridis@gmail.com"
-            }
-        ],
-        "description": "CSS for vector based country flags"
-    },
-    {
-        "name": "fortawesome/font-awesome",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/FortAwesome/Font-Awesome.git",
-            "reference": "260e2151492183c3aab94dc3023fc6777c27f244"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/260e2151492183c3aab94dc3023fc6777c27f244",
-            "reference": "260e2151492183c3aab94dc3023fc6777c27f244",
-            "shasum": ""
-        },
-        "require-dev": {
-            "jekyll": "1.0.2",
-            "lessc": "1.4.2"
-        },
-        "time": "2016-02-15 18:22:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "OFL-1.1",
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Dave Gandy",
-                "email": "dave@fontawesome.io",
-                "homepage": "http://twitter.com/davegandy",
-                "role": "Developer"
-            }
-        ],
-        "description": "The iconic font and CSS framework",
-        "homepage": "http://fontawesome.io/",
-        "keywords": [
-            "FontAwesome",
-            "awesome",
-            "bootstrap",
-            "font",
-            "icon"
-        ]
-    },
-    {
         "name": "ezyang/htmlpurifier",
         "version": "v4.7.0",
         "version_normalized": "4.7.0.0",
@@ -1736,12 +1156,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-framework.git",
-            "reference": "8d9ad814afae3b0de96d7878c3e784f81b43c0d8"
+            "reference": "770a0b2b2bdd42b4152659d9b117eba5a09bcafe"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/8d9ad814afae3b0de96d7878c3e784f81b43c0d8",
-            "reference": "8d9ad814afae3b0de96d7878c3e784f81b43c0d8",
+            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/770a0b2b2bdd42b4152659d9b117eba5a09bcafe",
+            "reference": "770a0b2b2bdd42b4152659d9b117eba5a09bcafe",
             "shasum": ""
         },
         "require": {
@@ -1752,12 +1172,12 @@
             "cebe/markdown": "~1.0.0 | ~1.1.0",
             "ext-ctype": "*",
             "ext-mbstring": "*",
-            "ezyang/htmlpurifier": "~4.7.0",
+            "ezyang/htmlpurifier": "~4.6",
             "lib-pcre": "*",
             "php": ">=5.4.0",
             "yiisoft/yii2-composer": "~2.0.4"
         },
-        "time": "2016-02-20 15:44:29",
+        "time": "2016-03-23 17:16:08",
         "bin": [
             "yii"
         ],
@@ -1880,84 +1300,6 @@
         "installation-source": "source"
     },
     {
-        "name": "bower-asset/blueimp-file-upload",
-        "version": "9.9.4",
-        "version_normalized": "9.9.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/blueimp/jQuery-File-Upload.git",
-            "reference": "ce33e8915c4e4b3e7930c9ed0ae45cf132944a88"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/ce33e8915c4e4b3e7930c9ed0ae45cf132944a88",
-            "reference": "ce33e8915c4e4b3e7930c9ed0ae45cf132944a88",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/blueimp-canvas-to-blob": ">=2.1.1",
-            "bower-asset/blueimp-load-image": ">=1.13.0",
-            "bower-asset/blueimp-tmpl": ">=2.5.4",
-            "bower-asset/jquery": ">=1.6"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "css/jquery.fileupload.css",
-                "css/jquery.fileupload-ui.css",
-                "css/jquery.fileupload-noscript.css",
-                "css/jquery.fileupload-ui-noscript.css",
-                "js/cors/jquery.postmessage-transport.js",
-                "js/cors/jquery.xdr-transport.js",
-                "js/vendor/jquery.ui.widget.js",
-                "js/jquery.fileupload.js",
-                "js/jquery.fileupload-process.js",
-                "js/jquery.fileupload-validate.js",
-                "js/jquery.fileupload-image.js",
-                "js/jquery.fileupload-audio.js",
-                "js/jquery.fileupload-video.js",
-                "js/jquery.fileupload-ui.js",
-                "js/jquery.fileupload-jquery-ui.js",
-                "js/jquery.fileupload-angular.js",
-                "js/jquery.iframe-transport.js"
-            ],
-            "bower-asset-ignore": [
-                "/*.*",
-                "/cors",
-                "css/demo-ie8.css",
-                "css/demo.css",
-                "css/style.css",
-                "js/app.js",
-                "js/main.js",
-                "server",
-                "test"
-            ]
-        },
-        "installation-source": "dist",
-        "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images, audio and video for jQuery. Supports cross-domain, chunked and resumable file uploads. Works with any server-side platform (Google App Engine, PHP, Python, Ruby on Rails, Java, etc.) that supports standard HTML form file uploads.",
-        "keywords": [
-            "bootstrap",
-            "chunk",
-            "cross-domain",
-            "cross-site",
-            "drag",
-            "drop",
-            "file",
-            "gae",
-            "go",
-            "jquery",
-            "multiple",
-            "php",
-            "preview",
-            "progress",
-            "python",
-            "resume",
-            "selection",
-            "upload",
-            "widget"
-        ]
-    },
-    {
         "name": "bower-asset/blueimp-gallery",
         "version": "v2.17.0",
         "version_normalized": "2.17.0.0",
@@ -2039,124 +1381,6 @@
         ]
     },
     {
-        "name": "2amigos/yii2-file-upload-widget",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/2amigos/yii2-file-upload-widget.git",
-            "reference": "83c75e4c2ed755135555a4e6aa80311649332d41"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/83c75e4c2ed755135555a4e6aa80311649332d41",
-            "reference": "83c75e4c2ed755135555a4e6aa80311649332d41",
-            "shasum": ""
-        },
-        "require": {
-            "2amigos/yii2-gallery-widget": "~1.0",
-            "bower-asset/blueimp-file-upload": "~9.9.0",
-            "yiisoft/yii2": "~2.0.0",
-            "yiisoft/yii2-bootstrap": "~2.0.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2016-01-11 22:15:49",
-        "type": "yii2-extension",
-        "extra": {
-            "asset-installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            },
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "dosamigos\\fileupload\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "2amigOS! Consulting Group",
-                "email": "hola@2amigos.us",
-                "homepage": "http://2amigos.us",
-                "role": "Developer"
-            },
-            {
-                "name": "Alexander Kochetov",
-                "email": "creocoder@gmail.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Blueimp file upload widget for the Yii framework",
-        "homepage": "https://github.com/2amigos/yii2-file-upload-widget",
-        "keywords": [
-            "2amigos",
-            "upload",
-            "widget",
-            "yii",
-            "yii 2",
-            "yii2"
-        ]
-    },
-    {
-        "name": "mdmsoft/yii2-upload-file",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mdmsoft/yii2-upload-file.git",
-            "reference": "c44f0d9694e02a7b62a270f142ae1cc1f2638435"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mdmsoft/yii2-upload-file/zipball/c44f0d9694e02a7b62a270f142ae1cc1f2638435",
-            "reference": "c44f0d9694e02a7b62a270f142ae1cc1f2638435",
-            "shasum": ""
-        },
-        "require": {
-            "yiisoft/yii2": "~2.0"
-        },
-        "time": "2015-10-26 10:58:52",
-        "type": "yii2-extension",
-        "extra": {
-            "bootstrap": "mdm\\upload\\Bootstrap",
-            "branch-alias": {
-                "dev-master": "1.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "mdm\\upload\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Misbahul Munir",
-                "email": "misbahuldmunir@gmail.com"
-            }
-        ],
-        "description": "Yii2 upload file tools",
-        "keywords": [
-            "file",
-            "upload",
-            "yii"
-        ]
-    },
-    {
         "name": "vova07/yii2-imperavi-widget",
         "version": "1.2.7",
         "version_normalized": "1.2.7.0",
@@ -2218,6 +1442,824 @@
             "yii",
             "yii 2",
             "yii2"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery",
+        "version": "2.2.2",
+        "version_normalized": "2.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery-dist.git",
+            "reference": "086d381cd2f3b4b8b0af85ecb2c9593a61e5b4bd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/086d381cd2f3b4b8b0af85ecb2c9593a61e5b4bd",
+            "reference": "086d381cd2f3b4b8b0af85ecb2c9593a61e5b4bd",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": "dist/jquery.js",
+            "bower-asset-ignore": [
+                "package.json"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "keywords": [
+            "browser",
+            "javascript",
+            "jquery",
+            "library"
+        ]
+    },
+    {
+        "name": "kartik-v/yii2-krajee-base",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kartik-v/yii2-krajee-base.git",
+            "reference": "3e491e51ed742663b239cd6e0b7f76d403bed7e1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/3e491e51ed742663b239cd6e0b7f76d403bed7e1",
+            "reference": "3e491e51ed742663b239cd6e0b7f76d403bed7e1",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2-bootstrap": "@dev"
+        },
+        "time": "2016-03-03 12:24:13",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.8.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "kartik\\base\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Kartik Visweswaran",
+                "email": "kartikv2@gmail.com",
+                "homepage": "http://www.krajee.com/"
+            }
+        ],
+        "description": "Base library and foundation components for all Yii2 Krajee extensions.",
+        "homepage": "https://github.com/kartik-v/yii2-krajee-base",
+        "keywords": [
+            "base",
+            "extension",
+            "foundation",
+            "krajee",
+            "widget",
+            "yii2"
+        ]
+    },
+    {
+        "name": "bower-asset/blueimp-file-upload",
+        "version": "9.12.1",
+        "version_normalized": "9.12.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/blueimp/jQuery-File-Upload.git",
+            "reference": "098b507770581d2c8b037fa0a747ff02eb45a329"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/098b507770581d2c8b037fa0a747ff02eb45a329",
+            "reference": "098b507770581d2c8b037fa0a747ff02eb45a329",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/blueimp-canvas-to-blob": ">=2.1.1",
+            "bower-asset/blueimp-load-image": ">=1.13.0",
+            "bower-asset/blueimp-tmpl": ">=2.5.4",
+            "bower-asset/jquery": ">=1.6"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "js/jquery.fileupload.js"
+            ],
+            "bower-asset-ignore": [
+                "/*.*",
+                "/cors",
+                "css/demo-ie8.css",
+                "css/demo.css",
+                "css/style.css",
+                "js/app.js",
+                "js/main.js",
+                "server",
+                "test"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images.",
+        "keywords": [
+            "bootstrap",
+            "chunk",
+            "cross-domain",
+            "cross-site",
+            "drag",
+            "drop",
+            "file",
+            "gae",
+            "go",
+            "jquery",
+            "multiple",
+            "php",
+            "preview",
+            "progress",
+            "python",
+            "resume",
+            "selection",
+            "upload",
+            "widget"
+        ]
+    },
+    {
+        "name": "notgosu/yii2-meta-tag-module",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/notgosu/yii2-meta-tag-module.git",
+            "reference": "27faa3bbba35e9b8b7c29c67151d7b770703a7f0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/notgosu/yii2-meta-tag-module/zipball/27faa3bbba35e9b8b7c29c67151d7b770703a7f0",
+            "reference": "27faa3bbba35e9b8b7c29c67151d7b770703a7f0",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "~2"
+        },
+        "time": "2015-03-27 00:00:00",
+        "type": "yii2-extension",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "notgosu\\yii2\\modules\\metaTag\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Naumenko Pavel",
+                "email": "not.gosu@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Pushkin Ivan",
+                "email": "imetalguardi+yii2@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Yii2 meta tag module for creating and setting meta tags for your site",
+        "homepage": "https://github.com/notgosu/yii2-meta-tag-module",
+        "keywords": [
+            "meta tag",
+            "seo",
+            "yii2"
+        ]
+    },
+    {
+        "name": "mongosoft/yii2-upload-behavior",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mongosoft/yii2-upload-behavior.git",
+            "reference": "f6cca5e7b741a0197c0910ccd0a0629cbfdb18ef"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mongosoft/yii2-upload-behavior/zipball/f6cca5e7b741a0197c0910ccd0a0629cbfdb18ef",
+            "reference": "f6cca5e7b741a0197c0910ccd0a0629cbfdb18ef",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "yiisoft/yii2": "*",
+            "yiisoft/yii2-imagine": "*"
+        },
+        "require-dev": {
+            "phpunit/dbunit": "~1.0",
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-03-10 11:45:39",
+        "type": "yii2-extension",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "mongosoft\\file\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD 3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Mohorev",
+                "email": "dev.mohorev@gmail.com"
+            }
+        ],
+        "description": "Upload behavior for Yii 2",
+        "homepage": "https://github.com/mongosoft/yii2-upload-behavior",
+        "keywords": [
+            "Behavior",
+            "extension",
+            "file",
+            "image",
+            "resize",
+            "thumb",
+            "upload",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-swiftmailer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
+            "reference": "20775fef1047cd927908270a8d7983580304eb57"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/20775fef1047cd927908270a8d7983580304eb57",
+            "reference": "20775fef1047cd927908270a8d7983580304eb57",
+            "shasum": ""
+        },
+        "require": {
+            "swiftmailer/swiftmailer": "~5.0",
+            "yiisoft/yii2": ">=2.0.4"
+        },
+        "time": "2016-03-21 19:16:09",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "yii\\swiftmailer\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Paul Klimov",
+                "email": "klimov.paul@gmail.com"
+            }
+        ],
+        "description": "The SwiftMailer integration for the Yii framework",
+        "keywords": [
+            "email",
+            "mail",
+            "mailer",
+            "swift",
+            "swiftmailer",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-faker",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-faker.git",
+            "reference": "a8daa97749e7154d91676405a1c59ed81e1ca999"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-faker/zipball/a8daa97749e7154d91676405a1c59ed81e1ca999",
+            "reference": "a8daa97749e7154d91676405a1c59ed81e1ca999",
+            "shasum": ""
+        },
+        "require": {
+            "fzaninotto/faker": "~1.4",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2016-03-21 19:13:03",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "yii\\faker\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Mark Jebri",
+                "email": "mark.github@yandex.ru"
+            }
+        ],
+        "description": "Fixture generator. The Faker integration for the Yii framework.",
+        "keywords": [
+            "Fixture",
+            "faker",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-imagine",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-imagine.git",
+            "reference": "a6c34ef6b69fb4670ba987ce4b9cfdb2131a8b99"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/a6c34ef6b69fb4670ba987ce4b9cfdb2131a8b99",
+            "reference": "a6c34ef6b69fb4670ba987ce4b9cfdb2131a8b99",
+            "shasum": ""
+        },
+        "require": {
+            "imagine/imagine": "0.5.*",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2016-03-21 19:13:31",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "yii\\imagine\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Antonio Ramirez",
+                "email": "amigo.cobos@gmail.com"
+            }
+        ],
+        "description": "The Imagine integration for the Yii framework",
+        "keywords": [
+            "helper",
+            "image",
+            "imagine",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-codeception",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-codeception.git",
+            "reference": "e01b3c46917b3f00c42f6a4aabf612cc36d792e6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/e01b3c46917b3f00c42f6a4aabf612cc36d792e6",
+            "reference": "e01b3c46917b3f00c42f6a4aabf612cc36d792e6",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": ">=2.0.4"
+        },
+        "time": "2016-03-21 19:11:26",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "yii\\codeception\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Mark Jebri",
+                "email": "mark.github@yandex.ru"
+            }
+        ],
+        "description": "The Codeception integration for the Yii framework",
+        "keywords": [
+            "codeception",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-jui",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-jui.git",
+            "reference": "226ffd897b26965a357e187cdf67f6c2e43e3139"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/226ffd897b26965a357e187cdf67f6c2e43e3139",
+            "reference": "226ffd897b26965a357e187cdf67f6c2e43e3139",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery-ui": "1.11.*@stable",
+            "yiisoft/yii2": ">=2.0.4"
+        },
+        "time": "2016-03-21 19:14:08",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            },
+            "asset-installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "yii\\jui\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Qiang Xue",
+                "email": "qiang.xue@gmail.com"
+            }
+        ],
+        "description": "The Jquery UI extension for the Yii framework",
+        "keywords": [
+            "jQuery UI",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-debug",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-debug.git",
+            "reference": "081795536b31d29106b0d1de0cb3aefa3e05e995"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/081795536b31d29106b0d1de0cb3aefa3e05e995",
+            "reference": "081795536b31d29106b0d1de0cb3aefa3e05e995",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": ">=2.0.4",
+            "yiisoft/yii2-bootstrap": "*"
+        },
+        "time": "2016-03-21 19:12:39",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "yii\\debug\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Qiang Xue",
+                "email": "qiang.xue@gmail.com"
+            }
+        ],
+        "description": "The debugger extension for the Yii framework",
+        "keywords": [
+            "debug",
+            "debugger",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-gii",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-gii.git",
+            "reference": "989d6c52c92e51f0d562729c329ee1012191cba2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/989d6c52c92e51f0d562729c329ee1012191cba2",
+            "reference": "989d6c52c92e51f0d562729c329ee1012191cba2",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/typeahead.js": "0.10.* | ~0.11.0",
+            "phpspec/php-diff": ">=1.0.2",
+            "yiisoft/yii2": ">=2.0.4",
+            "yiisoft/yii2-bootstrap": "~2.0"
+        },
+        "time": "2016-03-21 19:13:26",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            },
+            "asset-installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "yii\\gii\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Qiang Xue",
+                "email": "qiang.xue@gmail.com"
+            }
+        ],
+        "description": "The Gii extension for the Yii framework",
+        "keywords": [
+            "code generator",
+            "gii",
+            "yii2"
+        ]
+    },
+    {
+        "name": "components/flag-icon-css",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lipis/flag-icon-css.git",
+            "reference": "c63341210ecf69ab6b43345725d1813ff6c0389d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lipis/flag-icon-css/zipball/c63341210ecf69ab6b43345725d1813ff6c0389d",
+            "reference": "c63341210ecf69ab6b43345725d1813ff6c0389d",
+            "shasum": ""
+        },
+        "time": "2016-03-16 20:09:21",
+        "type": "component",
+        "extra": {
+            "component": {
+                "name": "flag-icon-css",
+                "files": [
+                    "less/**",
+                    "css/**",
+                    "flags/**"
+                ]
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Panayiotis Lipiridis (Lipis)",
+                "email": "lipiridis@gmail.com"
+            }
+        ],
+        "description": "CSS for vector based country flags"
+    },
+    {
+        "name": "fortawesome/font-awesome",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FortAwesome/Font-Awesome.git",
+            "reference": "5aacb03fa67b66b2e83844e3bdc9634af3d953f9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/5aacb03fa67b66b2e83844e3bdc9634af3d953f9",
+            "reference": "5aacb03fa67b66b2e83844e3bdc9634af3d953f9",
+            "shasum": ""
+        },
+        "require-dev": {
+            "jekyll": "1.0.2",
+            "lessc": "1.4.2"
+        },
+        "time": "2016-03-17 16:09:36",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "OFL-1.1",
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dave Gandy",
+                "email": "dave@fontawesome.io",
+                "homepage": "http://twitter.com/davegandy",
+                "role": "Developer"
+            }
+        ],
+        "description": "The iconic font and CSS framework",
+        "homepage": "http://fontawesome.io/",
+        "keywords": [
+            "FontAwesome",
+            "awesome",
+            "bootstrap",
+            "font",
+            "icon"
+        ]
+    },
+    {
+        "name": "2amigos/yii2-file-upload-widget",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/2amigos/yii2-file-upload-widget.git",
+            "reference": "bc1b0a918a74573e33f672c4a2bad854282a3a41"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/bc1b0a918a74573e33f672c4a2bad854282a3a41",
+            "reference": "bc1b0a918a74573e33f672c4a2bad854282a3a41",
+            "shasum": ""
+        },
+        "require": {
+            "2amigos/yii2-gallery-widget": "~1.0",
+            "bower-asset/blueimp-file-upload": "~9.9",
+            "yiisoft/yii2": "~2.0.0",
+            "yiisoft/yii2-bootstrap": "~2.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-03-17 20:46:38",
+        "type": "yii2-extension",
+        "extra": {
+            "asset-installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            },
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "dosamigos\\fileupload\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "2amigOS! Consulting Group",
+                "email": "hola@2amigos.us",
+                "homepage": "http://2amigos.us",
+                "role": "Developer"
+            },
+            {
+                "name": "Alexander Kochetov",
+                "email": "creocoder@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Blueimp file upload widget for the Yii framework",
+        "homepage": "https://github.com/2amigos/yii2-file-upload-widget",
+        "keywords": [
+            "2amigos",
+            "upload",
+            "widget",
+            "yii",
+            "yii 2",
+            "yii2"
+        ]
+    },
+    {
+        "name": "mdmsoft/yii2-upload-file",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mdmsoft/yii2-upload-file.git",
+            "reference": "62279504dadc55c404e7eb7ef501cd4b1043fb0a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mdmsoft/yii2-upload-file/zipball/62279504dadc55c404e7eb7ef501cd4b1043fb0a",
+            "reference": "62279504dadc55c404e7eb7ef501cd4b1043fb0a",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "~2.0"
+        },
+        "time": "2016-03-22 23:47:14",
+        "type": "yii2-extension",
+        "extra": {
+            "bootstrap": "mdm\\upload\\Bootstrap",
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "mdm\\upload\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Misbahul Munir",
+                "email": "misbahuldmunir@gmail.com"
+            }
+        ],
+        "description": "Yii2 upload file tools",
+        "keywords": [
+            "file",
+            "upload",
+            "yii"
         ]
     }
 ]

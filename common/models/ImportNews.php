@@ -103,20 +103,24 @@ class ImportNews extends \yii\db\ActiveRecord
 
     // Определить количество нов новостей после парсинга
     public static function getFreshNews(){
-        $ImportModel = file_get_contents(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
-        $obj = json_decode($ImportModel);
-        $i=0;
-        //$ImportModel = ImportNews::find()->all();
-        if($ImportModel) {
-            foreach ($obj as $row) {
+        $quantity=0;
+        $file = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
+        if(file_exists($file))
+        {
+            $ImportModel = file_get_contents(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
+            $obj = json_decode($ImportModel);
+            $quantity=0;
 
-                $duble = Blog::getDublicateByTitle($row->title);
-                if (!$duble) {
-                    $i++;
-             }
-
+            if($ImportModel) {
+                foreach ($obj as $row) {
+                    $duble = Blog::getDublicateByTitle($row->title);
+                    if (!$duble) {
+                        $quantity++;
+                    }
+                }
             }
         }
-        return $i;
+        return $quantity;
+
     }
 }

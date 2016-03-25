@@ -8,6 +8,7 @@ use frontend\assets\AppAsset;
 
 Yii::$app->formatter->locale = 'ru-RU';
 //$this->registerJSFile('/js/custom/tooltip.js',['depends'=>AppAsset::className()]);
+//$this->registerJSFile('/js/custom/zoom.js',['depends'=>AppAsset::className()]);
 
 ?>
 
@@ -30,7 +31,8 @@ Yii::$app->formatter->locale = 'ru-RU';
             ?>
 
             <div class="col-sm-6 col-md-4">
-                <a href="<?= Url::to(['/blog/default/views', 'id' => $blog->id]); ?>">
+                <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
+
                     <div class="thumbnail" >
                         <img class="img-thumb" src="<?= $image ?>" alt="...">
 
@@ -81,7 +83,7 @@ Yii::$app->formatter->locale = 'ru-RU';
             ?>
             <div class="col-sm-6 col-md-4">
 
-                <a href="<?= Url::to(['/blog/default/views', 'id' => $blog->id]); ?>">
+                <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
                     <div class="thumbnail">
                         <img class="img-thumb" src="<?= $image ?>" alt="...">
                         <div class="caption">
@@ -113,7 +115,7 @@ Yii::$app->formatter->locale = 'ru-RU';
             }
             ?>
             <div class="col-sm-6 col-md-4">
-                <a href="<?= Url::to(['/blog/default/views', 'id' => $blog->id]); ?>">
+                <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
                     <div class="thumbnail">
                         <img class="img-thumb" src="<?= $image ?>" alt="...">
                         <div class="caption">

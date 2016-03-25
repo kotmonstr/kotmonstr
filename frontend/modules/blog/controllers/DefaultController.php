@@ -20,7 +20,10 @@ use keltstr\simplehtmldom\SimpleHTMLDom as SHD;
 use vova07\imperavi\actions\GetAction;
 use yii\web\Response;
 
-class DefaultController extends CoreController {
+class DefaultController extends CoreController
+{
+    public $meta = [];
+    
     public function behaviors()
     {
         return [
@@ -35,14 +38,14 @@ class DefaultController extends CoreController {
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start','show','image-upload','images-get','upload'],
+                        'actions' => ['create', 'update', 'delete', 'create-image', 'add-news-from-parser', 'parser-start', 'show', 'image-upload', 'images-get', 'upload'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
                     [
-                        'actions' => ['index','view','views'],
+                        'actions' => ['index', 'view', 'views'],
                         'allow' => true,
-                        'roles' => ['@','?'],
+                        'roles' => ['@', '?'],
                     ],
                 ],
             ],
@@ -68,11 +71,12 @@ class DefaultController extends CoreController {
 
     public $layout = '/blog';
 
-    public function actionIndex() {
+    public function actionIndex()
+    {
         //$this->layout = '/blog';
         // Вывести список статей
 
-        $pageSize =9;
+        $pageSize = 9;
         $query = Blog::find();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pageSize]);
@@ -92,23 +96,25 @@ class DefaultController extends CoreController {
             ->all();
 
 
-        return $this->render('index', [ 'model' => $models,
-            'modelLastBlog'=> $modelLastBlog,
-            'modeMostWatched'=> $modeMostWatched,
+        return $this->render('index', ['model' => $models,
+            'modelLastBlog' => $modelLastBlog,
+            'modeMostWatched' => $modeMostWatched,
             'pages' => $pages,
-            'pageSize'=> $pageSize
+            'pageSize' => $pageSize
         ]);
     }
 
-    public function actionView() {
+    public function actionView()
+    {
         $this->layout = '/adminka';
-        $id = Yii::$app->request->get('id');
-        $blog = $this->findModel($id);
-        //$blog = Blog::find()->where(['id' => $id])->one();
+        $slug = Yii::$app->request->get('slug');
+        //$blog = $this->findModel($id);
+        $blog = Blog::find()->where(['slug' => $slug])->one();
         return $this->render('view', ['model' => $blog]);
     }
 
-    public function actionShow() {
+    public function actionShow()
+    {
         $this->layout = '/adminka';
         $searchModel = new BlogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -123,7 +129,7 @@ class DefaultController extends CoreController {
     {
         $this->layout = '/adminka';
         $model = new Blog();
-        $time= time();
+        $time = time();
 
 
         if ($model->load(Yii::$app->request->post())) {
@@ -132,8 +138,8 @@ class DefaultController extends CoreController {
                 $uploaddir = Yii::getAlias('@frontend') . '/web/upload/upload_news/';
                 FileHelper::createDirectory($uploaddir);
                 $file = \yii\web\UploadedFile::getInstance($model, 'file');
-                $file->saveAs($uploaddir . $time. '.' . $file->extension);
-                $model->image = $time. '.' . $file->extension;
+                $file->saveAs($uploaddir . $time . '.' . $file->extension);
+                $model->image = $time . '.' . $file->extension;
             }
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
@@ -149,7 +155,7 @@ class DefaultController extends CoreController {
         $this->layout = '/adminka';
         $model = $this->findModel($id);
         if (\yii\web\UploadedFile::getInstance($model, 'file') != '') {
-            $time= time();
+            $time = time();
             $uploaddir = Yii::getAlias('@frontend') . '/web/upload/upload_news/';
             FileHelper::createDirectory($uploaddir);
             $file = \yii\web\UploadedFile::getInstance($model, 'file');
@@ -167,13 +173,15 @@ class DefaultController extends CoreController {
         }
     }
 
-    public function actionDelete($id) {
+    public function actionDelete($id)
+    {
         $this->findModel($id)->delete();
 
         return $this->redirect(['show']);
     }
 
-    protected function findModel($id) {
+    protected function findModel($id)
+    {
         if (($model = Blog::findOne($id)) !== null) {
             return $model;
         } else {
@@ -181,7 +189,8 @@ class DefaultController extends CoreController {
         }
     }
 
-    public function actionCreateImage() {
+    public function actionCreateImage()
+    {
         FileHelper::createDirectory(Yii::getAlias('@frontend') . '/web/upload/blog');
         $model = new Blog();
         $name = date("dmYHis", time());
@@ -193,26 +202,34 @@ class DefaultController extends CoreController {
         }
     }
 
-    public function actionViews($id) {
+    public function actionViews()
+    {
+
         $this->layout = '/blog';
 
 
-        $id = Yii::$app->request->get('id');
-        $blog = Blog::find()->where(['id' => $id])->one();
-        $viwsQuantity =(int)$blog->view;
-        $blog->view = $viwsQuantity +1;
-        $blog->updateAttributes(['view']);
-        $coment_model = Comment::find()->where(['blog_id'=>$id])->all();
-        return $this->render('views', ['model' => $blog,'coment_model'=> $coment_model]);
+        $slug = Yii::$app->request->get('slug');
+        $blog = Blog::find()->where(['slug' => $slug])->one();
+        if ($blog) {
+            $viwsQuantity = (int)$blog->view;
+            $blog->view = $viwsQuantity + 1;
+            $blog->updateAttributes(['view']);
+            $coment_model = Comment::find()->where(['blog_id' => $blog->id])->all();
+            $this->meta = $blog;
+            return $this->render('views', ['model' => $blog, 'coment_model' => $coment_model]);
+        } else {
+            $this->redirect('site/index');
+        }
     }
 
-    public function actionAddNewsFromParser(){
-        $ImportModel = file_get_contents(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
+    public function actionAddNewsFromParser()
+    {
+        $ImportModel = file_get_contents(Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'import.json');
         //vd(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
         //$ImportModel = ImportNews::find()->all();
         $obj = json_decode($ImportModel);
         //vd($obj);
-        if($ImportModel) {
+        if ($ImportModel) {
             foreach ($obj as $row) {
 
                 $duble = Blog::getDublicateByTitle($row->title);
@@ -225,7 +242,7 @@ class DefaultController extends CoreController {
                     $model->updated_at = time();
                     $model->author = 1;
                     //$model->validate();
-                   // vd($model->getErrors());
+                    // vd($model->getErrors());
                     $model->save();
                 } else {
                     //echo "It is Dublicate", PHP_EOL;
@@ -236,10 +253,11 @@ class DefaultController extends CoreController {
         return $this->redirect('/admin/index');
     }
 
-    public function actionParserStart(){
+    public function actionParserStart()
+    {
 
-        $file = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
-        if(file_exists($file)){
+        $file = Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'import.json';
+        if (file_exists($file)) {
             unlink($file);
         }
 
@@ -247,7 +265,7 @@ class DefaultController extends CoreController {
         ini_set('max_execution_time', 60000);
         ini_set('wait_timeout', 60000);
         ini_set('memory_limit', '128M');
-        ini_set( 'default_charset', 'UTF-8' );
+        ini_set('default_charset', 'UTF-8');
         //header('Content-Type: text/html; charset=UTF-8');
 
         $arrResult = [];
@@ -280,7 +298,7 @@ class DefaultController extends CoreController {
         }
         //vd($arrResult2);
 
-        if(!empty($arrResult2)){
+        if (!empty($arrResult2)) {
             //$model = ImportNews::deleteAll();
 
 
@@ -289,7 +307,7 @@ class DefaultController extends CoreController {
             //echo $data;
             //vd(1);
 
-            $file2 = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
+            $file2 = Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'import.json';
             file_put_contents($file2, $data);
         }
 
@@ -320,10 +338,10 @@ class DefaultController extends CoreController {
     public function actionUpload()
     {
         $uploaddir = Yii::getAlias('@frontend') . '/web/upload/imp/';
-        $file = md5(date('YmdHis')).'.'.pathinfo(@$_FILES['file']['name'], PATHINFO_EXTENSION);
-        if (move_uploaded_file(@$_FILES['file']['tmp_name'], $uploaddir.$file)) {
+        $file = md5(date('YmdHis')) . '.' . pathinfo(@$_FILES['file']['name'], PATHINFO_EXTENSION);
+        if (move_uploaded_file(@$_FILES['file']['tmp_name'], $uploaddir . $file)) {
             $array = array(
-                'filelink' => '/upload/imp/'.$file
+                'filelink' => '/upload/imp/' . $file
             );
         }
         Yii::$app->response->format = Response::FORMAT_JSON;
@@ -337,10 +355,10 @@ class DefaultController extends CoreController {
 
         $uploaddir = Yii::getAlias('@frontend') . '/web/upload/imp/';
         $arr = scandir($uploaddir);
-        $i=0;
-        foreach($arr as $key =>  $val){
+        $i = 0;
+        foreach ($arr as $key => $val) {
             $i++;
-            if( $i > 2 ) {
+            if ($i > 2) {
                 $array['filelink' . $i]['thumb'] = '/upload/imp/' . $val;
                 $array['filelink' . $i]['image'] = '/upload/imp/' . $val;
                 $array['filelink' . $i]['title'] = '/upload/imp/' . $val;

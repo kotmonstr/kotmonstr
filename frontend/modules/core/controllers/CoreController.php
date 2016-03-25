@@ -13,7 +13,7 @@ class CoreController extends Controller
 {
     public function init()
     {
-        Online::SetMyDataAsVisitor();
+        //Online::SetMyDataAsVisitor();
         //echo "CORE";
 
 

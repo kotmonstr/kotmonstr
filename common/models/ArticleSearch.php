@@ -41,11 +41,14 @@ class ArticleSearch extends Article
      */
     public function search($params)
     {
-        $query = Article::find();
+        $query = Article::find()->orderBy('created_at DESC');
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+
         ]);
+
+
 
         if (!($this->load($params) && $this->validate())) {
             return $dataProvider;
