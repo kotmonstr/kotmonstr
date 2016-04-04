@@ -5,7 +5,7 @@ namespace common\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
-
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "video".
@@ -22,17 +22,26 @@ use yii\behaviors\TimestampBehavior;
  */
 class Video extends \yii\db\ActiveRecord
 {
-        public function behaviors()
-{
-    return [
-        [
-            'class' => TimestampBehavior::className(),
-            'createdAtAttribute' => 'created_at',
-           
-        ],
-    ];
-}
-public $updated_at;
+public $template;
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+
+            ],
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+                // 'slugAttribute' => 'slug',
+            ],
+        ];
+    }
+
+    public $updated_at;
+
     /**
      * @inheritdoc
      */
@@ -49,8 +58,8 @@ public $updated_at;
         return [
             [['youtube_id', 'title'], 'required'],
             [['descr'], 'string'],
-            [['created_at', 'categoria','author_id'], 'integer'],
-            [['youtube_id', 'title'], 'string', 'max' => 255]
+            [['created_at', 'categoria', 'author_id'], 'integer'],
+            [['youtube_id', 'title','slug'], 'string', 'max' => 255]
         ];
     }
 
@@ -77,6 +86,7 @@ public $updated_at;
     {
         return $this->hasOne(VideoCategoria::className(), ['id' => 'categoria']);
     }
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -86,11 +96,12 @@ public $updated_at;
     }
 
     // Вернет несколько последних видео
-    public static function getLastVideo($q){
+    public static function getLastVideo($q)
+    {
         $model = self::find()->orderBy('created_at DESC')->limit($q)->all();
-        if($model){
+        if ($model) {
             return $model;
-        }else{
+        } else {
             return false;
         }
     }

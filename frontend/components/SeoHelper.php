@@ -14,7 +14,7 @@ class SeoHelper extends BaseArrayHelper
         if($arr){ ?>
             <title><?= Html::encode($arr->title); ?></title>
             <meta name="description"
-                  content="<?= Html::encode(StringHelper::truncate($arr->content,200)) ?>">
+                  content="<?= Html::encode(StringHelper::truncate(isset($arr->content) ? $arr->content : $arr->title,200)) ?>">
             <meta name="keywords"
                   content="Мужской, мужской сайт, мужчина, мужские новости , мужские гаджеты , советы мужчинам, книги для мужчин , мужские новости, бабы - дуры">
         <? }else{

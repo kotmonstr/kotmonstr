@@ -63,7 +63,7 @@ class Blog extends \yii\db\ActiveRecord
             [['title'], 'required'],
             [['content'], 'string'],
             [['created_at', 'updated_at', 'author', 'view', 'updater_id'], 'integer'],
-            [['title', 'image','slug'], 'string', 'max' => 255]
+            [['title', 'image', 'slug'], 'string', 'max' => 255]
         ];
     }
 
@@ -112,4 +112,30 @@ class Blog extends \yii\db\ActiveRecord
         }
 
     }
+
+    public static function getNewsFronCroAuto()
+    {
+        $file = Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'cron-import.json';
+        if (file_exists($file)) {
+            $data = file_get_contents($file);
+            $data = unserialize($data);
+
+            if ($data) {
+                foreach ($data as $row) {
+                    $duble = Blog::getDublicateByTitle(mb_convert_encoding($row['title'], 'UTF-8', 'Windows-1251'));
+                    if (!$duble) {
+                        $model = new Blog();
+                        $model->title = mb_convert_encoding($row['title'], 'UTF-8', 'Windows-1251');
+                        $model->image = $row['image'] ? $row['image'] : '';
+                        $model->content = mb_convert_encoding($row['content'], 'UTF-8', 'Windows-1251');
+                        $model->updated_at = time();
+                        $model->author = (int)1;
+                        $model->save();
+                    } else {
+                    }
+                }
+            }
+        }
+    }
+
 }

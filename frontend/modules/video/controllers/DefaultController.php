@@ -52,7 +52,8 @@ class DefaultController extends CoreController
                             'tv24',
                             'tv1',
                             'tvc',
-                            '5canal'
+                            '5canal',
+                            'views'
 
                         ],
                         'allow' => true,
@@ -64,6 +65,7 @@ class DefaultController extends CoreController
     }
 
     public $layout = '/blog';
+    public $meta = [];
 
     public function actionView()
     {
@@ -187,6 +189,7 @@ class DefaultController extends CoreController
     {
 
         $data = Yii::$app->request->post();
+        //vd($data);
         $y_id = $data['id'];
         //РџРѕРёСЃРє РґСѓР±Р»СЏ
         $duble = Video::find()->where(['youtube_id' => $y_id])->one();
@@ -321,6 +324,16 @@ class DefaultController extends CoreController
         //vd($model);
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         return $this->renderAjax('get-video-by-categoria-id', ['model' => $model]);
+    }
+    
+    public function actionViews(){
+        $slug = Yii::$app->request->get('slug');
+        $model = Video::find()->where(['slug' => $slug])->one();
+        $this->meta = $model;
+        
+        return $this->render('views', [
+            'model' => $model,
+        ]);
     }
 
 }

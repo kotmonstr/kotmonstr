@@ -81,7 +81,7 @@ class DefaultController extends CoreController
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pageSize]);
         $models = $query->offset($pages->offset)
-            ->orderBy('created_at DESC')
+            ->orderBy('id DESC')
             ->limit($pages->limit)
             ->all();
 
@@ -216,7 +216,16 @@ class DefaultController extends CoreController
             $blog->updateAttributes(['view']);
             $coment_model = Comment::find()->where(['blog_id' => $blog->id])->all();
             $this->meta = $blog;
-            return $this->render('views', ['model' => $blog, 'coment_model' => $coment_model]);
+
+            $prevBlog = Blog::find()->where('id >' . $blog->id )->orderBy('id ASC')->limit(1)->asArray()->all();
+            $nextBlog  = Blog::find()->where('id <' . $blog->id )->orderBy('id DESC')->limit(1)->asArray()->all();
+//vd($prevBlog[0]['slug']);
+            return $this->render('views', [
+                                           'model' => $blog,
+                                           'coment_model' => $coment_model,
+                                           'nextBlog'=> !empty($nextBlog) ? $nextBlog[0]['slug'] : NULL,
+                                           'prevBlog'=> !empty($prevBlog) ? $prevBlog[0]['slug'] : NULL
+                                                                    ]);
         } else {
             $this->redirect('site/index');
         }

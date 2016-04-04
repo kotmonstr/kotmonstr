@@ -34,6 +34,7 @@ return [
 
                 'article/list/<slug:.+>' => '/article/default/views',
                 'blog/list/<slug:.+>' => '/blog/default/views',
+                'video/list/<slug:.+>' => '/video/default/views',
 
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<_m:[\w\-]+>' => '<_m>/default/index',

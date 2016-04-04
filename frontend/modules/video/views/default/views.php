@@ -8,7 +8,7 @@ use app\components\TemplateWidget;
 
 Yii::$app->formatter->locale = 'ru-RU';
 $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\AppAsset::className()]);
-
+//vd($model);
 
 ?>
 
@@ -27,7 +27,7 @@ $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\App
    
 
 
-        <?= TemplateWidget::widget(['model' => $model]); ?>
+        <?= TemplateWidget::widget(['model' => $model,'template'=>6]); ?>
 
 
         <div class="row">
@@ -47,7 +47,7 @@ $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\App
                                     <span
                                         class="dark-color"><?= ' ' . Yii::$app->formatter->asDate($model->created_at, 'short') . ' ' . Yii::$app->formatter->asTime($model->created_at, 'short') ?></span>
                                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"
-                                          style="margin-left:10px">&nbsp;<?= $model->view ?></span>
+                                          style="margin-left:10px">&nbsp;<?//= $model->view ?></span>
                                     <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"
                                           style="margin-left:10px">&nbsp;<?= Comment::getMessagesQuantityByBlogId($model->id) ?></span>
             </div>
@@ -57,58 +57,7 @@ $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\App
     </div>
 
 
-    <div class="container" style="text-align: center;padding: 6px 70px 0px 0px;margin: 0px 1px 0px 0px;">
 
-            <section id="comment">
-
-
-                <center><h5>Коментарии</h5></center>
-
-                <? if($coment_model && $coment_model != ''): ?>
-                <?php foreach ($coment_model as $model): ?>
-
-
-                    <div class="row target main-comment pos bg_preview_post">
-                        <div class="span2" style="text-align: center">
-                            <?= User::getAvatar($model->author_id) ?><br>
-
-                            <div class="com-name"><?= $model->author->username ?></div>
-                        </div>
-
-                        <div class="span6" title="<?= $model->content ?>">
-                            <?= StringHelper::truncate($model->content, 1000); ?>
-                        </div>
-                        <div class="span2 time-d">
-                            <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?>
-                            <br><?= date("H:i", $model->created_at) ?>
-                        </div>
-                    </div>
-
-                <?php endforeach; ?>
-                <?php endif; ?>
-
-            </section>
-
-    </div>
-
-
-<?php if (!Yii::$app->user->isGuest): ?>
-    <section id="form">
-        <div class="container shet" style="margin-top:50px">
-            <div class="row">
-
-                    <div class="span8 left-div">
-                        <textarea id="comment-textarea"></textarea>
-                    </div>
-                    <div class="span4">
-                        <a onclick="Comment.AddComment()" href="javascript:void(0);" class="btn btn_ sub-btn">Добавить
-                            комментарий</a>
-                    </div>
-                </div>
-
-        </div>
-    </section>
-<?php endif; ?>
 
 
 </div>
@@ -176,7 +125,7 @@ $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\App
     }
 
     h3 {
-        font-size: 28px;
+        font-size: 20px;
         text-transform: uppercase;
         font-family: verdana;
         letter-spacing: -2px;

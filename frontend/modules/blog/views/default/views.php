@@ -5,7 +5,7 @@ use common\models\User;
 use common\models\Comment;
 use yii\helpers\StringHelper;
 use app\components\TemplateWidget;
-
+//vd($model);
 Yii::$app->formatter->locale = 'ru-RU';
 
 $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAsset::className()]);
@@ -14,29 +14,47 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
 <input type="hidden" id="comment_id" value="<?= $model->id ?>">
 
 <section id="content">
-    <div class="container" style="text-align: center; padding: 0px 35px">
+    <div class="container" style="text-align: center; padding: 5px 35px">
         <div class="row pos bg_preview_post">
 
 
             <div class="row">
-                <div class="col-md-12" style="text-align: center">
+                <div class="col-md-12" style="text-align: center;">
                     <input type="hidden" id="comment_id" value="<?= $model->id ?>">
-                    <h3><?= $model->title ?></h3>
+                    <p class="header-title"><?= $model->title ?></p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-12 " style="padding: 0px 45px">
+                <div class="col-md-1" style="">
+                    <? if($prevBlog): ?>
+                    <a href="<?= Url::to(['/blog/list/'.$prevBlog]) ?>" title="Предыдущая новость">
+                        <div class="arrow-left"></div>
+
+
+                    </a>
+                    <? endif; ?>
+                </div>
+                <div class="col-md-10 " style="padding: 0px 45px">
                     <img src="<?= $model->image ?>" width="auto" alt="">
                 </div>
+                <div class="col-md-1" >
+                    <? if($nextBlog): ?>
+                    <a href="<?= Url::to(['/blog/list/'.$nextBlog]) ?>" title="Следующая новость">
+                        <div class="arrow-right"></div>
+
+
+                    </a>
+                    <? endif; ?>
+                </div>
             </div>
 
-
-            <?= TemplateWidget::widget(['model' => $model,'template'=> 1]); ?>
-
+            <div class="row">
+            <?= TemplateWidget::widget(['model' => $model,'template'=> 4]); ?>
+            </div>
 
             <div class="row">
-                <div class="col-md-12" style="padding-right: 0px;padding-left: 20px;">
+                <div class="col-md-12" style="">
                     <hr>
                 </div>
                 <div class="col-md-9" style="text-align: right">
@@ -81,7 +99,7 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
                         <?= StringHelper::truncate($model->content,1000); ?>
                     </div>
                     <div class="span2 time-d">
-                  
+
                         <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?><br><?= date("H:i",$model->created_at) ?>
                     </div>
                 </div>
@@ -108,6 +126,39 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
 </section>
 <?php endif ?>
 <style>
+.header-title{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+    .arrow-left{
+        width:25px;
+        height:25px;
+        background-image: url('/img/arrows/left-tiny.png'); none repeat center center;
+        position: absolute;
+        top: 150px;
+        left: 83px;
+        z-index: 2;
+    }
+    .arrow-left:hover{
+        background-image: url('/img/arrows/left-active-tiny.png'); none repeat center center;
+    }
+    .arrow-right{
+        width:25px;
+        height:25px;
+        background-image: url('/img/arrows/right-tiny.png'); none repeat center center;
+        position: absolute;
+        top: 150px;
+        right: 83px;
+        z-index: 2;
+    }
+    .arrow-right:hover{
+        background-image: url('/img/arrows/right-active-tiny.png'); none repeat center center;
+    }
+
+    .btn-left-right{
+        margin: auto 0px;
+    }
     .sub-btn{
         margin-left: 0px!important;
     }
@@ -119,10 +170,6 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
     }
     .left-div{
         margin: 0px;
-    }
-    a, a:link, a:visited {
-       // color: #fff!important;
-
     }
     .com-name{
         font-size: 14px;
@@ -139,29 +186,21 @@ vertical-align: middle;
 margin-top: 23px;
     }
     p {
-        // color : #ffffff !important;
-        //background-color: #fff !important;
+
         font-family: verdana;
     }
-    h5{
-        padding: 20px;
+    .bg_preview_post {
+        padding: 20px 20px 20px 40px!important;
     }
 
 
-
-    h3 {
-        font-size: 28px;
+    h3,h4,h5 {
+        font-size: 18px;
         text-transform: uppercase;
         font-family: verdana;
-        letter-spacing: -2px;
+        //letter-spacing: -2px;
         color: #666;
     }
-
-
-
-
-</style>
-<style>
     .bg_preview_post {
         background: none repeat scroll 0 0 #ffffff;
         margin-bottom: 20px;
@@ -198,13 +237,10 @@ margin-top: 23px;
         width: 340px;
     }
 
-    a, a:link, a:visited {
-        color: #cc0000;
-        text-decoration: none;
-    }
+
 
     a, a:link, a:visited {
-        color: #cc0000;
+        //color: #cc0000;
         text-decoration: none;
 
     }
@@ -230,66 +266,20 @@ margin-top: 23px;
         margin-bottom: 20px;
     }
 
-    .preview_post .txt .text {
-        color: #000 !important;;
-        font-family: "Open Sans", sans-serif;
-        font-size: 20px;
-        line-height: 28px;
-        margin-bottom: 25px;
-        text-align: justify;
-        padding: 0px 20px 0px 0px;
-    }
 
-    .bg_preview_post .preview_post .bottom {
-        bottom: 0;
-        left: 310px;
-        overflow: hidden;
-        padding-left: 1px;
-        position: absolute;
-        width: 610px;
-    }
-
-    .preview_post .bottom {
-        bottom: 0;
-        left: 375px;
-        overflow: hidden;
-        position: absolute;
-        width: 565px;
-    }
-
-    .post_list {
-        color: #666;
-        font-family: "solomon";
-        font-size: 14px;
-        background-color: #E9E9E9;
-    }
-
-    .clearfix:after, .group:after {
-        clear: both;
-        // content : " ";
-        display: block;
-        font-size: 0;
-        height: 0;
-        line-height: 0;
-        visibility: hidden;
-    }
-
-    .pos {
-        border-radius: 4px;
-        box-shadow: 5px 5px 10px #000;
-       
-    }
 
     .title {
         // font-family : "solomon";
         font-size: 20px;
     }
-    . p{
-        background-color: #ffffff!important;
+    .text{
+        font-size: 16px;
+        font-family: "Verdana", "sans-serif";
+        text-align: justify;
          }
     .content{
         font-size: 14px;
         font-family: "Verdana", "sans-serif";
-        margin-top: 20px;
+       // margin-top: 20px;
     }
 </style>

@@ -21,7 +21,7 @@ class TemplateWidget extends Widget
         if ($this->template) {
             echo $this->render('template/_template_'.$this->template, ['model' => $this->model]);
         } else {
-            echo $this->render('_template_1', ['model' => $this->model]);
+           echo $this->render('_template_1', ['model' => $this->model]);
         }
 
     }
