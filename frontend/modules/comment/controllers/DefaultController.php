@@ -145,7 +145,8 @@ class DefaultController extends CoreController {
         $model = new Comment;
         $model->content = $message;
         $model->blog_id = $comment_id;
-        $model->author_id = Yii::$app->user->id ? Yii::$app->user->id : null;
+        $model->author_id = 1;
+        $model->social = $identity ? 1 : 0;
         $model->social_name = $identity ? $identity->profile['name'] : null;
         $model->social_avatar = $identity && !empty($identity->profile['photo'] ) ? $identity->profile['photo'] : null;
         //$model->validate();

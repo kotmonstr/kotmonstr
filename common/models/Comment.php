@@ -48,7 +48,7 @@ class Comment extends \yii\db\ActiveRecord
         return [
             [['content', 'blog_id',], 'required'],
             [['content'], 'string'],
-            [['author_id', 'created_at', 'blog_id', 'updated_at'], 'integer'],
+            [['author_id', 'created_at', 'blog_id', 'updated_at','social'], 'integer'],
             [['social_name', 'social_avatar'], 'string', 'max' => 255],
         ];
     }

@@ -75,7 +75,7 @@ class Article extends \yii\db\ActiveRecord
     {
         return [
             [['article_category', 'title', 'image', 'src', 'content', 'template', 'slug'], 'required'],
-            [['article_category', 'created_at', 'updated_at', 'updater_id', 'view', 'template'], 'integer'],
+            [['article_category', 'created_at', 'updated_at', 'updater_id', 'view', 'template','like'], 'integer'],
             [['content'], 'string'],
             [['title', 'image', 'src'], 'string', 'max' => 255],
             [['author'], 'string', 'max' => 100],
@@ -129,5 +129,16 @@ class Article extends \yii\db\ActiveRecord
     public static function find()
     {
         return new ArticleQuery(get_called_class());
+    }
+
+    public static function getDublicateByTitle($title)
+    {
+        $model = self::find()->where(['title' => $title])->one();
+        if ($model) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }

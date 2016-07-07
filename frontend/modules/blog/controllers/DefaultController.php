@@ -38,12 +38,12 @@ class DefaultController extends CoreController
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'update', 'delete', 'create-image', 'add-news-from-parser', 'parser-start', 'show', 'image-upload', 'images-get', 'upload'],
+                        'actions' => ['create', 'update', 'delete', 'create-image', 'parser-start', 'show', 'image-upload', 'images-get', 'upload'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
                     [
-                        'actions' => ['index', 'view', 'views'],
+                        'actions' => ['index', 'view', 'views','add-news-from-parser'],
                         'allow' => true,
                         'roles' => ['@', '?'],
                     ],
@@ -233,6 +233,7 @@ class DefaultController extends CoreController
 
     public function actionAddNewsFromParser()
     {
+        $result = 0;
         $ImportModel = file_get_contents(Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'import.json');
         //vd(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
         //$ImportModel = ImportNews::find()->all();
@@ -253,13 +254,14 @@ class DefaultController extends CoreController
                     //$model->validate();
                     // vd($model->getErrors());
                     $model->save();
+                    $result =1;
                 } else {
-                    //echo "It is Dublicate", PHP_EOL;
+
                 }
 
             }
         }
-        return $this->redirect('/admin/index');
+        return $result;
     }
 
     public function actionParserStart()

@@ -23,6 +23,7 @@ class AppAsset extends AssetBundle
         'css/responsive.css',
         'css/camera.css',
         'css/style.css',
+        'css/system_message.css',
     ];
     public $js = [
         'js/jquery.js',
@@ -32,6 +33,8 @@ class AppAsset extends AssetBundle
         'js/jquery.mobile.customized.min.js',
         'js/bootstrap.js',
         'js/custom/index.js',
+        'js/custom/system_message.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

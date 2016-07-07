@@ -16,7 +16,7 @@ Yii::$app->formatter->locale = 'ru-RU';
                 <div class="col-md-3">
 
                     <div class="col-md-12" style="margin-top: 15px">
-                        <div class="navbar navbar-inverse " style="height: 200px">
+                        <div class="navbar navbar-inverse " style="min-height: 200px">
 
                             <div class="navbar-inner" >
                                 <h5 style="text-align: center;color: #676061; text-transform: uppercase;" href="javascript:void(0);">Темы</h5>

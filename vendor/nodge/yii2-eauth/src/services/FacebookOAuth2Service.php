@@ -50,7 +50,17 @@ class FacebookOAuth2Service extends Service
                 'fields' => join(',', [
                     'id',
                     'name',
-                    'link'
+                    'link',
+					'verified',
+					'first_name',
+					'last_name',
+					'gender',
+					'birthday',
+					'hometown',
+					'location',
+					'locale',
+					'timezone',
+					'updated_time'
                 ])
             ]
         ]);
@@ -58,6 +68,8 @@ class FacebookOAuth2Service extends Service
 		$this->attributes['id'] = $info['id'];
 		$this->attributes['name'] = $info['name'];
 		$this->attributes['url'] = $info['link'];
+		$this->attributes['first_name'] = $info['first_name'];
+		$this->attributes['photo_url'] = $this->baseApiUrl.$this->getId().'/picture?width=100&height=100';
 
 		return true;
 	}

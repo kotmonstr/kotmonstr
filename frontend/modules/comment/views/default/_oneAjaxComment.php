@@ -10,8 +10,8 @@ Yii::$app->formatter->locale = 'ru-RU';
             <div class="container">
                 <div class="span12 target main-comment pos bg_preview_post">
                     <div class="span2" style="text-align: center">
-                        <?= isset($model->author_id) && $model->author_id != null ? User::getAvatar($model->author_id) : User::getAvatarSocial($model->social_avatar) ?><br>
-                        <div class="com-name"><?= !$model->author_id ? $model->social_name : $model->author->username ?></div>
+                        <?= $model->social == 0 ? User::getAvatar($model->author_id) : User::getAvatarSocial($model->social_avatar) ?><br>
+                        <div class="com-name"><?= $model->social == 1  ? $model->social_name : $model->author->username ?></div>
                     </div>
 
                     <div class="span8" title="<?= $model->content ?>">

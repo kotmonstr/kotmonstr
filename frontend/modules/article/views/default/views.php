@@ -5,7 +5,8 @@ use common\models\User;
 use common\models\Comment;
 use yii\helpers\StringHelper;
 use app\components\TemplateWidget;
-
+use kartik\rating\StarRating;
+use yii\web\JsExpression;
 Yii::$app->formatter->locale = 'ru-RU';
 $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\AppAsset::className()]);
 
@@ -35,21 +36,27 @@ $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\App
                 <hr>
             </div>
             <div class="col-md-9" style="text-align: right">
-
+    <span class="pull-left">
+                          
+                                    </span>
                 <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"
                         charset="utf-8"></script>
                 <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
                 <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
             </div>
             <div class="col-md-3" style="text-align: right">
-                                                <span class="glyphicon glyphicon-time bold dark-color"
-                                                      aria-hidden="true"></span>
-                                    <span
-                                        class="dark-color"><?= ' ' . Yii::$app->formatter->asDate($model->created_at, 'short') . ' ' . Yii::$app->formatter->asTime($model->created_at, 'short') ?></span>
+
+
+                                    <span class="glyphicon glyphicon-time bold dark-color" aria-hidden="true">
+                                    </span>
+                                    <span class="dark-color">
+                                        <?= ' ' . Yii::$app->formatter->asDate($model->created_at, 'short') . ' ' . Yii::$app->formatter->asTime($model->created_at, 'short') ?>
+                                    </span>
                                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"
-                                          style="margin-left:10px">&nbsp;<?= $model->view ?></span>
-                                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"
-                                          style="margin-left:10px">&nbsp;<?= Comment::getMessagesQuantityByBlogId($model->id) ?></span>
+                                          style="margin-left:10px">&nbsp;<?= $model->view ?>
+                                    </span>
+                                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true" style="margin-left:10px">&nbsp;<?= Comment::getMessagesQuantityByBlogId($model->id) ?>
+                                    </span>
             </div>
         </div>
 
@@ -70,9 +77,9 @@ $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\App
 
                     <div class="row target main-comment pos bg_preview_post">
                         <div class="span2" style="text-align: center">
-                            <?= User::getAvatar($model->author_id) ?><br>
+                            <?= $model->social == 0 ? User::getAvatar($model->author_id) : User::getAvatarSocial($model->social_avatar) ?><br>
 
-                            <div class="com-name"><?= $model->author->username ?></div>
+                            <div class="com-name"><?= $model->social == 1  ? $model->social_name : $model->author->username ?></div>
                         </div>
 
                         <div class="span6" title="<?= $model->content ?>">
@@ -124,6 +131,10 @@ $this->registerJsFile('/js/custom/comment.js', ['depends' => \backend\assets\App
 
 
 <style>
+    .rating-md {
+        margin-left: 20px;
+        font-size: 2.13em;
+    }
     .text {
         font-size: 14px;
         font-family: "Verdana", "sans-serif";

@@ -530,7 +530,7 @@ h1.brand span {
 /*--- header end ------*/
 /*------ content ------- */
 #content {
-  background: url(../img/bg-content.jpg) 0 0 repeat #1f1e21;
+  //background: url(../img/bg-content.jpg) 0 0 repeat #1f1e21;
 }
 .main-content {
   padding-bottom: 46px;

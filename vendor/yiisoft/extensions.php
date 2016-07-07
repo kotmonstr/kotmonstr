@@ -22,33 +22,6 @@ return array (
       '@karpoff/icrop' => $vendorDir . '/karpoff/yii2-crop-image-upload',
     ),
   ),
-  'kartik-v/yii2-icons' => 
-  array (
-    'name' => 'kartik-v/yii2-icons',
-    'version' => '1.4.1.0',
-    'alias' => 
-    array (
-      '@kartik/icons' => $vendorDir . '/kartik-v/yii2-icons',
-    ),
-  ),
-  'kartik-v/yii2-popover-x' => 
-  array (
-    'name' => 'kartik-v/yii2-popover-x',
-    'version' => '1.3.3.0',
-    'alias' => 
-    array (
-      '@kartik/popover' => $vendorDir . '/kartik-v/yii2-popover-x',
-    ),
-  ),
-  'kartik-v/yii2-ipinfo' => 
-  array (
-    'name' => 'kartik-v/yii2-ipinfo',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/ipinfo' => $vendorDir . '/kartik-v/yii2-ipinfo',
-    ),
-  ),
   'keltstr/yii2-simplehtmldom' => 
   array (
     'name' => 'keltstr/yii2-simplehtmldom',
@@ -74,33 +47,6 @@ return array (
     'alias' => 
     array (
       '@vova07/imperavi' => $vendorDir . '/vova07/yii2-imperavi-widget/src',
-    ),
-  ),
-  'kartik-v/yii2-krajee-base' => 
-  array (
-    'name' => 'kartik-v/yii2-krajee-base',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
-    ),
-  ),
-  'notgosu/yii2-meta-tag-module' => 
-  array (
-    'name' => 'notgosu/yii2-meta-tag-module',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@notgosu/yii2/modules/metaTag' => $vendorDir . '/notgosu/yii2-meta-tag-module/src',
-    ),
-  ),
-  'yiisoft/yii2-bootstrap' => 
-  array (
-    'name' => 'yiisoft/yii2-bootstrap',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
     ),
   ),
   'mongosoft/yii2-upload-behavior' => 
@@ -148,15 +94,6 @@ return array (
       '@yii/codeception' => $vendorDir . '/yiisoft/yii2-codeception',
     ),
   ),
-  'yiisoft/yii2-jui' => 
-  array (
-    'name' => 'yiisoft/yii2-jui',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
-    ),
-  ),
   'yiisoft/yii2-debug' => 
   array (
     'name' => 'yiisoft/yii2-debug',
@@ -164,15 +101,6 @@ return array (
     'alias' => 
     array (
       '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
-    ),
-  ),
-  'yiisoft/yii2-gii' => 
-  array (
-    'name' => 'yiisoft/yii2-gii',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
     ),
   ),
   '2amigos/yii2-file-upload-widget' => 
@@ -193,5 +121,23 @@ return array (
       '@mdm/upload' => $vendorDir . '/mdmsoft/yii2-upload-file',
     ),
     'bootstrap' => 'mdm\\upload\\Bootstrap',
+  ),
+  'yiisoft/yii2-bootstrap' => 
+  array (
+    'name' => 'yiisoft/yii2-bootstrap',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
+    ),
+  ),
+  'yiisoft/yii2-gii' => 
+  array (
+    'name' => 'yiisoft/yii2-gii',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
+    ),
   ),
 );

@@ -3,6 +3,7 @@
 namespace app\modules\article\controllers;
 
 use common\models\ArticleCategory;
+use common\models\Blog;
 use common\models\simple_html_dom;
 use yii\web\Controller;
 use common\models\Article;
@@ -33,12 +34,12 @@ class DefaultController extends CoreController {
                 //'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create','update','delete','create-image','add-news-from-parser','parser-start','image-submit'],
+                        'actions' => ['create','update','delete','create-image','parser-start','image-submit'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['index','view','show','views'],
+                        'actions' => ['index','view','show','views','add-news-from-parser'],
                         'allow' => true,
                         'roles' => ['@','?'],
                     ],
@@ -206,6 +207,7 @@ class DefaultController extends CoreController {
     }
 
     public function actionAddNewsFromParser(){
+        $result = 0;
         $file = Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json';
         if(file_exists($file)){
             $ImportModel = file_get_contents($file);
@@ -214,7 +216,7 @@ class DefaultController extends CoreController {
             if($ImportModel) {
                 foreach ($obj as $row) {
 
-                    $duble = Article::getDublicateByTitle($row->title);
+                    $duble = Blog::getDublicateByTitle($row->title);
                     if (!$duble) {
                         $model = new Article();
                         $model->title = $row->title;
@@ -224,20 +226,22 @@ class DefaultController extends CoreController {
                         $model->updated_at = $row->updated_at;
                         $model->author = $row->author;
                         $model->save();
+                        $result = 1;
                     } else {
                         //echo "It is Dublicate", PHP_EOL;
                     }
 
                 }
             }
-            return $this->redirect('/admin/index');
+            
+
         }else{
             //Todo add emty file
             file_put_contents($file,"");
             Yii::$app->session->setFlash('error', 'Нет новых новостей!');
-            return $this->redirect('/admin/index');
-        }
 
+        }
+        return $result;
     }
 
     public function actionParserStart(){

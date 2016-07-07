@@ -22,9 +22,8 @@
         "mdmsoft/yii2-upload-file": "*",
         "madcoda/php-youtube-api": "*",
         "karpoff/yii2-crop-image-upload": "*",
-        "kartik-v/yii2-ipinfo": "@dev",
         "keltstr/yii2-simplehtmldom": "dev-master",
-        "vova07/yii2-imperavi-widget": "1.2.7",
+        "vova07/yii2-imperavi-widget": "1.2.7"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
