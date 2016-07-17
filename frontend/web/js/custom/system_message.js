@@ -23,12 +23,9 @@ var MyWidget = {
                     if(data == 1){
                         MyWidget.Show();
                     }
-                   },
-                done: function(){
-                    //MyWidget.Show();
-                },
+                   }
             });
-        },30000);
+        },5000);
     },
 
     // Вывод инфо блока

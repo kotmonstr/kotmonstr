@@ -14,7 +14,7 @@ class CoreController extends Controller
     public function init()
     {
         //Online::SetMyDataAsVisitor();
-        Blog::getNewsFronCroAuto();
+        //Blog::getNewsFronCroAuto();
         //echo "CORE";
 
 

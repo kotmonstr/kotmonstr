@@ -113,8 +113,9 @@ class Blog extends \yii\db\ActiveRecord
 
     }
 
-    public static function getNewsFronCroAuto()
+    public static function getNewsFromCronAuto()
     {
+        $result = 0;
         $file = Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'cron-import.json';
         if (file_exists($file)) {
             $data = file_get_contents($file);
@@ -131,11 +132,13 @@ class Blog extends \yii\db\ActiveRecord
                         $model->updated_at = time();
                         $model->author = (int)1;
                         $model->save();
-                    } else {
+                        $result = 1;
                     }
+                    $result = 2;
                 }
             }
         }
+        return $result;
     }
 
 }

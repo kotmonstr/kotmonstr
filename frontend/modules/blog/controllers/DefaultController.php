@@ -233,34 +233,9 @@ class DefaultController extends CoreController
 
     public function actionAddNewsFromParser()
     {
-        $result = 0;
-        $ImportModel = file_get_contents(Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'import.json');
-        //vd(Yii::getAlias('@json').DIRECTORY_SEPARATOR.'import.json');
-        //$ImportModel = ImportNews::find()->all();
-        $obj = json_decode($ImportModel);
-        //vd($obj);
-        if ($ImportModel) {
-            foreach ($obj as $row) {
-
-                $duble = Blog::getDublicateByTitle($row->title);
-                if (!$duble) {
-                    $model = new Blog();
-                    $model->title = $row->title;
-                    $model->image = $row->image ? $row->image : '';
-                    $model->content = $row->content;
-                    //$model->created_at = $row->created_at;
-                    $model->updated_at = time();
-                    $model->author = 1;
-                    //$model->validate();
-                    // vd($model->getErrors());
-                    $model->save();
-                    $result =1;
-                } else {
-
-                }
-
-            }
-        }
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $result = Blog::getNewsFromCronAuto();
+        //vd($result);
         return $result;
     }
 

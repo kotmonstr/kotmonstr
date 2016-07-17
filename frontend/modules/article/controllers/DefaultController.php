@@ -235,11 +235,6 @@ class DefaultController extends CoreController {
             }
             
 
-        }else{
-            //Todo add emty file
-            file_put_contents($file,"");
-            Yii::$app->session->setFlash('error', 'Нет новых новостей!');
-
         }
         return $result;
     }
