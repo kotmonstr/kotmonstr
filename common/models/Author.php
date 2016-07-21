@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "author".
@@ -15,6 +16,16 @@ use Yii;
  */
 class Author extends \yii\db\ActiveRecord
 {
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'name',
+                // 'slugAttribute' => 'slug',
+            ],
+        ];
+    }
     /**
      * @inheritdoc
      */

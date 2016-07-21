@@ -35,7 +35,6 @@ class DefaultController extends CoreController
                             'send-youtube-code',
                             'add',
                             'send-youtube-code',
-                            'show-author',
                         ],
                         'allow' => true,
                         'roles' => ['@'],
@@ -44,8 +43,7 @@ class DefaultController extends CoreController
                         'actions' => [
                             'view',
                             'preview',
-                            'show-author',
-                            'show-author',
+                            'author',
                             'get-video-by-categoria-id',
                             'get-video-by-author-id',
                             'get-video-by-time',
@@ -53,11 +51,10 @@ class DefaultController extends CoreController
                             'tv1',
                             'tvc',
                             '5canal',
-                            'views'
-
+                            'views',
                         ],
                         'allow' => true,
-                        'roles' => ['?','@'],
+                        'roles' => ['?', '@'],
                     ],
                 ],
             ],
@@ -69,10 +66,9 @@ class DefaultController extends CoreController
 
     public function actionView()
     {
-        $categoria_id = Yii::$app->request->get('categoria_id');
-        //vd($categoria_id);
-        $model = Video::find()->where(['categoria' => $categoria_id]);
-        //vd($model_video);
+        $slug = Yii::$app->request->get('slug');
+        $models = VideoCategoria::find()->where(['slug' => $slug])->one();
+        $model = Video::find()->where(['categoria' => $models->id]);
         $countQuery = clone $model;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => 12]);
         $model_video = $model->offset($pages->offset)
@@ -92,6 +88,7 @@ class DefaultController extends CoreController
 
         return $this->render('tv');
     }
+
     public function actionTvc()
     {
 
@@ -216,12 +213,11 @@ class DefaultController extends CoreController
         return $this->redirect('/video/index');
     }
 
-    public function actionShowAuthor($id)
+    public function actionAuthor()
     {
-
-
-        //vd($categoria_id);
-        $model = Video::find()->where(['author_id' => $id]);
+        $slug = Yii::$app->request->get('slug');
+        $models = Author::find()->where(['slug' => $slug])->one();
+        $model = Video::find()->where(['author_id' => $models->id]);
         //vd($model_video);
         $countQuery = clone $model;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => 12]);
@@ -325,12 +321,13 @@ class DefaultController extends CoreController
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         return $this->renderAjax('get-video-by-categoria-id', ['model' => $model]);
     }
-    
-    public function actionViews(){
+
+    public function actionViews()
+    {
         $slug = Yii::$app->request->get('slug');
         $model = Video::find()->where(['slug' => $slug])->one();
         $this->meta = $model;
-        
+
         return $this->render('views', [
             'model' => $model,
         ]);

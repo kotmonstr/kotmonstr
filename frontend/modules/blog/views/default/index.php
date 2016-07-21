@@ -33,13 +33,13 @@ Yii::$app->formatter->locale = 'ru-RU';
             <div class="col-sm-6 col-md-4">
                 <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
 
-                    <div class="thumbnail" >
+                    <div class="thumbnail" style="height: 367px">
                         <img class="img-thumb" src="<?= $image ?>" alt="...">
 
                         <div class="caption">
-                            <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 63) ?></h5>
+                            <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 90) ?></h5>
                         </div>
-                        <div class="caption">
+                        <div class="caption date-info" style="position: absolute;bottom: 19px;">
                             <span class="glyphicon glyphicon-time bold dark-color" aria-hidden="true"></span>
                             <span class="dark-color"><?= ' ' . Yii::$app->formatter->asDate($blog->created_at, 'long') . ' ' . Yii::$app->formatter->asTime($blog->created_at, 'short') ?></span>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true" style="margin-left:10px"><?= $blog->view ?></span>
@@ -84,10 +84,10 @@ Yii::$app->formatter->locale = 'ru-RU';
             <div class="col-sm-6 col-md-4">
 
                 <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
-                    <div class="thumbnail">
+                    <div class="thumbnail" style="height: 367px">
                         <img class="img-thumb" src="<?= $image ?>" alt="...">
                         <div class="caption">
-                            <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 63) ?></h5>
+                            <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 90) ?></h5>
                         </div>
                         <div class="caption">
                             <span class="glyphicon glyphicon-time bold dark-color" aria-hidden="true"></span>
@@ -116,10 +116,10 @@ Yii::$app->formatter->locale = 'ru-RU';
             ?>
             <div class="col-sm-6 col-md-4">
                 <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
-                    <div class="thumbnail">
+                    <div class="thumbnail" style="height: 367px">
                         <img class="img-thumb" src="<?= $image ?>" alt="...">
                         <div class="caption">
-                            <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 63) ?></h5>
+                            <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 90) ?></h5>
                         </div>
                         <div class="caption">
                             <span class="glyphicon glyphicon-time bold dark-color" aria-hidden="true"></span>

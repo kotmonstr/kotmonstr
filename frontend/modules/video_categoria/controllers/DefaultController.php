@@ -62,6 +62,9 @@ class DefaultController extends CoreController
      */
     public function actionView($id)
     {
+        //Todo
+        //$model = VideoCategoria::getAllBySlug($slug);
+        
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);

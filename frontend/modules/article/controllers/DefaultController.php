@@ -202,7 +202,7 @@ class DefaultController extends CoreController {
             $this->meta = $Article;
             return $this->render('views', ['model' => $Article, 'coment_model' => $coment_model]);
         }else{
-            $this->redirect('site/index');
+            return $this->redirect('/site/index');
         }
     }
 

@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "video_categoria".
@@ -12,6 +13,20 @@ use Yii;
  */
 class VideoCategoria extends \yii\db\ActiveRecord
 {
+    public function behaviors()
+    {
+
+
+        return [
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'name',
+            ],
+        ];
+
+
+    }
+
     /**
      * @inheritdoc
      */
@@ -46,5 +61,14 @@ class VideoCategoria extends \yii\db\ActiveRecord
      */
     public static function getModel(){
         return VideoCategoria::find()->all();
+    }
+
+    public static function getAllBySlug($slug){
+        $model = self::find()->where(['slug' => $slug])->all();
+        if ($model) {
+            return $model;
+        } else {
+            return false;
+        }
     }
 }

@@ -377,11 +377,11 @@
 					if(typeof alignment === 'undefined' || alignment === false || alignment === ''){
 						alignment = opts.alignment;
 					}
-					
+
 					if(typeof portrait === 'undefined' || portrait === false || portrait === ''){
 						portrait = opts.portrait;
 					}
-										
+
 					if(portrait==false||portrait=='false'){
 						if((wT/hT)<(w/h)) {
 							var r = w / wT;

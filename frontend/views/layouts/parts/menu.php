@@ -23,7 +23,7 @@ $module = Yii::$app->controller->module->id;
     ?>"><a href="javascript:void(0);">Авторы</a>
         <ul>
             <?php foreach ($model_author as $author): ?>
-                <li><a href="<?= Url::to(['/video/show-author', 'id' => $author->id]) ?>"><?= $author->name ?></a></li>
+                <li><a href="<?= Url::to(['/video/author/'.$author->slug]) ?>"><?= $author->name ?></a></li>
             <?php endforeach; ?>
         </ul>
     </li>
@@ -34,7 +34,7 @@ $module = Yii::$app->controller->module->id;
     ?>"><a href="javascript:void(0);">Видео</a>
         <ul>
             <?php foreach (VideoCategoria::getModel() as $categoria): ?>
-                <li><a href="<?= Url::to(['/video/view', 'categoria_id' => $categoria->id]); ?>"><?= $categoria->name ?></a></li>
+                <li><a href="<?= Url::to(['/video/view/'.$categoria->slug]); ?>"><?= $categoria->name ?></a></li>
             <?php endforeach; ?>
         </ul>
     </li>
@@ -58,6 +58,7 @@ $module = Yii::$app->controller->module->id;
     <li class="<?= $url == 'article/index' || $url == 'article/views'? 'active' : ''; ?>"><a href="<?= Url::to('/blog') ?>">Статьи</a></li>
     <li class="<?= $url == 'music/show' ? 'active' : ''; ?>"><a href="<?= Url::to('/music') ?>">Музыка</a></li>
     <li class="<?= $url == 'book/views' ? 'active' : ''; ?>"> <a href="<?= Url::to('/books') ?>">Книги</a></li>
+    <li> <a href="<?= Url::to('/sitemap.xml') ?>">Sitemap</a></li>
 
 
 
