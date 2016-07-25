@@ -89,10 +89,10 @@ foreach ($model as $item) {//9
     }
     /* Changes the position of the indicators */
     .carousel-indicators {
-        //right: 50%;
-       //top: auto;
-        //bottom: 0px;
-        //margin-right: -19px;
+        right: 50%;
+        top: auto;
+        bottom: 0px;
+        margin-right: -19px;
     }
     /* Changes the colour of the indicators */
     .carousel-indicators li {
