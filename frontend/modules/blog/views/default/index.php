@@ -5,6 +5,7 @@ use yii\widgets\LinkPager;
 use yii\helpers\StringHelper;
 use common\models\Comment;
 use frontend\assets\AppAsset;
+use app\components\CarouselWidget;
 
 Yii::$app->formatter->locale = 'ru-RU';
 //$this->registerJSFile('/js/custom/tooltip.js',['depends'=>AppAsset::className()]);
@@ -15,7 +16,11 @@ Yii::$app->formatter->locale = 'ru-RU';
 
 <div class="container">
 
-    <div class="new-conteiner">
+    <? if($model): ?>
+    <?= CarouselWidget::widget(['model'=>$model]); ?>
+    <? endif ?>
+
+        <div class="new-conteiner">
         <div class="row">
             <div class="col-md-12" style="text-align: center">
                 <h3>Новости</h3>

@@ -18,24 +18,11 @@ class ShopAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'eshop/css/bootstrap.min.css',
-        'eshop/css/font-awesome.min.css',
-        'eshop/css/prettyPhoto.css',
-        'eshop/css/price-range.css',
-        'eshop/css/animate.css',
-        'eshop/css/main.css',
-        'eshop/css/responsive.css',
+        //'css/bootstrap.css',
     ];
     public $js = [
-       // 'eshop/js/jquery.js',//   с ним не работают active form
-        'eshop/js/bootstrap.min.js',
-        'eshop/js/jquery.scrollUp.min.js',
-        'eshop/js/price-range.js',
-        'eshop/js/jquery.prettyPhoto.js',
-        'eshop/js/main.js',
-        'eshop/js/jquery.zoom.js',
-        'eshop/js/custom.js'
-
+        //'js/jquery.js',
+        'js/custom/bootstrap.js',
 
     ];
     public $depends = [

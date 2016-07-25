@@ -13,15 +13,6 @@ return array (
     ),
     'bootstrap' => 'nodge\\eauth\\Bootstrap',
   ),
-  'karpoff/yii2-crop-image-upload' => 
-  array (
-    'name' => 'karpoff/yii2-crop-image-upload',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@karpoff/icrop' => $vendorDir . '/karpoff/yii2-crop-image-upload',
-    ),
-  ),
   'keltstr/yii2-simplehtmldom' => 
   array (
     'name' => 'keltstr/yii2-simplehtmldom',
@@ -40,15 +31,6 @@ return array (
       '@dosamigos/gallery' => $vendorDir . '/2amigos/yii2-gallery-widget/src',
     ),
   ),
-  'vova07/yii2-imperavi-widget' => 
-  array (
-    'name' => 'vova07/yii2-imperavi-widget',
-    'version' => '1.2.7.0',
-    'alias' => 
-    array (
-      '@vova07/imperavi' => $vendorDir . '/vova07/yii2-imperavi-widget/src',
-    ),
-  ),
   'mongosoft/yii2-upload-behavior' => 
   array (
     'name' => 'mongosoft/yii2-upload-behavior',
@@ -56,24 +38,6 @@ return array (
     'alias' => 
     array (
       '@mongosoft/file' => $vendorDir . '/mongosoft/yii2-upload-behavior',
-    ),
-  ),
-  'yiisoft/yii2-swiftmailer' => 
-  array (
-    'name' => 'yiisoft/yii2-swiftmailer',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
-    ),
-  ),
-  'yiisoft/yii2-faker' => 
-  array (
-    'name' => 'yiisoft/yii2-faker',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
   'yiisoft/yii2-imagine' => 
@@ -85,28 +49,28 @@ return array (
       '@yii/imagine' => $vendorDir . '/yiisoft/yii2-imagine',
     ),
   ),
-  'yiisoft/yii2-codeception' => 
+  'yiisoft/yii2-swiftmailer' => 
   array (
-    'name' => 'yiisoft/yii2-codeception',
-    'version' => '9999999-dev',
+    'name' => 'yiisoft/yii2-swiftmailer',
+    'version' => '2.0.5.0',
     'alias' => 
     array (
-      '@yii/codeception' => $vendorDir . '/yiisoft/yii2-codeception',
+      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
     ),
   ),
-  'yiisoft/yii2-debug' => 
+  'yiisoft/yii2-bootstrap' => 
   array (
-    'name' => 'yiisoft/yii2-debug',
-    'version' => '9999999-dev',
+    'name' => 'yiisoft/yii2-bootstrap',
+    'version' => '2.0.6.0',
     'alias' => 
     array (
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
+      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
     ),
   ),
   '2amigos/yii2-file-upload-widget' => 
   array (
     'name' => '2amigos/yii2-file-upload-widget',
-    'version' => '9999999-dev',
+    'version' => '1.0.4.0',
     'alias' => 
     array (
       '@dosamigos/fileupload' => $vendorDir . '/2amigos/yii2-file-upload-widget/src',
@@ -115,29 +79,56 @@ return array (
   'mdmsoft/yii2-upload-file' => 
   array (
     'name' => 'mdmsoft/yii2-upload-file',
-    'version' => '9999999-dev',
+    'version' => '1.3.0.0',
     'alias' => 
     array (
       '@mdm/upload' => $vendorDir . '/mdmsoft/yii2-upload-file',
     ),
     'bootstrap' => 'mdm\\upload\\Bootstrap',
   ),
-  'yiisoft/yii2-bootstrap' => 
+  'karpoff/yii2-crop-image-upload' => 
   array (
-    'name' => 'yiisoft/yii2-bootstrap',
-    'version' => '9999999-dev',
+    'name' => 'karpoff/yii2-crop-image-upload',
+    'version' => '0.0.1.0',
     'alias' => 
     array (
-      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
+      '@karpoff/icrop' => $vendorDir . '/karpoff/yii2-crop-image-upload',
+    ),
+  ),
+  'vova07/yii2-imperavi-widget' => 
+  array (
+    'name' => 'vova07/yii2-imperavi-widget',
+    'version' => '1.2.10.0',
+    'alias' => 
+    array (
+      '@vova07/imperavi' => $vendorDir . '/vova07/yii2-imperavi-widget/src',
+    ),
+  ),
+  'yiisoft/yii2-debug' => 
+  array (
+    'name' => 'yiisoft/yii2-debug',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
     ),
   ),
   'yiisoft/yii2-gii' => 
   array (
     'name' => 'yiisoft/yii2-gii',
-    'version' => '9999999-dev',
+    'version' => '2.0.5.0',
     'alias' => 
     array (
       '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
+    ),
+  ),
+  'yiisoft/yii2-faker' => 
+  array (
+    'name' => 'yiisoft/yii2-faker',
+    'version' => '2.0.3.0',
+    'alias' => 
+    array (
+      '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
 );

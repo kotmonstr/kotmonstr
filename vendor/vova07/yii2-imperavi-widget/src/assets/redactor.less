@@ -84,7 +84,6 @@
 	background: #fff;
 }
 
-
 /*
 	Z-index setup
 */
@@ -848,6 +847,7 @@ body .redactor-box-fullscreen {
 	code,
 	pre {
 		font-family: @redactorCodeFontFamily;
+		cursor: text;
 	}
 	div,
 	p,
@@ -898,9 +898,14 @@ body .redactor-box-fullscreen {
 	}
 	blockquote {
 	  margin-left: 1.6em !important;
-	  padding-left: 0;
+	  padding: 0;
+	  text-align: left;
 	  color: #777;
 	  font-style: italic;
+	  &:before,
+	  &:after {
+		  content: '';
+	  }
 	}
 	ul,
 	ol {
@@ -951,7 +956,6 @@ body .redactor-box-fullscreen {
 	  border: 1px solid #ddd;
 	  border-radius: 3px;
 	  background: #f8f8f8;
-	  white-space: pre;
 	  font-size: 90%;
 	}
 	hr {

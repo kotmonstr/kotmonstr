@@ -15,21 +15,21 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "*",
-        "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*",
-        "2amigos/yii2-file-upload-widget" : "*",
-        "mdmsoft/yii2-upload-file": "*",
-        "madcoda/php-youtube-api": "*",
-        "karpoff/yii2-crop-image-upload": "*",
+        "yiisoft/yii2": "2.0.9",
+        "yiisoft/yii2-bootstrap": "2.0.6",
+        "yiisoft/yii2-swiftmailer": "2.0.5",
+        "2amigos/yii2-file-upload-widget" : "1.0.4",
+        "mdmsoft/yii2-upload-file": "1.3",
+        "madcoda/php-youtube-api": "1.2",
+        "karpoff/yii2-crop-image-upload": "0.0.1",
         "keltstr/yii2-simplehtmldom": "dev-master",
-        "vova07/yii2-imperavi-widget": "1.2.7"
+        "vova07/yii2-imperavi-widget": "1.2.10"
     },
     "require-dev": {
-        "yiisoft/yii2-codeception": "*",
-        "yiisoft/yii2-debug": "*",
-        "yiisoft/yii2-gii": "*",
-        "yiisoft/yii2-faker": "*",
+
+        "yiisoft/yii2-debug": "2.0.6",
+        "yiisoft/yii2-gii": "2.0.5",
+        "yiisoft/yii2-faker": "2.0.3",
         "nodge/yii2-eauth": "2.4.1"
     },
     "config": {

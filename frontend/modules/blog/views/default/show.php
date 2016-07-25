@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         //'content:html',
                         //'created_at',
                         [
-                          
+
                             'attribute' => 'created_at',
                             //'format' => 'date',
                             'value' => function($data){
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             }
                         ],
                         [
-                          
+
                             'attribute' => 'author',
                             //'format' => 'html',
                             'value' => function($data){
