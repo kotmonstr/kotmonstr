@@ -93,6 +93,11 @@ class DefaultController extends CoreController
         $modeMostWatched = Blog::find()
             ->orderBy('view DESC')
             ->limit(3)
+            ->all(); 
+        
+        $modeLastSider = Blog::find()
+            ->orderBy('view DESC')
+            ->limit(16)
             ->all();
 
 
@@ -100,7 +105,8 @@ class DefaultController extends CoreController
             'modelLastBlog' => $modelLastBlog,
             'modeMostWatched' => $modeMostWatched,
             'pages' => $pages,
-            'pageSize' => $pageSize
+            'pageSize' => $pageSize,
+            'modeLastSider' => $modeLastSider
         ]);
     }
 

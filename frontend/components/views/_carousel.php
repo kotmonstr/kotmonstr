@@ -46,9 +46,9 @@ foreach ($model as $item) {//9
                             <? $ii++; ?>
                             <? $active = $ii == 1 ? 'active': 'nonactive'; ?>
                             <?= ($i == 1) ? '<div class="item '.$active. ' "><div class="row-fluid">' : null ?>
-                            <div class="span3" title=""><a href="#x" class="thumbnail thumbnail-carousel"><img src="<?= $image ?>"
-                                                                                            alt="Image"
-                                                                                            style="max-height:160px;"/></a>
+                            <div class="span3" title="">
+                                <a href="#x" class="thumbnail thumbnail-carousel"><img src="<?= $image ?>" alt="Image" style="max-height:160px;"/>
+                                </a>
                    </div>
                             <? if ($i == 4 || $count == $ii) echo '</div></div>';
                             if ($i == 4) {

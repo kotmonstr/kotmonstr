@@ -17,7 +17,7 @@ Yii::$app->formatter->locale = 'ru-RU';
 <div class="container">
 
     <? if($model): ?>
-    <?= CarouselWidget::widget(['model'=>$model]); ?>
+    <?= CarouselWidget::widget(['model'=>$modeLastSider]); ?>
     <? endif ?>
 
         <div class="new-conteiner">
