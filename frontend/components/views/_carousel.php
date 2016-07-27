@@ -1,5 +1,7 @@
 <?
 use frontend\assets\ShopAsset;
+use yii\helpers\Url;
+use yii\helpers\StringHelper;
 
 $this->registerJsFile('/js/custom/init-carousel.js', ['depends' => ShopAsset::className()]);
 $i = 0;
@@ -12,18 +14,20 @@ $Iterator = ceil($count / 4);
 
 
 foreach ($model as $item) {//9
-
+    $ii++;
     $i++;
     if ($i > 4) {
         $line++;
         $i = 1;
     }
-    $arrIMAGES[] = $item->image;
+    $arrIMAGES[$ii]['image'] = $item->image;
+    $arrIMAGES[$ii]['title'] = $item->title;
+    $arrIMAGES[$ii]['slug'] = $item->slug;
 
 }
 
 
-//vd($arrIMAGES, false);
+//vd($arrIMAGES);
 ?>
 <div class="new-conteiner">
     <div class="row">
@@ -40,14 +44,19 @@ foreach ($model as $item) {//9
 
 
                     <? $i = 0; ?>
+                    <? $ii = 0; ?>
                     <div class="carousel-inner">
                         <? foreach ($arrIMAGES as $image): ?>
+                            <?// vd($image,false) ?>
                             <? $i++; ?>
                             <? $ii++; ?>
                             <? $active = $ii == 1 ? 'active': 'nonactive'; ?>
                             <?= ($i == 1) ? '<div class="item '.$active. ' "><div class="row-fluid">' : null ?>
                             <div class="span3" title="">
-                                <a href="#x" class="thumbnail thumbnail-carousel"><img src="<?= $image ?>" alt="Image" style="max-height:160px;"/>
+                                <a href="<?= Url::to('/blog/list/'.$image['slug']); ?>" class="thumbnail thumbnail-carousel"><img src="<?= $image['image'] ?>" alt="Image" style="max-height:160px;"/>
+                                    <div>
+                                        <?= StringHelper::truncate($image['title'],80); ?>
+                                    </div>
                                 </a>
                    </div>
                             <? if ($i == 4 || $count == $ii) echo '</div></div>';
@@ -71,7 +80,8 @@ foreach ($model as $item) {//9
 
 <style>
     .thumbnail-carousel{
-        height: 170px!important;
+        height: 220px!important;
+        color: #888;
     }
     .carousel-indicators{
         bottom: -36px;
