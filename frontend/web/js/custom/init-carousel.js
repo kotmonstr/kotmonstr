@@ -1,7 +1,7 @@
 
 jQuery(document).ready(function() {
     jQuery('#myCarousel').carousel({
-        interval: 3000,
+        interval: 10000,
         //animation:slide
     })
 });
