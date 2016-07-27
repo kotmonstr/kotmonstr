@@ -42,7 +42,6 @@ foreach ($model as $item) {//9
                         <? endfor; ?>
                     </ol>
 
-
                     <? $i = 0; ?>
                     <? $ii = 0; ?>
                     <div class="carousel-inner">
