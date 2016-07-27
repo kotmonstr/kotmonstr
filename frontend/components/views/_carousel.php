@@ -112,4 +112,9 @@ foreach ($model as $item) {//9
     }
     .carousel {
         margin-left: 20px;
+    }
+    .new-conteiner {
+        padding: 2px 20px 2px 20px!important;
+        margin: 0px 0px 5px 0px!important;
+    }
 </style>
