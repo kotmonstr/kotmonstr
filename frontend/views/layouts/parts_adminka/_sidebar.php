@@ -217,8 +217,8 @@ $countNewNews = ImportNews::getFreshNews();
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                        onclick="$('.modal').hide();$('.layout').hide()"><span aria-hidden="true">&times;</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('.modal').hide();$('.layout').hide()">
+                    <span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title">Очистка кеш</h4>
             </div>
@@ -230,8 +230,7 @@ $countNewNews = ImportNews::getFreshNews();
                 <a href="<?= Url::to('/cash/clear') ?>">
                     <button type="button" class="btn btn-danger">Очистить</button>
                 </a>
-                <button type="button" class="btn btn-default" data-dismiss="modal"
-                        onclick="$('.modal').hide();$('.layout').hide()">Отмена
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="$('.modal').hide();$('.layout').hide()">Отмена
                 </button>
             </div>
         </div>

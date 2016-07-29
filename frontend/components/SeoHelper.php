@@ -12,11 +12,11 @@ class SeoHelper extends BaseArrayHelper
     public static function getMeta($arr=null)
     {
         if($arr){ ?>
-            <title><?= Html::encode($arr->title); ?>| kotmonstr.com | артефакты прошлого</title>
+            <title><?= Html::encode($arr->title); ?> kotmonstr.com | артефакты прошлого</title>
             <meta name="description"
                   content="<?= Html::encode(StringHelper::truncate(isset($arr->content) ? $arr->content : $arr->title,200)) ?>">
             <meta name="keywords"
-                  content="Артефакты прошлого , альтернативная история , ведическая культура , ведическая библиотека">
+                  content="Артефакты прошлого , история руси , альтернативная история , ведическая культура , ведическая библиотека, истина , правда">
         <? }else{
             $module = Yii::$app->controller->module->id;
             $controller = Yii::$app->controller->id;
@@ -25,11 +25,11 @@ class SeoHelper extends BaseArrayHelper
             $meta = Seo::getPageMeta($url);
             //vd($meta);
             ?>
-            <title><?= $meta ? Html::encode($meta->title) : '| kotmonstr.com | артефакты прошлого<' ?></title>
+            <title><?= $meta ? Html::encode($meta->title) : 'kotmonstr.com | артефакты прошлого' ?></title>
             <meta name="description"
-                  content="<?= is_object($meta) ? Html::encode($meta->description) : 'kotmonstr.com | артефакты прошлого' ?>">
+                  content="<?= is_object($meta) ? Html::encode($meta->description) : 'kotmonstr.com | артефакты прошлого, истина , правда' ?>">
             <meta name="keywords"
-                  content="<?= is_object($meta) ? Html::encode($meta->keywords) : 'kotmonstr.com | артефакты прошлого | альтернативная история | ведическая культура русов' ?>">
+                  content="<?= is_object($meta) ? Html::encode($meta->keywords) : 'kotmonstr.com | артефакты прошлого | альтернативная история | ведическая культура русов | история руси' ?>">
             <?
         }
 

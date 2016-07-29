@@ -18,21 +18,17 @@ $identity = Yii::$app->getUser()->getIdentity();
 
 <div class="container">
     <div class="row">
-    <div id="panel">
-        <div class="navbar navbar-inverse navbar-fixed-top" id="advanced" style="margin-top: 0px;">
-            <span class="trigger"><strong></strong><em></em></span>
-            <div class="navbar-inner">
-                <div class="container"
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-top-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="javascript:void(0);">kotmonstr.com</a>
-              </div>
+        <div id="panel">
+            <div class="navbar navbar-inverse navbar-fixed-top" id="advanced" style="margin-top: 0px;">
+                <span class="trigger"><strong></strong><em></em></span>
+                <div class="navbar-inner">
+                    <div class="container"
+                    <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-top-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        <a class="brand" href="javascript:void(0);">kotmonstr.com</a>
+                  </div>
+                </div>
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -120,9 +116,4 @@ $identity = Yii::$app->getUser()->getIdentity();
     </div>
 </div>
 
-<style>
-    .span3 {
-        //border: 1px solid red;
-    }
-</style>
 
