@@ -96,7 +96,7 @@ class DefaultController extends CoreController
             ->all(); 
         
         $modeLastSider = Blog::find()
-            ->orderBy('view DESC')
+            ->orderBy('id DESC')
             ->limit(16)
             ->all();
 
