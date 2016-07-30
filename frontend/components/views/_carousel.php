@@ -20,6 +20,7 @@ foreach ($model as $item) {//9
     }
     $arrIMAGES[] = $item->image;
 
+
 }
 
 
@@ -49,6 +50,9 @@ foreach ($model as $item) {//9
                             <div class="span3" title="">
                                 <a href="#x" class="thumbnail thumbnail-carousel"><img src="<?= $image ?>" alt="Image" style="max-height:160px;"/>
                                 </a>
+                                <div>
+
+                                </div>
                    </div>
                             <? if ($i == 4 || $count == $ii) echo '</div></div>';
                             if ($i == 4) {
