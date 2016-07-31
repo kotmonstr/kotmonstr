@@ -31,7 +31,7 @@ class Online extends \yii\db\ActiveRecord
     {
         return [
             [['user_id', 'last_visit', 'social'], 'integer'],
-            [['social_name', 'user_ip', 'social_name'], 'string', 'max' => 255],
+            [['social_name', 'user_ip'], 'string', 'max' => 255],
         ];
     }
 
