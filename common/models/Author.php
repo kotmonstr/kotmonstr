@@ -71,7 +71,7 @@ class Author extends \yii\db\ActiveRecord
         $model = self::find()
             ->leftJoin('video','`author`.`id` = `video`.`author_id`')
             //->where(['author.id' => 'video.author_id'])
-            ->where(['video.author_id'=>'author.id'])
+            ->where(['<>','video.author_id', 111111])
             //->with('videos')
             ->all();
 
