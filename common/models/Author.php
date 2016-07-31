@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\behaviors\SluggableBehavior;
+use common\models\Video;
 
 /**
  * This is the model class for table "author".
@@ -64,5 +65,16 @@ class Author extends \yii\db\ActiveRecord
     public function getVideos()
     {
         return $this->hasMany(Video::className(), ['author_id' => 'id']);
+    }
+    
+    public static function getListAuthorNonEmpty(){
+        $model = self::find()
+            ->leftJoin('video','`author`.`id` = `video`.`author_id`')
+            //->where(['author.id' => 'video.author_id'])
+            ->where(['<>','video.author_id', 111111])
+            //->with('videos')
+            ->all();
+
+        return $model ? $model : false;
     }
 }

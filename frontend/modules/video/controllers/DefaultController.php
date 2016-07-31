@@ -215,7 +215,6 @@ class DefaultController extends CoreController
 
     public function actionAuthor()
     {
-        //Todo
         $slug = Yii::$app->request->get('slug');
         $models = Author::find()->where(['slug' => $slug])->one();
         $model = Video::find()->where(['author_id' => $models->id]);
@@ -223,9 +222,6 @@ class DefaultController extends CoreController
         $countQuery = clone $model;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => 12]);
         $model_video = $model->offset($pages->offset)
-            //->leftJoin('author',  '`author`.`id` = `video`.`author_id`')
-            ->where(['`video`.`author_id`'=> '`author`.`id`'])
-            ->with('author_id')
             ->limit($pages->limit)
             ->orderBy('created_at Desc')
             ->all();

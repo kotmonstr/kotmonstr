@@ -2,9 +2,11 @@
 use yii\helpers\Url;
 use common\models\VideoCategoria;
 use common\models\Author;
-$model_author = Author::find()->all();
 
-$model_author = Author::find()->all();
+
+$model_author = Author::getListAuthorNonEmpty();
+
+
 $url = Yii::$app->controller->module->id . '/' . Yii::$app->controller->action->id;
 $module = Yii::$app->controller->module->id;
 
@@ -16,17 +18,21 @@ $module = Yii::$app->controller->module->id;
         echo"active";
     }
     ?>"><a href="<?= Url::to('/') ?>"><em class="hidden-phone"></em><span class="visible-phone">Home</span></a></li>
+
+    <? if($model_author): ?>
     <li class="sub-menu <?php
     if ($url == 'video/show-author') {
         echo"active";
     }
-    ?>"><a href="javascript:void(0);">Авторы</a>
+    ?>">
+        <a href="javascript:void(0);">Авторы</a>
         <ul>
             <?php foreach ($model_author as $author): ?>
                 <li><a href="<?= Url::to(['/video/author/'.$author->slug]) ?>"><?= $author->name ?></a></li>
             <?php endforeach; ?>
         </ul>
     </li>
+    <? endif;?>
     <li class="sub-menu <?php
     if ($url == 'video/view') {
         echo"active";
