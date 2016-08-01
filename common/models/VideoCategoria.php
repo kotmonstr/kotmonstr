@@ -71,4 +71,11 @@ class VideoCategoria extends \yii\db\ActiveRecord
             return false;
         }
     }
+
+    public static function getModelNonEmpty(){
+        return VideoCategoria::find()
+            ->leftJoin('video','video_categoria.id = video.categoria')
+            ->where('video.categoria IS NOT NULL')
+            ->all();
+    }
 }
