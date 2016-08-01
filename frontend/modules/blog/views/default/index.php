@@ -39,7 +39,7 @@ Yii::$app->formatter->locale = 'ru-RU';
                 <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
 
                     <div class="thumbnail" style="height: 367px">
-                        <img class="img-thumb" src="<?= $image ?>" alt="...">
+                        <img class="img-thumb" src="<?= $image ?>" alt="<?= StringHelper::truncate($blog->title, 190) ?>">
 
                         <div class="caption">
                             <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 90) ?></h5>
@@ -90,7 +90,7 @@ Yii::$app->formatter->locale = 'ru-RU';
 
                 <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
                     <div class="thumbnail" style="height: 367px">
-                        <img class="img-thumb" src="<?= $image ?>" alt="...">
+                        <img class="img-thumb" src="<?= $image ?>" alt="<?= StringHelper::truncate($blog->title, 190) ?>">
                         <div class="caption">
                             <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 90) ?></h5>
                         </div>
@@ -122,7 +122,7 @@ Yii::$app->formatter->locale = 'ru-RU';
             <div class="col-sm-6 col-md-4">
                 <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">
                     <div class="thumbnail" style="height: 367px">
-                        <img class="img-thumb" src="<?= $image ?>" alt="...">
+                        <img class="img-thumb" src="<?= $image ?>" alt="<?= StringHelper::truncate($blog->title, 190) ?>">
                         <div class="caption">
                             <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 90) ?></h5>
                         </div>

@@ -132,28 +132,33 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
     letter-spacing: -2px;
 }
     .arrow-left{
-        width:25px;
-        height:25px;
-        background-image: url('/img/arrows/left-tiny.png'); none repeat center center;
+        width: 100px;
+        height: 100px;
+        background: url('/img/arrow_left.png')100% 100% no-repeat;
+        background-size: 100%;
         position: absolute;
         top: 150px;
         left: 83px;
         z-index: 2;
+        opacity: 0.7;
     }
     .arrow-left:hover{
-        background-image: url('/img/arrows/left-active-tiny.png'); none repeat center center;
+        opacity: 2;
     }
     .arrow-right{
-        width:25px;
-        height:25px;
-        background-image: url('/img/arrows/right-tiny.png'); none repeat center center;
+        width: 100px;
+        height: 100px;
+
+        background: url('/img/arrow_right.png')100% 100% no-repeat;
+        background-size: 100%;
         position: absolute;
         top: 150px;
         right: 83px;
         z-index: 2;
+        opacity: 0.7;
     }
     .arrow-right:hover{
-        background-image: url('/img/arrows/right-active-tiny.png'); none repeat center center;
+       opacity: 1;
     }
 
     .btn-left-right{
