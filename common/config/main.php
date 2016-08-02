@@ -34,10 +34,12 @@ return [
 
                 'article/list/<slug:.+>' => '/article/default/views',
                 'blog/list/<slug:.+>' => '/blog/default/views',
+                'blog/list-ajax/<slug:.+>' => '/blog/default/views-ajax',
 
                 'video/author/<slug:.+>' => '/video/default/author',
                 'video/view/<slug:.+>' => '/video/default/view',
                 'video/list/<slug:.+>' => '/video/default/views',
+
 
 
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',

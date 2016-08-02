@@ -31,11 +31,11 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
             <div class="row">
                 <div class="col-md-1" style="">
                     <? if($prevBlog): ?>
-                    <a href="<?= Url::to(['/blog/list-ajax/'.$prevBlog]) ?>" title="Предыдущая новость">
-                        <div class="arrow-left"></div>
+                        <a href="<?= Url::to(['/blog/list-ajax/'.$prevBlog]) ?>" title="Предыдущая новость">
+                            <div class="arrow-left"></div>
 
 
-                    </a>
+                        </a>
                     <? endif; ?>
                 </div>
                 <div class="col-md-10 " style="padding: 0px 45px">
@@ -43,24 +43,24 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
                 </div>
                 <div class="col-md-1" >
                     <? if($nextBlog): ?>
-                    <a href="<?= Url::to(['/blog/list-ajax/'.$nextBlog]) ?>" title="Следующая новость">
-                        <div class="arrow-right"></div>
+                        <a href="<?= Url::to(['/blog/list-ajax/'.$nextBlog]) ?>" title="Следующая новость">
+                            <div class="arrow-right"></div>
 
 
-                    </a>
+                        </a>
                     <? endif; ?>
                 </div>
             </div>
 
-         
+
             <div class="row">
-            <?= TemplateWidget::widget(['model' => $model,'template'=> 4]); ?>
+                <?= TemplateWidget::widget(['model' => $model,'template'=> 4]); ?>
             </div>
             <?php Pjax::end(); ?>
-            
-            
-            
-            
+
+
+
+
             <div class="row">
                 <div class="col-md-12" style="">
                     <hr>
@@ -117,28 +117,28 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
 
 </section>
 <?php if(!Yii::$app->user->isGuest):?>
-<section id="form">
-    <div class="container shet" style="margin-top:50px">
-        <div class="row">
-            <div class="span12">
-            <div class="span10 left-div">
-                <textarea id="comment-textarea"></textarea>
-            </div>
-            <div class="span2">
-                <a onclick="Comment.AddComment()" href="javascript:void(0);" class="btn btn_ sub-btn">Добавить комментарий</a>
-            </div>
-            </div>
+    <section id="form">
+        <div class="container shet" style="margin-top:50px">
+            <div class="row">
+                <div class="span12">
+                    <div class="span10 left-div">
+                        <textarea id="comment-textarea"></textarea>
+                    </div>
+                    <div class="span2">
+                        <a onclick="Comment.AddComment()" href="javascript:void(0);" class="btn btn_ sub-btn">Добавить комментарий</a>
+                    </div>
+                </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php endif ?>
 <style>
-.header-title{
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: -2px;
-}
+    .header-title{
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: -2px;
+    }
     .arrow-left{
         width: 100px;
         height: 100px;
@@ -166,7 +166,7 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
         opacity: 0.7;
     }
     .arrow-right:hover{
-       opacity: 1;
+        opacity: 1;
     }
 
     .btn-left-right{
@@ -176,10 +176,10 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
         margin-left: 0px!important;
     }
 
-   #comment-textarea {
+    #comment-textarea {
         width: 885px;
         height: 120px;
-       margin-left: 16px;
+        margin-left: 16px;
     }
     .left-div{
         margin: 0px;
@@ -189,14 +189,14 @@ $this->registerJsFile('/js/custom/comment.js',['depends'=>\backend\assets\AppAss
         font-weight: bold;
     }
     .main-comment{
-        //border: 1px solid red;
+    //border: 1px solid red;
         padding: 5px 0px;
         margin-bottom: 10px;
     }
     .time-d{
         text-align: center;
-vertical-align: middle;
-margin-top: 23px;
+        vertical-align: middle;
+        margin-top: 23px;
     }
     p {
 
@@ -211,7 +211,7 @@ margin-top: 23px;
         font-size: 18px;
         text-transform: uppercase;
         font-family: verdana;
-        //letter-spacing: -2px;
+    //letter-spacing: -2px;
         color: #666;
     }
     .bg_preview_post {
@@ -253,7 +253,7 @@ margin-top: 23px;
 
 
     a, a:link, a:visited {
-        //color: #cc0000;
+    //color: #cc0000;
         text-decoration: none;
 
     }
@@ -282,17 +282,17 @@ margin-top: 23px;
 
 
     .title {
-        // font-family : "solomon";
+    // font-family : "solomon";
         font-size: 20px;
     }
     .text{
         font-size: 16px;
         font-family: "Verdana", "sans-serif";
         text-align: justify;
-         }
+    }
     .content{
         font-size: 14px;
         font-family: "Verdana", "sans-serif";
-       // margin-top: 20px;
+    // margin-top: 20px;
     }
 </style>

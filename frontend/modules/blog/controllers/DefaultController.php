@@ -43,7 +43,7 @@ class DefaultController extends CoreController
                         'roles' => ['admin'],
                     ],
                     [
-                        'actions' => ['index', 'view', 'views','add-news-from-parser'],
+                        'actions' => ['index', 'view', 'views','add-news-from-parser','views-ajax'],
                         'allow' => true,
                         'roles' => ['@', '?'],
                     ],
@@ -227,6 +227,33 @@ class DefaultController extends CoreController
             $nextBlog  = Blog::find()->where('id <' . $blog->id )->orderBy('id DESC')->limit(1)->asArray()->all();
 //vd($prevBlog[0]['slug']);
             return $this->render('views', [
+                                           'model' => $blog,
+                                           'coment_model' => $coment_model,
+                                           'nextBlog'=> !empty($nextBlog) ? $nextBlog[0]['slug'] : NULL,
+                                           'prevBlog'=> !empty($prevBlog) ? $prevBlog[0]['slug'] : NULL
+                                                                    ]);
+        } else {
+            $this->redirect('site/index');
+        }
+    }
+
+    public function actionViewsAjax()
+    {
+
+        $this->layout = '/blog';
+        $slug = Yii::$app->request->get('slug');
+        $blog = Blog::find()->where(['slug' => $slug])->one();
+        if ($blog) {
+            $viwsQuantity = (int)$blog->view;
+            $blog->view = $viwsQuantity + 1;
+            $blog->updateAttributes(['view']);
+            $coment_model = Comment::find()->where(['blog_id' => $blog->id])->all();
+            $this->meta = $blog;
+
+            $prevBlog = Blog::find()->where('id >' . $blog->id )->orderBy('id ASC')->limit(1)->asArray()->all();
+            $nextBlog  = Blog::find()->where('id <' . $blog->id )->orderBy('id DESC')->limit(1)->asArray()->all();
+
+            return $this->render('views-ajax', [
                                            'model' => $blog,
                                            'coment_model' => $coment_model,
                                            'nextBlog'=> !empty($nextBlog) ? $nextBlog[0]['slug'] : NULL,
