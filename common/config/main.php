@@ -9,9 +9,6 @@ return [
             'password' => 'jokers12',
             'charset' => 'utf8',
         ],
-    ],
-    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
-    'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -57,4 +54,6 @@ return [
             'ruleFile' => '@common/components/rbac/rules.php'
         ],
     ],
+    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+
 ];

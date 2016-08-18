@@ -17,6 +17,17 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+            'view' => [
+                'theme' => [
+                    'basePath' => '@app/themes/vapor',
+                    'baseUrl' => '@web/themes/vapor',
+                    'pathMap' => [
+                        //'@app/views' => '@app/themes/stylesh/views',
+                        '@app/views' => '@app/themes/vapor/views',
+                        '@app/modules'=>'@app/themes/vapor/modules',
+                    ],
+                ],
+            ],
         'formatter' => [
             'class' => 'yii\i18n\Formatter',
             'dateFormat' => 'php:d.m.Y',

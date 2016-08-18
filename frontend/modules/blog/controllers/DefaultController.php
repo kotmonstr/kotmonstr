@@ -43,7 +43,7 @@ class DefaultController extends CoreController
                         'roles' => ['admin'],
                     ],
                     [
-                        'actions' => ['index', 'view', 'views','add-news-from-parser','views-ajax'],
+                        'actions' => ['index', 'view', 'views','add-news-from-parser','views-ajax','pjax','cron'],
                         'allow' => true,
                         'roles' => ['@', '?'],
                     ],
@@ -315,7 +315,7 @@ class DefaultController extends CoreController
             $arrResult2[$key]['content'] = $content;
             $arrResult2[$key]['image'] = $img2;
         }
-        //vd($arrResult2);
+        vd($arrResult2);
 
         if (!empty($arrResult2)) {
             //$model = ImportNews::deleteAll();
@@ -385,6 +385,70 @@ class DefaultController extends CoreController
         }
         $array = stripslashes(json_encode($array));
         echo $array;
+    }
+
+    public function actionPjax()
+    {
+        return $this->render('pjax', ['time' => date('H:i:s')]);
+    }
+
+    public function actionCron(){
+
+        require_once __DIR__.'/scripts/simple_html_dom.php';
+
+
+        ini_set('max_execution_time', 60000);
+        ini_set('wait_timeout', 60000);
+        ini_set('memory_limit', '128M');
+        ini_set('default_charset', 'UTF-8');
+
+        $arrResult = [];
+        $arrResult2 = [];
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,'http://politrussia.com/news');
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+        $html = curl_exec($ch);
+        $html = str_get_html($html);
+
+        foreach ($html->find('a.overlink') as $element) {
+            $arrResult[] = $element->href;
+        }
+        $i = 0;
+        foreach ($arrResult as $key => $link) {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL,'http://politrussia.com'. $link);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_HEADER, 0);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+            $html2 = curl_exec($ch);
+            $html2 = str_get_html($html2);
+
+            $i++;
+            $content = $html2->find('div[class="news_text"]', 0)->plaintext;
+            $title = $html2->find('h1[itemprop="name"]', 0)->plaintext;
+
+            foreach ($html2->find('img[itemprop="contentUrl"]') as $element) {
+                $img2 = 'http://politrussia.com' . $element->src;
+            }
+
+            $arrResult2[$key]['title'] = $title;
+            $arrResult2[$key]['content'] = $content;
+            $arrResult2[$key]['image'] = $img2;
+        }
+        $data = serialize($arrResult2);
+
+
+        $file2 = Yii::getAlias('@json') . DIRECTORY_SEPARATOR . 'cron-import.json';
+        file_put_contents($file2, $data);
+
+        die();
     }
 
 }

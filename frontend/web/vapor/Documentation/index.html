@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+		
+	<title>Donate Documentation</title>
+		
+	<link href="assets/styles.css" rel="stylesheet">
+	
+</head>
+<body>
+		
+	<div id="docs-info">
+		<h1>Vapor HTML5 Landing Page</h1>
+		<h4>Designed &amp; Developed by Ewebcraft © 2015</h4>
+		<div class="links">
+			<a href="http://themeforest.net/user/ewebcraft" target="_blank">Get Support</a><a href="http://layerstheme.com/portfolio/html/MountainBicycles/" target="_blank">View Template Demo</a><a href="http://themeforest.net/user/ewebcraft/portfolio" target="_blank">View Portfolio</a>
+		</div>
+	</div>
+
+	<div id="docs-contents" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-vertical ui-helper-clearfix">
+			
+		<ul id="tab-nav" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+			<li class="ui-state-default ui-tabs-active ui-corner-left"><a href="#introduction" class="ui-tabs-anchor">Introduction</a></li>
+			<li class="divider ui-corner-left"><span></span></li>
+			<li class="ui-corner-left"><span>Item Detail</span></li>
+			<li class="ui-state-default ui-corner-left"><a href="#template-installation" class="ui-tabs-anchor">File Structure</a></li>
+			<li class="divider ui-corner-left"><span></span></li>
+			<li class="divider ui-corner-left"><span></span></li>
+			<li class="ui-corner-left"><span>Customizations</span></li>
+			<li class="ui-state-default ui-corner-left"><a href="#replace-images" class="ui-tabs-anchor">Replace Images</a></li>
+			
+		</ul>
+		
+		<div id="introduction" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+			<h2>Introduction</h2>
+			<p>Welcome to Vapor HTML one page website! Thank you for purchasing our product.<br>
+			If you have any questions that are beyond the scope of this documentation, please feel free to email us via the form on <a href="http://www.themeforest.net/user/ewebcraft">http://www.themeforest.net/user/ewebcraft</a>. OR <a href="mailto:support@ewebcraft.com">Email us</a> directly at <a href="mailto:support@ewebcraft.com">support@ewebcraft.com</a>.</p>
+			<h3>Documentation Improvements</h3>
+			<p>If you have any comments, please mail us via the form on <a href="http://www.themeforest.net/user/ewebcraft">http://www.themeforest.net/user/ewebcraft</a>.</p>
+		</div>
+
+		<div id="template-installation" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none;">
+			<h2>File Structure</h2>
+			
+			<a class="button" href="http://feedback.instapage.com/knowledgebase" target="_blank">Usage Instructions</a>
+		</div>
+
+		<div id="replace-images" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none;">
+			<h2>Replace Images</h2>
+			<p>Open the /images/ folder from the pack and replace the images to yours, we have written the perfect sizes on the images. So, you just have to replace the exact size image.</p>
+            <p>If you have any question, please never hesitate to ask.  <a href="mailto: support@ewebcraft.com">support</a></p>
+			
+	  </div>
+
+		
+	</div>
+
+	<footer>
+		<div class="links">
+			<a href="http://themeforest.net/user/ewebcraft" target="_blank">Get Support</a><a href="http://layerstheme.com/portfolio/html/vapor/" target="_blank">View Theme Demo</a><a href="http://themeforest.net/user/ewebcraft/portfolio" target="_blank">View Portfolio</a>
+		</div>
+		<p>© 2015 Ewebcraft </p>
+	</footer>
+		
+	<script src="assets/jquery-1.9.1.js"></script>
+	<script src="assets/jquery-ui.js"></script>
+	<script>
+		$(function() {
+	    	$("#docs-contents").tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+	    	$("#tab-nav li").removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+	    
+	    	$('ul#tab-nav li').on('click', function() {
+	        	window.location.hash = jQuery(this).find('a').attr('href');
+	    	});
+	  	});
+	</script>
+	
+</body>
+</html>
