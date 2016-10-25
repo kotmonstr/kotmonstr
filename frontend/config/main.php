@@ -22,9 +22,9 @@ return [
                     'basePath' => '@app/themes/vapor',
                     'baseUrl' => '@web/themes/vapor',
                     'pathMap' => [
-                        //'@app/views' => '@app/themes/stylesh/views',
-                        '@app/views' => '@app/themes/vapor/views',
-                        '@app/modules'=>'@app/themes/vapor/modules',
+                        '@app/views' => '@app/themes/stylesh/views',
+                        //'@app/views' => '@app/themes/vapor/views',
+                        //'@app/modules'=>'@app/themes/vapor/modules',
                     ],
                 ],
             ],

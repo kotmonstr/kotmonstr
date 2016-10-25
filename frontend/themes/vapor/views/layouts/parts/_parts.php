@@ -1,7 +1,8 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\StringHelper;
 ?>
-<? if(isset($modelLastBlog)): ?>
+<? if(isset($model)): ?>
 <!-- parts -->
 <div id="parts">
     <div id="parts-title">
@@ -12,7 +13,7 @@ use yii\helpers\Url;
             <div id="parts-gallery">
                 <div id="parts-slider">
 
-                    <?php foreach ($modelLastBlog as $blog):
+                    <?php foreach ($model as $blog):
                         $image = $blog->image;
                         if ($image == '') {
                             $image = "/img-custom/default.jpg";
@@ -21,23 +22,17 @@ use yii\helpers\Url;
                     
                     <div class="item">
                         <div class="parts-image">
-                            <img src="<?= $image ?>" alt="Trail Image">
+                            <img src="<?= $image ?>"  alt="<?= StringHelper::truncate($blog->title, 190) ?>">
 			      		<span class="parts-hover">
-				      		<a href="index.html">
+				      		<a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]) ?>">
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
 			      		</span>
                         </div>
                         <h3>
-                            <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>">SRAM PG-950 9-Speed Cassette</a>
+                            <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]); ?>"><?= StringHelper::truncate($blog->title, 120) ?></a>
                         </h3>
-                        <p>
-                            Curabitur ullamcorper felis bibe
-                            adipiscing vitae est
-                        </p>
-                        <p class="parts-price">
-                            $36.00
-                        </p>
+
                     </div>
 
                     <? endforeach; ?>

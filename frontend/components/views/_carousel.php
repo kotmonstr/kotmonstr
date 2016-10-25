@@ -36,12 +36,12 @@ foreach ($model as $item) {//9
 
                 <div id="myCarousel" class="carousel slide">
 
-                    <ol class="carousel-indicators clearfix" >
-                        <? for ($b = 1; $b <= $Iterator; $b++): ?>
-                            <li data-target="#myCarousel" data-slide-to="<?= $b ?>"
-                                class="<?= $b == 1 ? 'active' : null ?>"></li>
-                        <? endfor; ?>
-                    </ol>
+<!--                    <ol class="carousel-indicators clearfix" >-->
+<!--                        --><?// for ($b = 1; $b <= $Iterator; $b++): ?>
+<!--                            <li data-target="#myCarousel" data-slide-to="--><?//= $b ?><!--"-->
+<!--                                class="--><?//= $b == 1 ? 'active' : null ?><!--"></li>-->
+<!--                        --><?// endfor; ?>
+<!--                    </ol>-->
 
                     <? $i = 0; ?>
                     <? $ii = 0; ?>
@@ -90,7 +90,7 @@ foreach ($model as $item) {//9
         bottom: -36px;
     }
     .carousel {
-        margin-bottom: 0;
+        margin-bottom: -40px;
         padding: 0 40px 30px 40px;
     }
     /* Reposition the controls slightly */

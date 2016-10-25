@@ -87,12 +87,12 @@ class DefaultController extends CoreController
 
         $modelLastBlog = Blog::find()
             ->orderBy('id DESC')
-            ->limit(3)
+            ->limit(5)
             ->all();
 
         $modeMostWatched = Blog::find()
             ->orderBy('view DESC')
-            ->limit(3)
+            ->limit(5)
             ->all(); 
         
         $modeLastSider = Blog::find()

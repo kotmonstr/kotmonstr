@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <div id="logo">
-                    <img src="/vapor/vapor/images/logo.png" alt="logo">
+                    <img src="/img-custom/kotmonstr.png" alt="logo">
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 hidden-xs">

@@ -47,6 +47,9 @@ Yii::$app->formatter->locale = 'ru-RU';
                                             <div class="caption">
                                                 <h5 class="caption-header"><?= StringHelper::truncate($blog->title, 63) ?></h5>
                                             </div>
+<!--                                            <div class="link-to-pdf">-->
+<!--                                                <h5 class="caption-header">--><?//= Html::a('Maxseal_flex.pdf','/files/Maxseal_flex.pdf') ?><!--</h5>-->
+<!--                                            </div>-->
                                             <div class="caption time">
                                                 <span class="glyphicon glyphicon-time bold dark-color"
                                                       aria-hidden="true"></span>
@@ -266,5 +269,11 @@ Yii::$app->formatter->locale = 'ru-RU';
     .dark-link {
         color: red;
         cursor: pointer;
+    }
+    .link-to-pdf a{
+        color: #50aef3!important;
+    }
+    .link-to-pdf a:hover{
+        color: red!important;
     }
 </style>

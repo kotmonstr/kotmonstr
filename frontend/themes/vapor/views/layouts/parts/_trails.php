@@ -1,3 +1,8 @@
+<?php
+use yii\helpers\Url;
+use yii\helpers\StringHelper;
+?>
+<? if(isset($model)): ?>
 <!-- start trial area -->
 <div id="trails">
     <div id="trail-title">
@@ -6,117 +11,38 @@
         <div class="row">
             <div id="trail-gallery">
                 <div id="trail-slider">
+
+                    <?php foreach ($model as $blog):
+                    $image = $blog->image;
+                    if ($image == '') {
+                        $image = "/img-custom/default.jpg";
+                    }
+                    ?>
+
                     <div class="item">
                         <div class="trail-image">
-                            <img src="/vapor/vapor/images/trails-slider/img-1.jpg" alt="Image">
+                            <img src="<?= $image ?>" alt="<?= StringHelper::truncate($blog->title, 190) ?>">
 			      		<span class="trail-hover">
-				      		<a href="index.html" class="popup">
+				      		<a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]) ?>" class="popup">
                                 <i class="fa fa-external-link"></i>
                             </a>
 			      		</span>
                         </div>
                         <h3>
-                            <a href="#" class="popup">
-                                Talweg Paznaun - Galtuer
+                            <a href="<?= Url::toRoute(['/blog/list/'.$blog->slug]) ?>" class="popup">
+                                <?= StringHelper::truncate($blog->title, 120) ?>
                             </a>
                         </h3>
-                        <p>
-                            Galtuer - See, 28.00 km, 430 m
-                        </p>
+           
                     </div>
-                    <div class="item">
-                        <div class="trail-image">
-                            <img src="/vapor/vapor/images/trails-slider/img-2.jpg" alt="Image">
-			      		<span class="trail-hover">
-				      		<a href="index.html" class="popup">
-                                <i class="fa fa-external-link"></i>
-                            </a>
-			      		</span>
-                        </div>
-                        <h3>
-                            <a href="#" class="popup" data-toggle="modal" data-target="#myModal-2">
-                                Alps 2 Ocean Cycle Trail Map
-                            </a>
-                        </h3>
-                        <p>
-                            Braemar Road 35km
-                        </p>
-                    </div>
-                    <div class="item">
-                        <div class="trail-image">
-                            <img src="/vapor/vapor/images/trails-slider/img-3.jpg" alt="Image">
-			      		<span class="trail-hover">
-				      		<a href="index.html" class="popup">
-                                <i class="fa fa-external-link"></i>
-                            </a>
-			      		</span>
-                        </div>
-                        <h3>
-                            <a href="#" class="popup" data-toggle="modal" data-target="#myModal-3">
-                                Twizel to Lake Ohau
-                            </a>
-                        </h3>
-                        <p>
-                            Ohau Lodge 38km
-                        </p>
-                    </div>
-                    <div class="item">
-                        <div class="trail-image">
-                            <img src="/vapor/vapor/images/trails-slider/img-1.jpg" alt="Image">
-			      		<span class="trail-hover">
-				      		<a href="index.html" class="popup">
-                                <i class="fa fa-external-link"></i>
-                            </a>
-			      		</span>
-                        </div>
-                        <h3>
-                            <a href="#" class="popup" data-toggle="modal" data-target="#myModal-4">
-                                Talweg Paznaun - Galtuer
-                            </a>
-                        </h3>
-                        <p>
-                            Galtuer - See, 28.00 km, 430 m
-                        </p>
-                    </div>
-                    <div class="item">
-                        <div class="trail-image">
-                            <img src="/vapor/vapor/images/trails-slider/img-2.jpg" alt="Image">
-			      		<span class="trail-hover">
-				      		<a href="index.html" class="popup">
-                                <i class="fa fa-external-link"></i>
-                            </a>
-			      		</span>
-                        </div>
-                        <h3>
-                            <a href="#" class="popup">
-                                Alps 2 Ocean Cycle Trail Map
-                            </a>
-                        </h3>
-                        <p>
-                            Braemar Road 35km
-                        </p>
-                    </div>
-                    <div class="item">
-                        <div class="trail-image">
-                            <img src="/vapor/vapor/images/trails-slider/img-3.jpg" alt="Image">
-			      		<span class="trail-hover">
-				      		<a href="index.html" data-toggle="modal" data-target="#myModal-6">
-                                <i class="fa fa-external-link"></i>
-                            </a>
-			      		</span>
-                        </div>
-                        <h3>
-                            <a href="#" class="popup">
-                                Twizel to Lake Ohau
-                            </a>
-                        </h3>
-                        <p>
-                            Ohau Lodge 38km
-                        </p>
-                    </div>
+
+                    <? endforeach; ?>
+
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- end trial area -->
+<? endif; ?>
